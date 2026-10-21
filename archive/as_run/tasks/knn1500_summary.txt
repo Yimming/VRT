@@ -1,0 +1,49 @@
+=== Schilling / Henze at n=1500 per split ===
+setting       epochs  Schilling   Henze   paper Sch/Hen (n=2000)  VRT fwd
+r50              200        121     120                  121/117       61
+v7               200         ND     199                null/null       19
+ablA              50         ND      ND                    49/47       31
+ablB              50         ND      ND                null/null       ND
+ablC              50         ND      ND                null/null       35
+ablD              50         ND      ND                null/null       ND
+wp               101         ND      ND                null/null       ND
+zoo_c10_m0        51         ND      ND                  null/48       23
+zoo_c10_m1        51         ND      ND                  null/48       25
+zoo_c10_m2        51         ND      ND                  null/48       22
+zoo_c10_m3        51         ND      49                  null/48       28
+zoo_c10_m4        51         ND      ND                  null/48       23
+zoo_c100_m0       61         52      51                    52/51       34
+zoo_c100_m1       61         54      50                    52/51       28
+zoo_c100_m2       61         57      49                    52/51       29
+zoo_c100_m3       61         52      50                    52/51       29
+zoo_c100_m4       61         53      50                    52/51       28
+
+--- r50, epochs 55 to 130: median p (Schilling, Henze), every 5th epoch ---
+  ep  55  0.5875  0.6497
+  ep  60  0.5084  0.5002
+  ep  65  0.2722  0.1472
+  ep  70  0.5147  0.5187
+  ep  75  0.3660  0.2796
+  ep  80  0.3366  0.2384
+  ep  85  0.3217  0.2401
+  ep  90  0.2653  0.1535
+  ep  95  0.2104  0.0925
+  ep 100  0.1815  0.0737
+  ep 105  0.2553  0.1380
+  ep 110  0.2337  0.1182
+  ep 115  0.2244  0.1109
+  ep 120  0.1485  0.0440
+  ep 125  0.0018  0.0005
+  ep 130  0.0013  0.0005
+
+--- v7, epochs 15 to 60: median p (Schilling, Henze), every 5th epoch ---
+  ep  15  0.3799  0.2964
+  ep  20  0.6058  0.6595
+  ep  25  0.5994  0.6589
+  ep  30  0.4874  0.4523
+  ep  35  0.3425  0.2434
+  ep  40  0.3195  0.2021
+  ep  45  0.5294  0.5460
+  ep  50  0.5042  0.5180
+  ep  55  0.4209  0.3666
+  ep  60  0.5706  0.6190

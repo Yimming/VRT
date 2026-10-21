@@ -1,0 +1,230 @@
+{
+  "input_files_checked": 65,
+  "changed_inputs": [],
+  "exported_csv_comparisons": [
+    {
+      "file": "base_ablA.csv",
+      "equal": false
+    },
+    {
+      "file": "base_ablB.csv",
+      "equal": false
+    },
+    {
+      "file": "base_ablC.csv",
+      "equal": false
+    },
+    {
+      "file": "base_ablD.csv",
+      "equal": false
+    },
+    {
+      "file": "base_r50.csv",
+      "equal": false
+    },
+    {
+      "file": "base_v7.csv",
+      "equal": false
+    },
+    {
+      "file": "dc_imgnet_adv.csv",
+      "equal": true
+    },
+    {
+      "file": "dc_imgnet_simple.csv",
+      "equal": true
+    },
+    {
+      "file": "dc_r50.csv",
+      "equal": true
+    },
+    {
+      "file": "dc_v7.csv",
+      "equal": true
+    },
+    {
+      "file": "fig4b_bn.csv",
+      "equal": true
+    },
+    {
+      "file": "fig4b_r50.csv",
+      "equal": true
+    },
+    {
+      "file": "onsets.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_ablA.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_ablB.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_ablC.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_ablD.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_imgnet_adv.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_imgnet_simple.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_phase_bs1024.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_phase_bs128.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_phase_bs8.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_r50.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_v7.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_wp.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c100_m0.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c100_m1.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c100_m2.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c100_m3.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c100_m4.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c10_m0.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c10_m1.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c10_m2.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c10_m3.csv",
+      "equal": true
+    },
+    {
+      "file": "vrt_zoo_c10_m4.csv",
+      "equal": true
+    }
+  ],
+  "pdf_comparisons": [
+    {
+      "output": "results/figures/appendix_c/fig_cifar_official_control.pdf",
+      "reference": "paper/Figures/fig_cifar_official_control.pdf",
+      "pages": 1,
+      "page_boxes_equal": true,
+      "content_streams_equal": true,
+      "extracted_text_equal": true
+    },
+    {
+      "output": "results/figures/appendix_f/fig_trajectories_appendix.pdf",
+      "reference": "paper/Figures/fig_trajectories_appendix.pdf",
+      "pages": 1,
+      "page_boxes_equal": true,
+      "content_streams_equal": true,
+      "extracted_text_equal": true
+    },
+    {
+      "output": "results/figures/appendix_g/fig_ref_asymmetry.pdf",
+      "reference": "paper/Figures/fig_ref_asymmetry.pdf",
+      "pages": 1,
+      "page_boxes_equal": true,
+      "content_streams_equal": false,
+      "extracted_text_equal": true
+    },
+    {
+      "output": "results/figures/appendix_i/fig_mmd_on_chat.pdf",
+      "reference": "paper/Figures/fig_mmd_on_chat.pdf",
+      "pages": 1,
+      "page_boxes_equal": true,
+      "content_streams_equal": true,
+      "extracted_text_equal": true
+    },
+    {
+      "output": "results/figures/earlier/fig2_trajectory.pdf",
+      "reference": "paper/Figures/fig2_trajectory.pdf",
+      "pages": 1,
+      "page_boxes_equal": false,
+      "content_streams_equal": false,
+      "extracted_text_equal": false
+    },
+    {
+      "output": "results/figures/earlier/fig_trajectories_appendix.pdf",
+      "reference": "paper/Figures/fig_trajectories_appendix.pdf",
+      "pages": 1,
+      "page_boxes_equal": false,
+      "content_streams_equal": false,
+      "extracted_text_equal": false
+    },
+    {
+      "output": "results/figures/fig3_regularization.pdf",
+      "reference": "paper/Figures/fig3_regularization.pdf",
+      "pages": 1,
+      "page_boxes_equal": false,
+      "content_streams_equal": false,
+      "extracted_text_equal": true
+    },
+    {
+      "output": "results/figures/fig4_diagnosis.pdf",
+      "reference": "paper/Figures/fig4_diagnosis.pdf",
+      "pages": 1,
+      "page_boxes_equal": true,
+      "content_streams_equal": true,
+      "extracted_text_equal": true
+    },
+    {
+      "output": "results/figures/fig_dc_trajectory.pdf",
+      "reference": "paper/Figures/fig_dc_trajectory.pdf",
+      "pages": 1,
+      "page_boxes_equal": true,
+      "content_streams_equal": true,
+      "extracted_text_equal": true
+    }
+  ],
+  "restored_python_files": 15,
+  "unique_plot_builds_run": 9,
+  "original_figure_inputs_unchanged": 65,
+  "scope_notes": [
+    "Five current PDF page content streams match the paper exactly.",
+    "Appendix G reconstructs a saved figure asset; raster comparison matches the paper.",
+    "Regularization page height differs by 0.284 points; extracted text matches.",
+    "Six historical base CSVs lack 127 later MMDAgg checkpoint fractions; export fills only those formerly blank fields.",
+    "Generated artifacts remain under ignored results/."
+  ]
+}

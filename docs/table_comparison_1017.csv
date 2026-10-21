@@ -1,0 +1,281 @@
+table,file,line,model,stat,mode,paper,expected,recomputed,individual,status
+1,table1.tex,18,ResNet20-FRN,vrt,eval,38,38,38,[38],matches
+1,table1.tex,18,ResNet20-FRN,mmd,eval,\textemdash,null,null,[None],matches
+1,table1.tex,18,ResNet20-FRN,mmdagg,eval,\textemdash,null,null,[None],matches
+1,table1.tex,18,ResNet20-FRN,c2st,eval,\textemdash,null,null,[None],matches
+1,table1.tex,18,ResNet20-FRN,ed,eval,\textemdash,null,null,[None],matches
+1,table1.tex,19,ResNet-18 C100 Zoo,vrt,eval,26--34,26--34,26--34,"[34, 28, 29, 26, 27]",matches
+1,table1.tex,19,ResNet-18 C100 Zoo,mmd,eval,43--45,43--45,43--45,"[45, 43, 45, 43, 45]",matches
+1,table1.tex,19,ResNet-18 C100 Zoo,mmdagg,eval,44--46,44--46,44--46,"[46, 46, 45, 44, 46]",matches
+1,table1.tex,19,ResNet-18 C100 Zoo,c2st,eval,\textemdash,null,null,"[None, None, None, None, None]",matches
+1,table1.tex,19,ResNet-18 C100 Zoo,ed,eval,43--45,43--45,43--45,"[45, 43, 45, 43, 45]",matches
+1,table1.tex,20,ResNet-18 C10 Zoo,vrt,eval,25--30,25--30,25--30,"[26, 25, 30, 29, 30]",matches
+1,table1.tex,20,ResNet-18 C10 Zoo,mmd,eval,\textemdash,null,null,"[None, None, None, None, None]",matches
+1,table1.tex,20,ResNet-18 C10 Zoo,mmdagg,eval,40--42,40--42,40--42,"[42, 42, 40, 42, 41]",matches
+1,table1.tex,20,ResNet-18 C10 Zoo,c2st,eval,\textemdash,null,null,"[None, None, None, None, None]",matches
+1,table1.tex,20,ResNet-18 C10 Zoo,ed,eval,\textemdash,null,null,"[None, None, None, None, None]",matches
+1,table1.tex,21,ResNet-50,vrt,eval,61,61,61,[61],matches
+1,table1.tex,21,ResNet-50,mmd,eval,73,73,73,[73],matches
+1,table1.tex,21,ResNet-50,mmdagg,eval,80,80,80,[80],matches
+1,table1.tex,21,ResNet-50,c2st,eval,121,121,121,[121],matches
+1,table1.tex,21,ResNet-50,ed,eval,73,73,73,[73],matches
+1,table1.tex,22,Phase Zoo bs8,vrt,eval,150,150,150,[150],matches
+1,table1.tex,22,Phase Zoo bs8,mmd,eval,150,150,150,[150],matches
+1,table1.tex,22,Phase Zoo bs8,mmdagg,eval,150,150,150,[150],matches
+1,table1.tex,22,Phase Zoo bs8,c2st,eval,150,150,150,[150],matches
+1,table1.tex,22,Phase Zoo bs8,ed,eval,150,150,150,[150],matches
+1,table1.tex,23,Phase Zoo bs128,vrt,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,23,Phase Zoo bs128,mmd,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,23,Phase Zoo bs128,mmdagg,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,23,Phase Zoo bs128,c2st,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,23,Phase Zoo bs128,ed,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,24,"Phase Zoo bs1{,}024",vrt,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,24,"Phase Zoo bs1{,}024",mmd,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,24,"Phase Zoo bs1{,}024",mmdagg,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,24,"Phase Zoo bs1{,}024",c2st,eval,125,125,125,[125],matches
+1,table1.tex,24,"Phase Zoo bs1{,}024",ed,eval,$\leq$100,100,100,[100],matches
+1,table1.tex,25,SimCLR CIFAR-10 ,vrt,eval,229,229,229,[229],matches
+1,table1.tex,25,SimCLR CIFAR-10 ,mmd,eval,284,284,284,[284],matches
+1,table1.tex,25,SimCLR CIFAR-10 ,mmdagg,eval,483,483,483,[483],matches
+1,table1.tex,25,SimCLR CIFAR-10 ,c2st,eval,691,691,691,[691],matches
+1,table1.tex,25,SimCLR CIFAR-10 ,ed,eval,283,283,283,[283],matches
+1,table1.tex,26,SimCLR CIFAR-100 ,vrt,eval,191,191,191,[191],matches
+1,table1.tex,26,SimCLR CIFAR-100 ,mmd,eval,213,213,213,[213],matches
+1,table1.tex,26,SimCLR CIFAR-100 ,mmdagg,eval,348,348,348,[348],matches
+1,table1.tex,26,SimCLR CIFAR-100 ,c2st,eval,653,653,653,[653],matches
+1,table1.tex,26,SimCLR CIFAR-100 ,ed,eval,213,213,213,[213],matches
+1,table1.tex,29,A:,vrt,eval,33,33,33,[33],matches
+1,table1.tex,29,A:,mmd,eval,\textemdash,null,null,[None],matches
+1,table1.tex,29,A:,mmdagg,eval,42,42,42,[42],matches
+1,table1.tex,29,A:,c2st,eval,\textemdash,null,null,[None],matches
+1,table1.tex,29,A:,ed,eval,44,44,44,[44],matches
+1,table1.tex,30,B:,vrt,eval,\textemdash,null,null,[None],matches
+1,table1.tex,30,B:,mmd,eval,\textemdash,null,null,[None],matches
+1,table1.tex,30,B:,mmdagg,eval,\textemdash,null,null,[None],matches
+1,table1.tex,30,B:,c2st,eval,\textemdash,null,null,[None],matches
+1,table1.tex,30,B:,ed,eval,\textemdash,null,null,[None],matches
+1,table1.tex,31,C:,vrt,eval,35,35,35,[35],matches
+1,table1.tex,31,C:,mmd,eval,\textemdash,null,null,[None],matches
+1,table1.tex,31,C:,mmdagg,eval,\textemdash,null,null,[None],matches
+1,table1.tex,31,C:,c2st,eval,\textemdash,null,null,[None],matches
+1,table1.tex,31,C:,ed,eval,\textemdash,null,null,[None],matches
+1,table1.tex,32,D:,vrt,eval,\textemdash,null,null,[None],matches
+1,table1.tex,32,D:,mmd,eval,\textemdash,null,null,[None],matches
+1,table1.tex,32,D:,mmdagg,eval,\textemdash,null,null,[None],matches
+1,table1.tex,32,D:,c2st,eval,\textemdash,null,null,[None],matches
+1,table1.tex,32,D:,ed,eval,\textemdash,null,null,[None],matches
+1,table1.tex,35,5-layer CNN,vrt,eval,\textemdash,null,null,[None],matches
+1,table1.tex,35,5-layer CNN,mmd,eval,\textemdash,null,null,[None],matches
+1,table1.tex,35,5-layer CNN,mmdagg,eval,\textemdash,null,null,[None],matches
+1,table1.tex,35,5-layer CNN,c2st,eval,\textemdash,null,null,[None],matches
+1,table1.tex,35,5-layer CNN,ed,eval,\textemdash,null,null,[None],matches
+1,table1.tex,36,DeepResNet50 simple,vrt,eval,$*$,null,null,[None],matches
+1,table1.tex,36,DeepResNet50 simple,mmd,eval,BN,1,1,[1],matches
+1,table1.tex,36,DeepResNet50 simple,mmdagg,eval,5,5,5,[5],matches
+1,table1.tex,36,DeepResNet50 simple,c2st,eval,\textemdash,null,null,[None],matches
+1,table1.tex,36,DeepResNet50 simple,ed,eval,BN,1,1,[1],matches
+1,table1.tex,37,DeepResNet50 adv.,vrt,eval,$*$,null,null,[None],matches
+1,table1.tex,37,DeepResNet50 adv.,mmd,eval,BN,1,1,[1],matches
+1,table1.tex,37,DeepResNet50 adv.,mmdagg,eval,20,20,20,[20],matches
+1,table1.tex,37,DeepResNet50 adv.,c2st,eval,\textemdash,null,null,[None],matches
+1,table1.tex,37,DeepResNet50 adv.,ed,eval,BN,1,1,[1],matches
+2,table2.tex,19,ResNet-18 C100 Zoo,vrt,eval,26--34 $\rightarrow$ 20--26,26--34,26--34,"[34, 28, 29, 26, 27]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,vrt,train,26--34 $\rightarrow$ 20--26,20--26,20--26,"[22, 20, 26, 22, 22]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,mmd,eval,43--45 $\rightarrow$ 55--56,43--45,43--45,"[45, 43, 45, 43, 45]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,mmd,train,43--45 $\rightarrow$ 55--56,55--56,55--56,"[56, 55, 55, 55, 55]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,mmdagg,eval,44--46 $\rightarrow$ 52,44--46,44--46,"[46, 46, 45, 44, 46]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,mmdagg,train,44--46 $\rightarrow$ 52,52,52,"[52, 52, 52, 52, 52]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,c2st,eval,\textemdash,null,null,"[None, None, None, None, None]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,c2st,train,\textemdash,null,null,"[None, None, None, None, None]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,ed,eval,43--45 $\rightarrow$ 54--55,43--45,43--45,"[45, 43, 45, 43, 45]",matches
+2,table2.tex,19,ResNet-18 C100 Zoo,ed,train,43--45 $\rightarrow$ 54--55,54--55,54--55,"[55, 54, 55, 54, 54]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,vrt,eval,25--30 $\rightarrow$ 26--32,25--30,25--30,"[26, 25, 30, 29, 30]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,vrt,train,25--30 $\rightarrow$ 26--32,26--32,26--32,"[26, 32, 30, 29, 30]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,mmd,eval,\textemdash,null,null,"[None, None, None, None, None]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,mmd,train,\textemdash,null,null,"[None, None, None, None, None]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,mmdagg,eval,40--42 $\rightarrow$ 42--48 (3),40--42,40--42,"[42, 42, 40, 42, 41]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,mmdagg,train,40--42 $\rightarrow$ 42--48 (3),42--48(3),42--48(3),"[48, None, 42, 46, None]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,c2st,eval,\textemdash,null,null,"[None, None, None, None, None]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,c2st,train,\textemdash,null,null,"[None, None, None, None, None]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,ed,eval,\textemdash,null,null,"[None, None, None, None, None]",matches
+2,table2.tex,20,ResNet-18 C10 Zoo,ed,train,\textemdash,null,null,"[None, None, None, None, None]",matches
+2,table2.tex,21,ResNet-50,vrt,eval,61 $\rightarrow$ 61,61,61,[61],matches
+2,table2.tex,21,ResNet-50,vrt,train,61 $\rightarrow$ 61,61,61,[61],matches
+2,table2.tex,21,ResNet-50,mmd,eval,73 $\rightarrow$ 121,73,73,[73],matches
+2,table2.tex,21,ResNet-50,mmd,train,73 $\rightarrow$ 121,121,121,[121],matches
+2,table2.tex,21,ResNet-50,mmdagg,eval,80 $\rightarrow$ 121,80,80,[80],matches
+2,table2.tex,21,ResNet-50,mmdagg,train,80 $\rightarrow$ 121,121,121,[121],matches
+2,table2.tex,21,ResNet-50,c2st,eval,121 $\rightarrow$ 130,121,121,[121],matches
+2,table2.tex,21,ResNet-50,c2st,train,121 $\rightarrow$ 130,130,130,[130],matches
+2,table2.tex,21,ResNet-50,ed,eval,73 $\rightarrow$ 121,73,73,[73],matches
+2,table2.tex,21,ResNet-50,ed,train,73 $\rightarrow$ 121,121,121,[121],matches
+2,table2.tex,22,Phase Zoo bs8,vrt,eval,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,vrt,train,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,mmd,eval,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,mmd,train,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,mmdagg,eval,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,mmdagg,train,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,c2st,eval,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,c2st,train,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,ed,eval,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,22,Phase Zoo bs8,ed,train,150 $\rightarrow$ 150,150,150,[150],matches
+2,table2.tex,23,Phase Zoo bs128,vrt,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,vrt,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,mmd,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,mmd,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,mmdagg,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,mmdagg,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,c2st,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,c2st,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,ed,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,23,Phase Zoo bs128,ed,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",vrt,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",vrt,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",mmd,eval,$\leq$100 $\rightarrow$ 125,100,100,[100],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",mmd,train,$\leq$100 $\rightarrow$ 125,125,125,[125],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",mmdagg,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",mmdagg,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",c2st,eval,125 $\rightarrow$ 125,125,125,[125],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",c2st,train,125 $\rightarrow$ 125,125,125,[125],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",ed,eval,$\leq$100 $\rightarrow$ 125,100,100,[100],matches
+2,table2.tex,24,"Phase Zoo bs1{,}024",ed,train,$\leq$100 $\rightarrow$ 125,125,125,[125],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,vrt,eval,229 $\rightarrow$ 527,229,229,[229],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,vrt,train,229 $\rightarrow$ 527,527,527,[527],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,mmd,eval,284 $\rightarrow$ 692,284,284,[284],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,mmd,train,284 $\rightarrow$ 692,692,692,[692],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,mmdagg,eval,483 $\rightarrow$ 632,483,483,[483],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,mmdagg,train,483 $\rightarrow$ 632,632,632,[632],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,c2st,eval,691 $\rightarrow$ 764,691,691,[691],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,c2st,train,691 $\rightarrow$ 764,764,764,[764],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,ed,eval,283 $\rightarrow$ 687,283,283,[283],matches
+2,table2.tex,25,SimCLR CIFAR-10 ,ed,train,283 $\rightarrow$ 687,687,687,[687],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,vrt,eval,191 $\rightarrow$ 324,191,191,[191],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,vrt,train,191 $\rightarrow$ 324,324,324,[324],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,mmd,eval,213 $\rightarrow$ 583,213,213,[213],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,mmd,train,213 $\rightarrow$ 583,583,583,[583],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,mmdagg,eval,348 $\rightarrow$ 495,348,348,[348],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,mmdagg,train,348 $\rightarrow$ 495,495,495,[495],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,c2st,eval,653 $\rightarrow$ 744,653,653,[653],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,c2st,train,653 $\rightarrow$ 744,744,744,[744],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,ed,eval,213 $\rightarrow$ 583,213,213,[213],matches
+2,table2.tex,26,SimCLR CIFAR-100 ,ed,train,213 $\rightarrow$ 583,583,583,[583],matches
+2,table2.tex,29,A:,vrt,eval,33 $\rightarrow$ 31,33,33,[33],matches
+2,table2.tex,29,A:,vrt,train,33 $\rightarrow$ 31,31,31,[31],matches
+2,table2.tex,29,A:,mmd,eval,\textemdash,null,null,[None],matches
+2,table2.tex,29,A:,mmd,train,\textemdash,null,null,[None],matches
+2,table2.tex,29,A:,mmdagg,eval,42 $\rightarrow$ 44,42,42,[42],matches
+2,table2.tex,29,A:,mmdagg,train,42 $\rightarrow$ 44,44,44,[44],matches
+2,table2.tex,29,A:,c2st,eval,\textemdash,null,null,[None],matches
+2,table2.tex,29,A:,c2st,train,\textemdash,null,null,[None],matches
+2,table2.tex,29,A:,ed,eval,44 $\rightarrow$ \textemdash,44,44,[44],matches
+2,table2.tex,29,A:,ed,train,44 $\rightarrow$ \textemdash,null,null,[None],matches
+2,table2.tex,30,B:,vrt,eval,\textemdash\ $\rightarrow$ 48,null,null,[None],matches
+2,table2.tex,30,B:,vrt,train,\textemdash\ $\rightarrow$ 48,48,48,[48],matches
+2,table2.tex,30,B:,mmd,eval,\textemdash,null,null,[None],matches
+2,table2.tex,30,B:,mmd,train,\textemdash,null,null,[None],matches
+2,table2.tex,30,B:,mmdagg,eval,\textemdash,null,null,[None],matches
+2,table2.tex,30,B:,mmdagg,train,\textemdash,null,null,[None],matches
+2,table2.tex,30,B:,c2st,eval,\textemdash,null,null,[None],matches
+2,table2.tex,30,B:,c2st,train,\textemdash,null,null,[None],matches
+2,table2.tex,30,B:,ed,eval,\textemdash,null,null,[None],matches
+2,table2.tex,30,B:,ed,train,\textemdash,null,null,[None],matches
+2,table2.tex,31,C:,vrt,eval,35 $\rightarrow$ 35,35,35,[35],matches
+2,table2.tex,31,C:,vrt,train,35 $\rightarrow$ 35,35,35,[35],matches
+2,table2.tex,31,C:,mmd,eval,\textemdash,null,null,[None],matches
+2,table2.tex,31,C:,mmd,train,\textemdash,null,null,[None],matches
+2,table2.tex,31,C:,mmdagg,eval,\textemdash,null,null,[None],matches
+2,table2.tex,31,C:,mmdagg,train,\textemdash,null,null,[None],matches
+2,table2.tex,31,C:,c2st,eval,\textemdash,null,null,[None],matches
+2,table2.tex,31,C:,c2st,train,\textemdash,null,null,[None],matches
+2,table2.tex,31,C:,ed,eval,\textemdash,null,null,[None],matches
+2,table2.tex,31,C:,ed,train,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,vrt,eval,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,vrt,train,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,mmd,eval,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,mmd,train,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,mmdagg,eval,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,mmdagg,train,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,c2st,eval,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,c2st,train,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,ed,eval,\textemdash,null,null,[None],matches
+2,table2.tex,32,D:,ed,train,\textemdash,null,null,[None],matches
+2,table2.tex,35,DeepResNet50 simple,vrt,eval,\textemdash,null,null,[None],matches
+2,table2.tex,35,DeepResNet50 simple,vrt,train,\textemdash,null,null,[None],matches
+2,table2.tex,35,DeepResNet50 simple,mmd,eval,1 $\rightarrow$ \textemdash,1,1,[1],matches
+2,table2.tex,35,DeepResNet50 simple,mmd,train,1 $\rightarrow$ \textemdash,null,null,[None],matches
+2,table2.tex,35,DeepResNet50 simple,mmdagg,eval,5 $\rightarrow$ 50,5,5,[5],matches
+2,table2.tex,35,DeepResNet50 simple,mmdagg,train,5 $\rightarrow$ 50,50,50,[50],matches
+2,table2.tex,35,DeepResNet50 simple,c2st,eval,\textemdash,null,null,[None],matches
+2,table2.tex,35,DeepResNet50 simple,c2st,train,\textemdash,null,null,[None],matches
+2,table2.tex,35,DeepResNet50 simple,ed,eval,1 $\rightarrow$ \textemdash,1,1,[1],matches
+2,table2.tex,35,DeepResNet50 simple,ed,train,1 $\rightarrow$ \textemdash,null,null,[None],matches
+2,table2.tex,36,DeepResNet50 adv.,vrt,eval,\textemdash,null,null,[None],matches
+2,table2.tex,36,DeepResNet50 adv.,vrt,train,\textemdash,null,null,[None],matches
+2,table2.tex,36,DeepResNet50 adv.,mmd,eval,1 $\rightarrow$ \textemdash,1,1,[1],matches
+2,table2.tex,36,DeepResNet50 adv.,mmd,train,1 $\rightarrow$ \textemdash,null,null,[None],matches
+2,table2.tex,36,DeepResNet50 adv.,mmdagg,eval,20 $\rightarrow$ 20,20,20,[20],matches
+2,table2.tex,36,DeepResNet50 adv.,mmdagg,train,20 $\rightarrow$ 20,20,20,[20],matches
+2,table2.tex,36,DeepResNet50 adv.,c2st,eval,\textemdash,null,null,[None],matches
+2,table2.tex,36,DeepResNet50 adv.,c2st,train,\textemdash,null,null,[None],matches
+2,table2.tex,36,DeepResNet50 adv.,ed,eval,1 $\rightarrow$ \textemdash,1,1,[1],matches
+2,table2.tex,36,DeepResNet50 adv.,ed,train,1 $\rightarrow$ \textemdash,null,null,[None],matches
+3,table3.tex,18,ResNet20-FRN,mmd_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,18,ResNet20-FRN,ed_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,19,ResNet-18 C100 Zoo,mmd_raw,eval,33--39 $\rightarrow$ \textemdash,33--39,33--39,"[39, 35, 33, 34, 33]",matches
+3,table3.tex,19,ResNet-18 C100 Zoo,mmd_raw,train,33--39 $\rightarrow$ \textemdash,null,null,"[None, None, None, None, None]",matches
+3,table3.tex,19,ResNet-18 C100 Zoo,ed_raw,eval,33--37 $\rightarrow$ 55--56,33--37,33--37,"[37, 35, 34, 34, 33]",matches
+3,table3.tex,19,ResNet-18 C100 Zoo,ed_raw,train,33--37 $\rightarrow$ 55--56,55--56,55--56,"[56, 55, 55, 56, 55]",matches
+3,table3.tex,20,ResNet-18 C10 Zoo,mmd_raw,eval,44--45 (3) $\rightarrow$ \textemdash,44--45(3),44--45(3),"[None, None, 44, 44, 45]",matches
+3,table3.tex,20,ResNet-18 C10 Zoo,mmd_raw,train,44--45 (3) $\rightarrow$ \textemdash,null,null,"[None, None, None, None, None]",matches
+3,table3.tex,20,ResNet-18 C10 Zoo,ed_raw,eval,39--41 $\rightarrow$ \textemdash,39--41,39--41,"[40, 41, 39, 39, 40]",matches
+3,table3.tex,20,ResNet-18 C10 Zoo,ed_raw,train,39--41 $\rightarrow$ \textemdash,null,null,"[None, None, None, None, None]",matches
+3,table3.tex,21,ResNet-50,mmd_raw,eval,63 $\rightarrow$ 121,63,63,[63],matches
+3,table3.tex,21,ResNet-50,mmd_raw,train,63 $\rightarrow$ 121,121,121,[121],matches
+3,table3.tex,21,ResNet-50,ed_raw,eval,62 $\rightarrow$ 121,62,62,[62],matches
+3,table3.tex,21,ResNet-50,ed_raw,train,62 $\rightarrow$ 121,121,121,[121],matches
+3,table3.tex,22,Phase Zoo bs8,mmd_raw,eval,150 $\rightarrow$ 150,150,150,[150],matches
+3,table3.tex,22,Phase Zoo bs8,mmd_raw,train,150 $\rightarrow$ 150,150,150,[150],matches
+3,table3.tex,22,Phase Zoo bs8,ed_raw,eval,150 $\rightarrow$ 150,150,150,[150],matches
+3,table3.tex,22,Phase Zoo bs8,ed_raw,train,150 $\rightarrow$ 150,150,150,[150],matches
+3,table3.tex,23,Phase Zoo bs128,mmd_raw,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+3,table3.tex,23,Phase Zoo bs128,mmd_raw,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+3,table3.tex,23,Phase Zoo bs128,ed_raw,eval,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+3,table3.tex,23,Phase Zoo bs128,ed_raw,train,$\leq$100 $\rightarrow$ $\leq$100,100,100,[100],matches
+3,table3.tex,24,"Phase Zoo bs1{,}024",mmd_raw,eval,$\leq$100 $\rightarrow$ 125,100,100,[100],matches
+3,table3.tex,24,"Phase Zoo bs1{,}024",mmd_raw,train,$\leq$100 $\rightarrow$ 125,125,125,[125],matches
+3,table3.tex,24,"Phase Zoo bs1{,}024",ed_raw,eval,$\leq$100 $\rightarrow$ 125,100,100,[100],matches
+3,table3.tex,24,"Phase Zoo bs1{,}024",ed_raw,train,$\leq$100 $\rightarrow$ 125,125,125,[125],matches
+3,table3.tex,25,SimCLR CIFAR-10 ,mmd_raw,eval,100 $\rightarrow$ 658,100,100,[100],matches
+3,table3.tex,25,SimCLR CIFAR-10 ,mmd_raw,train,100 $\rightarrow$ 658,658,658,[658],matches
+3,table3.tex,25,SimCLR CIFAR-10 ,ed_raw,eval,100 $\rightarrow$ 540,100,100,[100],matches
+3,table3.tex,25,SimCLR CIFAR-10 ,ed_raw,train,100 $\rightarrow$ 540,540,540,[540],matches
+3,table3.tex,26,SimCLR CIFAR-100 ,mmd_raw,eval,127 $\rightarrow$ 440,127,127,[127],matches
+3,table3.tex,26,SimCLR CIFAR-100 ,mmd_raw,train,127 $\rightarrow$ 440,440,440,[440],matches
+3,table3.tex,26,SimCLR CIFAR-100 ,ed_raw,eval,127 $\rightarrow$ 417,127,127,[127],matches
+3,table3.tex,26,SimCLR CIFAR-100 ,ed_raw,train,127 $\rightarrow$ 417,417,417,[417],matches
+3,table3.tex,29,A:,mmd_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,29,A:,mmd_raw,train,\textemdash,null,null,[None],matches
+3,table3.tex,29,A:,ed_raw,eval,43 $\rightarrow$ \textemdash,43,43,[43],matches
+3,table3.tex,29,A:,ed_raw,train,43 $\rightarrow$ \textemdash,null,null,[None],matches
+3,table3.tex,30,B:,mmd_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,30,B:,mmd_raw,train,\textemdash,null,null,[None],matches
+3,table3.tex,30,B:,ed_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,30,B:,ed_raw,train,\textemdash,null,null,[None],matches
+3,table3.tex,31,C:,mmd_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,31,C:,mmd_raw,train,\textemdash,null,null,[None],matches
+3,table3.tex,31,C:,ed_raw,eval,44 $\rightarrow$ \textemdash,44,44,[44],matches
+3,table3.tex,31,C:,ed_raw,train,44 $\rightarrow$ \textemdash,null,null,[None],matches
+3,table3.tex,32,D:,mmd_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,32,D:,mmd_raw,train,\textemdash,null,null,[None],matches
+3,table3.tex,32,D:,ed_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,32,D:,ed_raw,train,\textemdash,null,null,[None],matches
+3,table3.tex,35,5-layer CNN,mmd_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,35,5-layer CNN,ed_raw,eval,\textemdash,null,null,[None],matches
+3,table3.tex,36,DeepResNet50 simple,mmd_raw,eval,1 $\rightarrow$ \textemdash,1,1,[1],matches
+3,table3.tex,36,DeepResNet50 simple,mmd_raw,train,1 $\rightarrow$ \textemdash,null,null,[None],matches
+3,table3.tex,36,DeepResNet50 simple,ed_raw,eval,1 $\rightarrow$ \textemdash,1,1,[1],matches
+3,table3.tex,36,DeepResNet50 simple,ed_raw,train,1 $\rightarrow$ \textemdash,null,null,[None],matches
+3,table3.tex,37,DeepResNet50 adv.,mmd_raw,eval,5 $\rightarrow$ \textemdash,5,5,[5],matches
+3,table3.tex,37,DeepResNet50 adv.,mmd_raw,train,5 $\rightarrow$ \textemdash,null,null,[None],matches
+3,table3.tex,37,DeepResNet50 adv.,ed_raw,eval,1 $\rightarrow$ \textemdash,1,1,[1],matches
+3,table3.tex,37,DeepResNet50 adv.,ed_raw,train,1 $\rightarrow$ \textemdash,null,null,[None],matches

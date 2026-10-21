@@ -1,0 +1,473 @@
+table,file,line,model,tags,stat,mode,budget,paper,expected,from_final_csv,individual,independent_individual,note,status
+1,Table/table1.tex,18,ResNet20-FRN,v7,vrt,eval,10000,38,38,38,38,38,,matches
+1,Table/table1.tex,18,ResNet20-FRN,v7,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,18,ResNet20-FRN,v7,mmdagg,eval,5000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,18,ResNet20-FRN,v7,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,18,ResNet20-FRN,v7,ed,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,vrt,eval,10000,26--34,26--34,26--34,34;28;29;26;27,34;28;29;26;27,,matches
+1,Table/table1.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmd,eval,10000,43--45,43--45,43--45,45;43;45;43;45,45;43;45;43;45,,matches
+1,Table/table1.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmdagg,eval,5000,44--46,44--46,44--46,46;46;45;44;46,46;46;45;44;46,,matches
+1,Table/table1.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,c2st,eval,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+1,Table/table1.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,ed,eval,10000,43--45,43--45,43--45,45;43;45;43;45,45;43;45;43;45,,matches
+1,Table/table1.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,vrt,eval,10000,25--30,25--30,25--30,26;25;30;29;30,26;25;30;29;30,,matches
+1,Table/table1.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmd,eval,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+1,Table/table1.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmdagg,eval,5000,40--42,40--42,40--42,42;42;40;42;41,42;42;40;42;41,,matches
+1,Table/table1.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,c2st,eval,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+1,Table/table1.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,ed,eval,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+1,Table/table1.tex,21,ResNet-50,r50,vrt,eval,10000,61,61,61,61,61,,matches
+1,Table/table1.tex,21,ResNet-50,r50,mmd,eval,10000,73,73,73,73,73,,matches
+1,Table/table1.tex,21,ResNet-50,r50,mmdagg,eval,5000,80,80,80,80,80,,matches
+1,Table/table1.tex,21,ResNet-50,r50,c2st,eval,10000,121,121,121,121,121,,matches
+1,Table/table1.tex,21,ResNet-50,r50,ed,eval,10000,73,73,73,73,73,,matches
+1,Table/table1.tex,22,Phase Zoo bs8,phase_bs8,vrt,eval,10000,150,150,150,150,150,,matches
+1,Table/table1.tex,22,Phase Zoo bs8,phase_bs8,mmd,eval,10000,150,150,150,150,150,,matches
+1,Table/table1.tex,22,Phase Zoo bs8,phase_bs8,mmdagg,eval,5000,150,150,150,150,150,,matches
+1,Table/table1.tex,22,Phase Zoo bs8,phase_bs8,c2st,eval,10000,150,150,150,150,150,,matches
+1,Table/table1.tex,22,Phase Zoo bs8,phase_bs8,ed,eval,10000,150,150,150,150,150,,matches
+1,Table/table1.tex,23,Phase Zoo bs128,phase_bs128,vrt,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,23,Phase Zoo bs128,phase_bs128,mmd,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,23,Phase Zoo bs128,phase_bs128,mmdagg,eval,5000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,23,Phase Zoo bs128,phase_bs128,c2st,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,23,Phase Zoo bs128,phase_bs128,ed,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,vrt,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,mmd,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,mmdagg,eval,5000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,c2st,eval,10000,125,125,125,125,125,,matches
+1,Table/table1.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,ed,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+1,Table/table1.tex,25,SimCLR CIFAR-10 ,simclr_c10,vrt,eval,10000,229,229,229,229,229,,matches
+1,Table/table1.tex,25,SimCLR CIFAR-10 ,simclr_c10,mmd,eval,10000,284,284,284,284,284,,matches
+1,Table/table1.tex,25,SimCLR CIFAR-10 ,simclr_c10,mmdagg,eval,5000,483,483,483,483,483,,matches
+1,Table/table1.tex,25,SimCLR CIFAR-10 ,simclr_c10,c2st,eval,10000,691,691,691,691,691,,matches
+1,Table/table1.tex,25,SimCLR CIFAR-10 ,simclr_c10,ed,eval,10000,283,283,283,283,283,,matches
+1,Table/table1.tex,26,SimCLR CIFAR-100 ,simclr_c100,vrt,eval,10000,191,191,191,191,191,,matches
+1,Table/table1.tex,26,SimCLR CIFAR-100 ,simclr_c100,mmd,eval,10000,213,213,213,213,213,,matches
+1,Table/table1.tex,26,SimCLR CIFAR-100 ,simclr_c100,mmdagg,eval,5000,348,348,348,348,348,,matches
+1,Table/table1.tex,26,SimCLR CIFAR-100 ,simclr_c100,c2st,eval,10000,653,653,653,653,653,,matches
+1,Table/table1.tex,26,SimCLR CIFAR-100 ,simclr_c100,ed,eval,10000,213,213,213,213,213,,matches
+1,Table/table1.tex,29,A:,ablA,vrt,eval,10000,33,33,33,33,33,,matches
+1,Table/table1.tex,29,A:,ablA,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,29,A:,ablA,mmdagg,eval,5000,42,42,42,42,42,,matches
+1,Table/table1.tex,29,A:,ablA,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,29,A:,ablA,ed,eval,10000,44,44,44,44,44,,matches
+1,Table/table1.tex,30,B:,ablB,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,30,B:,ablB,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,30,B:,ablB,mmdagg,eval,5000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,30,B:,ablB,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,30,B:,ablB,ed,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,31,C:,ablC,vrt,eval,10000,35,35,35,35,35,,matches
+1,Table/table1.tex,31,C:,ablC,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,31,C:,ablC,mmdagg,eval,5000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,31,C:,ablC,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,31,C:,ablC,ed,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,32,D:,ablD,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,32,D:,ablD,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,32,D:,ablD,mmdagg,eval,5000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,32,D:,ablD,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,32,D:,ablD,ed,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,35,5-layer CNN,wp,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,35,5-layer CNN,wp,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,35,5-layer CNN,wp,mmdagg,eval,5000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,35,5-layer CNN,wp,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,35,5-layer CNN,wp,ed,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,36,DeepResNet50 simple,imgnet_simple,vrt,eval,10000,$*$,null,null,null,null,,matches
+1,Table/table1.tex,36,DeepResNet50 simple,imgnet_simple,mmd,eval,10000,BN,BN,1,1,1,"BN annotation: eval detects, train null; numeric epoch separately checked in Table 2",matches
+1,Table/table1.tex,36,DeepResNet50 simple,imgnet_simple,mmdagg,eval,5000,5,5,5,5,5,,matches
+1,Table/table1.tex,36,DeepResNet50 simple,imgnet_simple,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,36,DeepResNet50 simple,imgnet_simple,ed,eval,10000,BN,BN,1,1,1,"BN annotation: eval detects, train null; numeric epoch separately checked in Table 2",matches
+1,Table/table1.tex,37,DeepResNet50 adv.,imgnet_adv,vrt,eval,10000,$*$,null,null,null,null,,matches
+1,Table/table1.tex,37,DeepResNet50 adv.,imgnet_adv,mmd,eval,10000,BN,BN,1,1,1,"BN annotation: eval detects, train null; numeric epoch separately checked in Table 2",matches
+1,Table/table1.tex,37,DeepResNet50 adv.,imgnet_adv,mmdagg,eval,5000,20,20,20,20,20,,matches
+1,Table/table1.tex,37,DeepResNet50 adv.,imgnet_adv,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+1,Table/table1.tex,37,DeepResNet50 adv.,imgnet_adv,ed,eval,10000,BN,BN,1,1,1,"BN annotation: eval detects, train null; numeric epoch separately checked in Table 2",matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,vrt,eval,10000,26--34,26--34,26--34,34;28;29;26;27,34;28;29;26;27,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,vrt,train,10000,20--26,20--26,20--26,22;20;26;22;22,22;20;26;22;22,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmd,eval,10000,43--45,43--45,43--45,45;43;45;43;45,45;43;45;43;45,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmd,train,10000,55--56,55--56,55--56,56;55;55;55;55,56;55;55;55;55,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmdagg,eval,5000,44--46,44--46,44--46,46;46;45;44;46,46;46;45;44;46,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmdagg,train,5000,52,52,52,52;52;52;52;52,52;52;52;52;52,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,c2st,eval,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,c2st,train,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,ed,eval,10000,43--45,43--45,43--45,45;43;45;43;45,45;43;45;43;45,,matches
+2,Table/table2.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,ed,train,10000,54--55,54--55,54--55,55;54;55;54;54,55;54;55;54;54,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,vrt,eval,10000,25--30,25--30,25--30,26;25;30;29;30,26;25;30;29;30,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,vrt,train,10000,26--32,26--32,26--32,26;32;30;29;30,26;32;30;29;30,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmd,eval,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmd,train,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmdagg,eval,5000,40--42,40--42,40--42,42;42;40;42;41,42;42;40;42;41,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmdagg,train,5000,42--48 (3),42--48(3),42--48(3),48;null;42;46;null,48;null;42;46;null,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,c2st,eval,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,c2st,train,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,ed,eval,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+2,Table/table2.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,ed,train,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+2,Table/table2.tex,21,ResNet-50,r50,vrt,eval,10000,61,61,61,61,61,,matches
+2,Table/table2.tex,21,ResNet-50,r50,vrt,train,10000,61,61,61,61,61,,matches
+2,Table/table2.tex,21,ResNet-50,r50,mmd,eval,10000,73,73,73,73,73,,matches
+2,Table/table2.tex,21,ResNet-50,r50,mmd,train,10000,121,121,121,121,121,,matches
+2,Table/table2.tex,21,ResNet-50,r50,mmdagg,eval,5000,80,80,80,80,80,,matches
+2,Table/table2.tex,21,ResNet-50,r50,mmdagg,train,5000,121,121,121,121,121,,matches
+2,Table/table2.tex,21,ResNet-50,r50,c2st,eval,10000,121,121,121,121,121,,matches
+2,Table/table2.tex,21,ResNet-50,r50,c2st,train,10000,130,130,130,130,130,,matches
+2,Table/table2.tex,21,ResNet-50,r50,ed,eval,10000,73,73,73,73,73,,matches
+2,Table/table2.tex,21,ResNet-50,r50,ed,train,10000,121,121,121,121,121,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,vrt,eval,10000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,vrt,train,10000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,mmd,eval,10000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,mmd,train,10000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,mmdagg,eval,5000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,mmdagg,train,5000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,c2st,eval,10000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,c2st,train,10000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,ed,eval,10000,150,150,150,150,150,,matches
+2,Table/table2.tex,22,Phase Zoo bs8,phase_bs8,ed,train,10000,150,150,150,150,150,,matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,vrt,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,vrt,train,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,mmd,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,mmd,train,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,mmdagg,eval,5000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,mmdagg,train,5000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,c2st,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,c2st,train,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,ed,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,23,Phase Zoo bs128,phase_bs128,ed,train,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,vrt,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,vrt,train,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,mmd,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,mmd,train,10000,125,125,125,125,125,,matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,mmdagg,eval,5000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,mmdagg,train,5000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,c2st,eval,10000,125,125,125,125,125,,matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,c2st,train,10000,125,125,125,125,125,,matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,ed,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+2,Table/table2.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,ed,train,10000,125,125,125,125,125,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,vrt,eval,10000,229,229,229,229,229,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,vrt,train,10000,527,527,527,527,527,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,mmd,eval,10000,284,284,284,284,284,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,mmd,train,10000,692,692,692,692,692,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,mmdagg,eval,5000,483,483,483,483,483,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,mmdagg,train,5000,632,632,632,632,632,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,c2st,eval,10000,691,691,691,691,691,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,c2st,train,10000,764,764,764,764,764,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,ed,eval,10000,283,283,283,283,283,,matches
+2,Table/table2.tex,25,SimCLR CIFAR-10 ,simclr_c10,ed,train,10000,687,687,687,687,687,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,vrt,eval,10000,191,191,191,191,191,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,vrt,train,10000,324,324,324,324,324,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,mmd,eval,10000,213,213,213,213,213,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,mmd,train,10000,583,583,583,583,583,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,mmdagg,eval,5000,348,348,348,348,348,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,mmdagg,train,5000,495,495,495,495,495,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,c2st,eval,10000,653,653,653,653,653,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,c2st,train,10000,744,744,744,744,744,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,ed,eval,10000,213,213,213,213,213,,matches
+2,Table/table2.tex,26,SimCLR CIFAR-100 ,simclr_c100,ed,train,10000,583,583,583,583,583,,matches
+2,Table/table2.tex,29,A:,ablA,vrt,eval,10000,33,33,33,33,33,,matches
+2,Table/table2.tex,29,A:,ablA,vrt,train,10000,31,31,31,31,31,,matches
+2,Table/table2.tex,29,A:,ablA,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,29,A:,ablA,mmd,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,29,A:,ablA,mmdagg,eval,5000,42,42,42,42,42,,matches
+2,Table/table2.tex,29,A:,ablA,mmdagg,train,5000,44,44,44,44,44,,matches
+2,Table/table2.tex,29,A:,ablA,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,29,A:,ablA,c2st,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,29,A:,ablA,ed,eval,10000,44,44,44,44,44,,matches
+2,Table/table2.tex,29,A:,ablA,ed,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,vrt,eval,10000,\textemdash\,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,vrt,train,10000,48,48,48,48,48,,matches
+2,Table/table2.tex,30,B:,ablB,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,mmd,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,mmdagg,eval,5000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,mmdagg,train,5000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,c2st,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,ed,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,30,B:,ablB,ed,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,31,C:,ablC,vrt,eval,10000,35,35,35,35,35,,matches
+2,Table/table2.tex,31,C:,ablC,vrt,train,10000,35,35,35,35,35,,matches
+2,Table/table2.tex,31,C:,ablC,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,31,C:,ablC,mmd,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,31,C:,ablC,mmdagg,eval,5000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,31,C:,ablC,mmdagg,train,5000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,31,C:,ablC,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,31,C:,ablC,c2st,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,31,C:,ablC,ed,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,31,C:,ablC,ed,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,vrt,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,mmd,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,mmd,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,mmdagg,eval,5000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,mmdagg,train,5000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,c2st,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,ed,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,32,D:,ablD,ed,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,vrt,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,mmd,eval,10000,1,1,1,1,1,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,mmd,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,mmdagg,eval,5000,5,5,5,5,5,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,mmdagg,train,5000,50,50,50,50,50,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,c2st,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,ed,eval,10000,1,1,1,1,1,,matches
+2,Table/table2.tex,35,DeepResNet50 simple,imgnet_simple,ed,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,vrt,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,mmd,eval,10000,1,1,1,1,1,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,mmd,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,mmdagg,eval,5000,20,20,20,20,20,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,mmdagg,train,5000,20,20,20,20,20,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,c2st,eval,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,c2st,train,10000,\textemdash,null,null,null,null,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,ed,eval,10000,1,1,1,1,1,,matches
+2,Table/table2.tex,36,DeepResNet50 adv.,imgnet_adv,ed,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,18,ResNet20-FRN,v7,mmd_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,18,ResNet20-FRN,v7,ed_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmd_raw,eval,10000,33--39,33--39,33--39,39;35;33;34;33,39;35;33;34;33,,matches
+3,Table/table3.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmd_raw,train,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+3,Table/table3.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,ed_raw,eval,10000,33--37,33--37,33--37,37;35;34;34;33,37;35;34;34;33,,matches
+3,Table/table3.tex,19,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,ed_raw,train,10000,55--56,55--56,55--56,56;55;55;56;55,56;55;55;56;55,,matches
+3,Table/table3.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmd_raw,eval,10000,44--45 (3),44--45(3),44--45(3),null;null;44;44;45,null;null;44;44;45,,matches
+3,Table/table3.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmd_raw,train,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+3,Table/table3.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,ed_raw,eval,10000,39--41,39--41,39--41,40;41;39;39;40,40;41;39;39;40,,matches
+3,Table/table3.tex,20,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,ed_raw,train,10000,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+3,Table/table3.tex,21,ResNet-50,r50,mmd_raw,eval,10000,63,63,63,63,63,,matches
+3,Table/table3.tex,21,ResNet-50,r50,mmd_raw,train,10000,121,121,121,121,121,,matches
+3,Table/table3.tex,21,ResNet-50,r50,ed_raw,eval,10000,62,62,62,62,62,,matches
+3,Table/table3.tex,21,ResNet-50,r50,ed_raw,train,10000,121,121,121,121,121,,matches
+3,Table/table3.tex,22,Phase Zoo bs8,phase_bs8,mmd_raw,eval,10000,150,150,150,150,150,,matches
+3,Table/table3.tex,22,Phase Zoo bs8,phase_bs8,mmd_raw,train,10000,150,150,150,150,150,,matches
+3,Table/table3.tex,22,Phase Zoo bs8,phase_bs8,ed_raw,eval,10000,150,150,150,150,150,,matches
+3,Table/table3.tex,22,Phase Zoo bs8,phase_bs8,ed_raw,train,10000,150,150,150,150,150,,matches
+3,Table/table3.tex,23,Phase Zoo bs128,phase_bs128,mmd_raw,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+3,Table/table3.tex,23,Phase Zoo bs128,phase_bs128,mmd_raw,train,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+3,Table/table3.tex,23,Phase Zoo bs128,phase_bs128,ed_raw,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+3,Table/table3.tex,23,Phase Zoo bs128,phase_bs128,ed_raw,train,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+3,Table/table3.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,mmd_raw,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+3,Table/table3.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,mmd_raw,train,10000,125,125,125,125,125,,matches
+3,Table/table3.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,ed_raw,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+3,Table/table3.tex,24,"Phase Zoo bs1{,}024",phase_bs1024,ed_raw,train,10000,125,125,125,125,125,,matches
+3,Table/table3.tex,25,SimCLR CIFAR-10 ,simclr_c10,mmd_raw,eval,10000,100,100,100,100,100,,matches
+3,Table/table3.tex,25,SimCLR CIFAR-10 ,simclr_c10,mmd_raw,train,10000,658,658,658,658,658,,matches
+3,Table/table3.tex,25,SimCLR CIFAR-10 ,simclr_c10,ed_raw,eval,10000,100,100,100,100,100,,matches
+3,Table/table3.tex,25,SimCLR CIFAR-10 ,simclr_c10,ed_raw,train,10000,540,540,540,540,540,,matches
+3,Table/table3.tex,26,SimCLR CIFAR-100 ,simclr_c100,mmd_raw,eval,10000,127,127,127,127,127,,matches
+3,Table/table3.tex,26,SimCLR CIFAR-100 ,simclr_c100,mmd_raw,train,10000,440,440,440,440,440,,matches
+3,Table/table3.tex,26,SimCLR CIFAR-100 ,simclr_c100,ed_raw,eval,10000,127,127,127,127,127,,matches
+3,Table/table3.tex,26,SimCLR CIFAR-100 ,simclr_c100,ed_raw,train,10000,417,417,417,417,417,,matches
+3,Table/table3.tex,29,A:,ablA,mmd_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,29,A:,ablA,mmd_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,29,A:,ablA,ed_raw,eval,10000,43,43,43,43,43,,matches
+3,Table/table3.tex,29,A:,ablA,ed_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,30,B:,ablB,mmd_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,30,B:,ablB,mmd_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,30,B:,ablB,ed_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,30,B:,ablB,ed_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,31,C:,ablC,mmd_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,31,C:,ablC,mmd_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,31,C:,ablC,ed_raw,eval,10000,44,44,44,44,44,,matches
+3,Table/table3.tex,31,C:,ablC,ed_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,32,D:,ablD,mmd_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,32,D:,ablD,mmd_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,32,D:,ablD,ed_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,32,D:,ablD,ed_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,35,5-layer CNN,wp,mmd_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,35,5-layer CNN,wp,ed_raw,eval,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,36,DeepResNet50 simple,imgnet_simple,mmd_raw,eval,10000,1,1,1,1,1,,matches
+3,Table/table3.tex,36,DeepResNet50 simple,imgnet_simple,mmd_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,36,DeepResNet50 simple,imgnet_simple,ed_raw,eval,10000,1,1,1,1,1,,matches
+3,Table/table3.tex,36,DeepResNet50 simple,imgnet_simple,ed_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,37,DeepResNet50 adv.,imgnet_adv,mmd_raw,eval,10000,5,5,5,5,5,,matches
+3,Table/table3.tex,37,DeepResNet50 adv.,imgnet_adv,mmd_raw,train,10000,\textemdash,null,null,null,null,,matches
+3,Table/table3.tex,37,DeepResNet50 adv.,imgnet_adv,ed_raw,eval,10000,1,1,1,1,1,,matches
+3,Table/table3.tex,37,DeepResNet50 adv.,imgnet_adv,ed_raw,train,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,877,ResNet20-FRN,v7,schilling,eval,10000,118,118,118,118,118,,matches
+knn,main.tex,877,ResNet20-FRN,v7,henze,eval,10000,118,118,118,118,118,,matches
+knn,main.tex,877,ResNet20-FRN,v7,vrt,eval,10000,38,38,38,38,38,,matches
+knn,main.tex,877,ResNet20-FRN,v7,vrt_rev,eval,10000,41,41,41,41,41,,matches
+knn,main.tex,878,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,schilling,eval,10000,43--46,43--46,43--46,46;43;44;46;44,46;43;44;46;44,,matches
+knn,main.tex,878,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,henze,eval,10000,43--46,43--46,43--46,46;43;44;46;44,46;43;44;46;44,,matches
+knn,main.tex,878,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,vrt,eval,10000,26--34,26--34,26--34,34;28;29;26;27,34;28;29;26;27,,matches
+knn,main.tex,878,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,vrt_rev,eval,10000,26--34,26--34,26--34,34;29;29;26;28,34;29;29;26;28,,matches
+knn,main.tex,879,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,schilling,eval,10000,35--38,35--38,35--38,35;35;35;35;38,35;35;35;35;38,,matches
+knn,main.tex,879,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,henze,eval,10000,35--38,35--38,35--38,35;35;35;35;38,35;35;35;35;38,,matches
+knn,main.tex,879,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,vrt,eval,10000,25--30,25--30,25--30,26;25;30;29;30,26;25;30;29;30,,matches
+knn,main.tex,879,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,vrt_rev,eval,10000,27--34,27--34,27--34,27;31;34;29;30,27;31;34;29;30,,matches
+knn,main.tex,880,ResNet-50,r50,schilling,eval,10000,81,81,81,81,81,,matches
+knn,main.tex,880,ResNet-50,r50,henze,eval,10000,81,81,81,81,81,,matches
+knn,main.tex,880,ResNet-50,r50,vrt,eval,10000,61,61,61,61,61,,matches
+knn,main.tex,880,ResNet-50,r50,vrt_rev,eval,10000,61,61,61,61,61,,matches
+knn,main.tex,881,Phase Zoo bs8,phase_bs8,schilling,eval,10000,150,150,150,150,150,,matches
+knn,main.tex,881,Phase Zoo bs8,phase_bs8,henze,eval,10000,150,150,150,150,150,,matches
+knn,main.tex,881,Phase Zoo bs8,phase_bs8,vrt,eval,10000,150,150,150,150,150,,matches
+knn,main.tex,881,Phase Zoo bs8,phase_bs8,vrt_rev,eval,10000,150,150,150,150,150,,matches
+knn,main.tex,882,Phase Zoo bs128,phase_bs128,schilling,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+knn,main.tex,882,Phase Zoo bs128,phase_bs128,henze,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+knn,main.tex,882,Phase Zoo bs128,phase_bs128,vrt,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+knn,main.tex,882,Phase Zoo bs128,phase_bs128,vrt_rev,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+knn,main.tex,883,"Phase Zoo bs1{,}024",phase_bs1024,schilling,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+knn,main.tex,883,"Phase Zoo bs1{,}024",phase_bs1024,henze,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+knn,main.tex,883,"Phase Zoo bs1{,}024",phase_bs1024,vrt,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+knn,main.tex,883,"Phase Zoo bs1{,}024",phase_bs1024,vrt_rev,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+knn,main.tex,884,SimCLR CIFAR-10 ,simclr_c10,schilling,eval,10000,487,487,487,487,487,,matches
+knn,main.tex,884,SimCLR CIFAR-10 ,simclr_c10,henze,eval,10000,487,487,487,487,487,,matches
+knn,main.tex,884,SimCLR CIFAR-10 ,simclr_c10,vrt,eval,10000,229,229,229,229,229,,matches
+knn,main.tex,884,SimCLR CIFAR-10 ,simclr_c10,vrt_rev,eval,10000,256,256,256,256,256,,matches
+knn,main.tex,885,SimCLR CIFAR-100 ,simclr_c100,schilling,eval,10000,484,484,484,484,484,,matches
+knn,main.tex,885,SimCLR CIFAR-100 ,simclr_c100,henze,eval,10000,500,500,500,500,500,,matches
+knn,main.tex,885,SimCLR CIFAR-100 ,simclr_c100,vrt,eval,10000,191,191,191,191,191,,matches
+knn,main.tex,885,SimCLR CIFAR-100 ,simclr_c100,vrt_rev,eval,10000,238,238,238,238,238,,matches
+knn,main.tex,888,A:,ablA,schilling,eval,10000,41,41,41,41,41,,matches
+knn,main.tex,888,A:,ablA,henze,eval,10000,41,41,41,41,41,,matches
+knn,main.tex,888,A:,ablA,vrt,eval,10000,33,33,33,33,33,,matches
+knn,main.tex,888,A:,ablA,vrt_rev,eval,10000,33,33,33,33,33,,matches
+knn,main.tex,889,B:,ablB,schilling,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,889,B:,ablB,henze,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,889,B:,ablB,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,889,B:,ablB,vrt_rev,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,890,C:,ablC,schilling,eval,10000,45,45,45,45,45,,matches
+knn,main.tex,890,C:,ablC,henze,eval,10000,45,45,45,45,45,,matches
+knn,main.tex,890,C:,ablC,vrt,eval,10000,35,35,35,35,35,,matches
+knn,main.tex,890,C:,ablC,vrt_rev,eval,10000,35,35,35,35,35,,matches
+knn,main.tex,891,D:,ablD,schilling,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,891,D:,ablD,henze,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,891,D:,ablD,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,891,D:,ablD,vrt_rev,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,894,5-layer CNN,wp,schilling,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,894,5-layer CNN,wp,henze,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,894,5-layer CNN,wp,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,894,5-layer CNN,wp,vrt_rev,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,895,ImageNet simple,imgnet_simple,schilling,eval,10000,1,1,1,1,1,,matches
+knn,main.tex,895,ImageNet simple,imgnet_simple,henze,eval,10000,1,1,1,1,1,,matches
+knn,main.tex,895,ImageNet simple,imgnet_simple,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,895,ImageNet simple,imgnet_simple,vrt_rev,eval,10000,20,20,20,20,20,,matches
+knn,main.tex,896,ImageNet advanced,imgnet_adv,schilling,eval,10000,20,20,20,20,20,,matches
+knn,main.tex,896,ImageNet advanced,imgnet_adv,henze,eval,10000,20,20,20,20,20,,matches
+knn,main.tex,896,ImageNet advanced,imgnet_adv,vrt,eval,10000,\textemdash,null,null,null,null,,matches
+knn,main.tex,896,ImageNet advanced,imgnet_adv,vrt_rev,eval,10000,200,200,200,200,200,,matches
+small_budget,main.tex,1188,ResNet20-FRN,v7,vrt,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1188,ResNet20-FRN,v7,mmd,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1188,ResNet20-FRN,v7,mmdagg,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1188,ResNet20-FRN,v7,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1188,ResNet20-FRN,v7,ed,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1189,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,vrt,eval,1500,43 to 46,43--46,43--46,44;44;45;46;43,44;44;45;46;43,,matches
+small_budget,main.tex,1189,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmd,eval,1500,52 to 53,52--53,52--53,52;53;53;53;53,52;53;53;53;53,,matches
+small_budget,main.tex,1189,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,mmdagg,eval,1500,50 to 51,50--51,50--51,51;51;50;50;51,51;51;50;50;51,,matches
+small_budget,main.tex,1189,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,c2st,eval,1500,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+small_budget,main.tex,1189,ResNet-18 C100 Zoo,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,ed,eval,1500,52 to 53,52--53,52--53,52;52;53;53;53,52;52;53;53;53,,matches
+small_budget,main.tex,1190,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,vrt,eval,1500,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+small_budget,main.tex,1190,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmd,eval,1500,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+small_budget,main.tex,1190,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,mmdagg,eval,1500,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+small_budget,main.tex,1190,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,c2st,eval,1500,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+small_budget,main.tex,1190,ResNet-18 C10 Zoo,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,ed,eval,1500,\textemdash,null,null,null;null;null;null;null,null;null;null;null;null,,matches
+small_budget,main.tex,1191,ResNet-50,r50,vrt,eval,1500,86,86,86,86,86,,matches
+small_budget,main.tex,1191,ResNet-50,r50,mmd,eval,1500,121,121,121,121,121,,matches
+small_budget,main.tex,1191,ResNet-50,r50,mmdagg,eval,1500,121,121,121,121,121,,matches
+small_budget,main.tex,1191,ResNet-50,r50,c2st,eval,1500,196,196,196,196,196,,matches
+small_budget,main.tex,1191,ResNet-50,r50,ed,eval,1500,121,121,121,121,121,,matches
+small_budget,main.tex,1192,Phase Zoo bs8,phase_bs8,vrt,eval,1500,150,150,150,150,150,,matches
+small_budget,main.tex,1192,Phase Zoo bs8,phase_bs8,mmd,eval,1500,150,150,150,150,150,,matches
+small_budget,main.tex,1192,Phase Zoo bs8,phase_bs8,mmdagg,eval,1500,150,150,150,150,150,,matches
+small_budget,main.tex,1192,Phase Zoo bs8,phase_bs8,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1192,Phase Zoo bs8,phase_bs8,ed,eval,1500,150,150,150,150,150,,matches
+small_budget,main.tex,1193,Phase Zoo bs128,phase_bs128,vrt,eval,1500,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+small_budget,main.tex,1193,Phase Zoo bs128,phase_bs128,mmd,eval,1500,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+small_budget,main.tex,1193,Phase Zoo bs128,phase_bs128,mmdagg,eval,1500,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+small_budget,main.tex,1193,Phase Zoo bs128,phase_bs128,c2st,eval,1500,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+small_budget,main.tex,1193,Phase Zoo bs128,phase_bs128,ed,eval,1500,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+small_budget,main.tex,1194,"Phase Zoo bs1{,}024",phase_bs1024,vrt,eval,1500,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+small_budget,main.tex,1194,"Phase Zoo bs1{,}024",phase_bs1024,mmd,eval,1500,125,125,125,125,125,,matches
+small_budget,main.tex,1194,"Phase Zoo bs1{,}024",phase_bs1024,mmdagg,eval,1500,125,125,125,125,125,,matches
+small_budget,main.tex,1194,"Phase Zoo bs1{,}024",phase_bs1024,c2st,eval,1500,125,125,125,125,125,,matches
+small_budget,main.tex,1194,"Phase Zoo bs1{,}024",phase_bs1024,ed,eval,1500,125,125,125,125,125,,matches
+small_budget,main.tex,1195,SimCLR CIFAR-10 ,simclr_c10,vrt,eval,1500,689,689,689,689,689,,matches
+small_budget,main.tex,1195,SimCLR CIFAR-10 ,simclr_c10,mmd,eval,1500,675,675,675,675,675,,matches
+small_budget,main.tex,1195,SimCLR CIFAR-10 ,simclr_c10,mmdagg,eval,1500,713,713,713,713,713,,matches
+small_budget,main.tex,1195,SimCLR CIFAR-10 ,simclr_c10,c2st,eval,1500,810,810,810,810,810,,matches
+small_budget,main.tex,1195,SimCLR CIFAR-10 ,simclr_c10,ed,eval,1500,679,679,679,679,679,,matches
+small_budget,main.tex,1196,SimCLR CIFAR-100 ,simclr_c100,vrt,eval,1500,465,465,465,465,465,,matches
+small_budget,main.tex,1196,SimCLR CIFAR-100 ,simclr_c100,mmd,eval,1500,504,504,504,504,504,,matches
+small_budget,main.tex,1196,SimCLR CIFAR-100 ,simclr_c100,mmdagg,eval,1500,581,581,581,581,581,,matches
+small_budget,main.tex,1196,SimCLR CIFAR-100 ,simclr_c100,c2st,eval,1500,741,741,741,741,741,,matches
+small_budget,main.tex,1196,SimCLR CIFAR-100 ,simclr_c100,ed,eval,1500,504,504,504,504,504,,matches
+small_budget,main.tex,1199,A:,ablA,vrt,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1199,A:,ablA,mmd,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1199,A:,ablA,mmdagg,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1199,A:,ablA,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1199,A:,ablA,ed,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1200,B:,ablB,vrt,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1200,B:,ablB,mmd,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1200,B:,ablB,mmdagg,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1200,B:,ablB,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1200,B:,ablB,ed,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1201,C:,ablC,vrt,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1201,C:,ablC,mmd,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1201,C:,ablC,mmdagg,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1201,C:,ablC,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1201,C:,ablC,ed,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1202,D:,ablD,vrt,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1202,D:,ablD,mmd,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1202,D:,ablD,mmdagg,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1202,D:,ablD,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1202,D:,ablD,ed,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1205,5-layer CNN,wp,vrt,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1205,5-layer CNN,wp,mmd,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1205,5-layer CNN,wp,mmdagg,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1205,5-layer CNN,wp,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1205,5-layer CNN,wp,ed,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1206,DeepResNet50 simple,imgnet_simple,vrt,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1206,DeepResNet50 simple,imgnet_simple,mmd,eval,1500,150,150,150,150,150,,matches
+small_budget,main.tex,1206,DeepResNet50 simple,imgnet_simple,mmdagg,eval,1500,150,150,150,150,150,,matches
+small_budget,main.tex,1206,DeepResNet50 simple,imgnet_simple,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1206,DeepResNet50 simple,imgnet_simple,ed,eval,1500,150,150,150,150,150,,matches
+small_budget,main.tex,1207,DeepResNet50 adv.,imgnet_adv,vrt,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1207,DeepResNet50 adv.,imgnet_adv,mmd,eval,1500,20,20,20,20,20,,matches
+small_budget,main.tex,1207,DeepResNet50 adv.,imgnet_adv,mmdagg,eval,1500,20,20,20,20,20,,matches
+small_budget,main.tex,1207,DeepResNet50 adv.,imgnet_adv,c2st,eval,1500,\textemdash,null,null,null,null,,matches
+small_budget,main.tex,1207,DeepResNet50 adv.,imgnet_adv,ed,eval,1500,20,20,20,20,20,,matches
+reversed,main.tex,1310,ResNet20-FRN,v7,vrt,eval,10000,38,38,38,38,38,,matches
+reversed,main.tex,1310,ResNet20-FRN,v7,vrt_rev,eval,10000,41,41,41,41,41,,matches
+reversed,main.tex,1310,ResNet20-FRN,v7,reversed_gap,eval,10000,$+3$,+3,+3,3,3,,matches
+reversed,main.tex,1311,ResNet-50,r50,vrt,eval,10000,61,61,61,61,61,,matches
+reversed,main.tex,1311,ResNet-50,r50,vrt_rev,eval,10000,61,61,61,61,61,,matches
+reversed,main.tex,1311,ResNet-50,r50,reversed_gap,eval,10000,$+0$,+0,+0,0,0,,matches
+reversed,main.tex,1312,Zoo CIFAR-100,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,vrt,eval,10000,26--34,26--34,26--34,34;28;29;26;27,34;28;29;26;27,,matches
+reversed,main.tex,1312,Zoo CIFAR-100,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,vrt_rev,eval,10000,26--34,26--34,26--34,34;29;29;26;28,34;29;29;26;28,,matches
+reversed,main.tex,1312,Zoo CIFAR-100,zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,reversed_gap,eval,10000,$+0$ to $+1$,+0--+1,+0--+1,0;1;0;0;1,0;1;0;0;1,,matches
+reversed,main.tex,1313,Zoo CIFAR-10,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,vrt,eval,10000,25--30,25--30,25--30,26;25;30;29;30,26;25;30;29;30,,matches
+reversed,main.tex,1313,Zoo CIFAR-10,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,vrt_rev,eval,10000,27--34,27--34,27--34,27;31;34;29;30,27;31;34;29;30,,matches
+reversed,main.tex,1313,Zoo CIFAR-10,zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,reversed_gap,eval,10000,$+0$ to $+6$,+0--+6,+0--+6,1;6;4;0;0,1;6;4;0;0,,matches
+reversed,main.tex,1314,Phase Zoo bs8,phase_bs8,vrt,eval,10000,150,150,150,150,150,,matches
+reversed,main.tex,1314,Phase Zoo bs8,phase_bs8,vrt_rev,eval,10000,150,150,150,150,150,,matches
+reversed,main.tex,1314,Phase Zoo bs8,phase_bs8,reversed_gap,eval,10000,$+0$,+0,+0,0,0,,matches
+reversed,main.tex,1315,Phase Zoo bs128,phase_bs128,vrt,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+reversed,main.tex,1315,Phase Zoo bs128,phase_bs128,vrt_rev,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+reversed,main.tex,1315,Phase Zoo bs128,phase_bs128,reversed_gap,eval,10000,$+0$,+0,+0,0,0,,matches
+reversed,main.tex,1316,"Phase Zoo bs1{,}024",phase_bs1024,vrt,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+reversed,main.tex,1316,"Phase Zoo bs1{,}024",phase_bs1024,vrt_rev,eval,10000,$\leq$100,100,100,100,100,"<= denotes earliest saved checkpoint, verified against independent checkpoint grid",matches
+reversed,main.tex,1316,"Phase Zoo bs1{,}024",phase_bs1024,reversed_gap,eval,10000,$+0$,+0,+0,0,0,,matches
+reversed,main.tex,1317,SimCLR CIFAR-10 ,simclr_c10,vrt,eval,10000,229,229,229,229,229,,matches
+reversed,main.tex,1317,SimCLR CIFAR-10 ,simclr_c10,vrt_rev,eval,10000,256,256,256,256,256,,matches
+reversed,main.tex,1317,SimCLR CIFAR-10 ,simclr_c10,reversed_gap,eval,10000,$+27$,+27,+27,27,27,,matches
+reversed,main.tex,1318,SimCLR CIFAR-100 ,simclr_c100,vrt,eval,10000,191,191,191,191,191,,matches
+reversed,main.tex,1318,SimCLR CIFAR-100 ,simclr_c100,vrt_rev,eval,10000,238,238,238,238,238,,matches
+reversed,main.tex,1318,SimCLR CIFAR-100 ,simclr_c100,reversed_gap,eval,10000,$+47$,+47,+47,47,47,,matches
+reversed,main.tex,1321,A:,ablA,vrt,eval,10000,33,33,33,33,33,,matches
+reversed,main.tex,1321,A:,ablA,vrt_rev,eval,10000,33,33,33,33,33,,matches
+reversed,main.tex,1321,A:,ablA,reversed_gap,eval,10000,$+0$,+0,+0,0,0,,matches
+reversed,main.tex,1322,B:,ablB,vrt,eval,10000,null,null,null,null,null,,matches
+reversed,main.tex,1322,B:,ablB,vrt_rev,eval,10000,null,null,null,null,null,,matches
+reversed,main.tex,1322,B:,ablB,reversed_gap,eval,10000,---,null,null,null,null,,matches
+reversed,main.tex,1323,C:,ablC,vrt,eval,10000,35,35,35,35,35,,matches
+reversed,main.tex,1323,C:,ablC,vrt_rev,eval,10000,35,35,35,35,35,,matches
+reversed,main.tex,1323,C:,ablC,reversed_gap,eval,10000,$+0$,+0,+0,0,0,,matches
+reversed,main.tex,1324,D:,ablD,vrt,eval,10000,null,null,null,null,null,,matches
+reversed,main.tex,1324,D:,ablD,vrt_rev,eval,10000,null,null,null,null,null,,matches
+reversed,main.tex,1324,D:,ablD,reversed_gap,eval,10000,---,null,null,null,null,,matches
+reversed,main.tex,1327,WildPark,wp,vrt,eval,10000,null,null,null,null,null,,matches
+reversed,main.tex,1327,WildPark,wp,vrt_rev,eval,10000,null,null,null,null,null,,matches
+reversed,main.tex,1327,WildPark,wp,reversed_gap,eval,10000,---,null,null,null,null,,matches
+reversed,main.tex,1328,ImageNet simple,imgnet_simple,vrt,eval,10000,null,null,null,null,null,,matches
+reversed,main.tex,1328,ImageNet simple,imgnet_simple,vrt_rev,eval,10000,20,20,20,20,20,,matches
+reversed,main.tex,1328,ImageNet simple,imgnet_simple,reversed_gap,eval,10000,,null,null,null,null,,matches
+reversed,main.tex,1329,ImageNet advanced,imgnet_adv,vrt,eval,10000,null,null,null,null,null,,matches
+reversed,main.tex,1329,ImageNet advanced,imgnet_adv,vrt_rev,eval,10000,200,200,200,200,200,,matches
+reversed,main.tex,1329,ImageNet advanced,imgnet_adv,reversed_gap,eval,10000,,null,null,null,null,,matches

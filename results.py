@@ -36,38 +36,52 @@ class SchemaError(ValueError):
 
 
 FAMILY_PATHS = {
-    "vrt_fwd": "benchmarks/vrt",
-    "mmd_p2000": "benchmarks/mmd/normalized",
-    "mmd_raw_p2000": "benchmarks/mmd/unnormalized",
-    "ed_p2000": "benchmarks/energy_distance/normalized",
-    "ed_raw_p2000": "benchmarks/energy_distance/unnormalized",
-    "knn_v2": "benchmarks/nearest_neighbors",
-    "c2st": "benchmarks/c2st",
-    "bntrain_c2st": "benchmarks/c2st",
-    "mmdagg": "benchmarks/mmdagg",
-    "bntrain_mmdagg": "benchmarks/mmdagg",
-    "ssl": "benchmarks/simclr/eval",
-    "ssl_bntrain": "benchmarks/simclr/train",
-    "ssl_baselines": "benchmarks/simclr/aggregation_and_earlier_runs",
-    "null": "calibration/imagenet/train_test",
-    "null_trtr": "calibration/imagenet/disjoint_training",
-    "null_cifar_vrt": "calibration/cifar/vrt",
-    "null_cifar_base": "calibration/cifar/baselines",
-    "null_cifar_rule": "calibration/cifar/decision_rule",
-    "official_check": "calibration/cifar/split_checks",
-    "synth": "synthetic/power",
-    "km_logs": "synthetic/hyperparameters",
-    "reversed": "analyses/reference_direction",
-    "mmd_on_chat": "analyses/score_transform/mmd",
-    "chat_stats": "analyses/score_transform/statistics",
-    "ssl_nll": "analyses/contrastive_loss",
-    "timing": "runtime",
+    "vrt_fwd": "4_2_main_results/records/vrt",
+    "mmd_p2000": "4_2_main_results/records/mmd",
+    "ed_p2000": "4_2_main_results/records/energy_distance",
+    "mmd_raw_p2000": "4_4_synthetic_experiments_and_feature_extraction/records/mmd_raw",
+    "ed_raw_p2000": "4_4_synthetic_experiments_and_feature_extraction/records/energy_distance_raw",
+    "knn_v2": "B_nearest_neighbor_two_sample_baselines/records",
+    "c2st": "4_2_main_results/records/c2st",
+    "bntrain_c2st": "4_2_main_results/records/c2st",
+    "mmdagg": "4_2_main_results/records/mmdagg",
+    "bntrain_mmdagg": "4_2_main_results/records/mmdagg",
+    "ssl": "4_2_main_results/records/simclr/eval",
+    "ssl_bntrain": "4_2_main_results/records/simclr/train",
+    "ssl_baselines": "4_2_main_results/records/simclr/aggregation_and_earlier_runs",
+    "null": "C_type_i_calibration_and_controls_before_training/records/imagenet/train_test",
+    "null_trtr": "C_type_i_calibration_and_controls_before_training/records/imagenet/disjoint_training",
+    "null_cifar_vrt": "C_type_i_calibration_and_controls_before_training/records/cifar/vrt",
+    "null_cifar_base": "C_type_i_calibration_and_controls_before_training/records/cifar/baselines",
+    "null_cifar_rule": "C_type_i_calibration_and_controls_before_training/records/cifar/decision_rule",
+    "official_check": "C_type_i_calibration_and_controls_before_training/records/cifar/split_checks",
+    "synth": "D_synthetic_power_profile_details/records",
+    "km_logs": "E_sensitivity_to_hyperparameters_and_sample_size/records",
+    "ssl_nll": "F_per_model_trajectories/records/simclr_loss",
+    "reversed": "G_reference_set_selection/records",
+    "mmd_on_chat": "I_sensitivity_advantage_of_score_transformation/records/mmd",
+    "chat_stats": "I_sensitivity_advantage_of_score_transformation/records/statistics",
+    "timing": "K_compute_resources_and_runtime/records"
+}
+SUMMARY_PATHS = {
+    "all_onsets.csv": "4_2_main_results/all_onsets.csv",
+    "main_results.csv": "4_2_main_results/main_results.csv",
+    "batchnorm_comparison.csv": "4_2_main_results/batchnorm_comparison.csv",
+    "regularization_interventions.csv": "4_3_regularization_interventions/regularization_interventions.csv",
+    "raw_features.csv": "4_4_synthetic_experiments_and_feature_extraction/raw_features.csv",
+    "nearest_neighbors.csv": "B_nearest_neighbor_two_sample_baselines/nearest_neighbors.csv",
+    "calibration.csv": "C_type_i_calibration_and_controls_before_training/calibration.csv",
+    "synthetic_power.csv": "D_synthetic_power_profile_details/synthetic_power.csv",
+    "small_sample.csv": "E_sensitivity_to_hyperparameters_and_sample_size/small_sample.csv",
+    "reversed_onsets.csv": "G_reference_set_selection/reversed_onsets.csv",
+    "score_transform.csv": "I_sensitivity_advantage_of_score_transformation/score_transform.csv",
+    "runtime.csv": "K_compute_resources_and_runtime/runtime.csv"
 }
 FAMILY_ALIASES = {"bntrain_c2st": "c2st", "bntrain_mmdagg": "mmdagg"}
 GROUPED_PREFIXES = sorted(
     {(tuple(Path(path).parts), FAMILY_ALIASES.get(family, family))
      for family, path in FAMILY_PATHS.items()}, key=lambda item: len(item[0]), reverse=True)
-GROUP_ROOTS = {Path(path).parts[0] for path in FAMILY_PATHS.values()}
+GROUP_ROOTS = {Path(path).parts[0] for path in (*FAMILY_PATHS.values(), *SUMMARY_PATHS.values())}
 
 
 def family_path(root, family):
@@ -92,10 +106,19 @@ def identify_family(relative_path):
     return None, None
 
 
+def grouped_relative_path(relative_path):
+    """Map an original payload path to the release layout; grouped paths stay unchanged."""
+    path = Path(relative_path)
+    if path.parts and path.parts[0] in FAMILY_PATHS:
+        return Path(FAMILY_PATHS[path.parts[0]]).joinpath(*path.parts[1:])
+    return path
+
+
 def generated_path(relative_path):
     """Documentation and regenerated summaries are not source result payloads."""
     parts = Path(relative_path).parts
-    return bool(parts) and (parts[0] == "summaries" or parts[-1].lower() == "readme.md"
+    return bool(parts) and (parts[0] == "summaries" or str(Path(relative_path)) in SUMMARY_PATHS.values()
+                           or parts[-1].lower() == "readme.md"
                            or len(parts) == 1 and parts[0] in {"MANIFEST.csv", "EXCLUDED.txt"})
 
 
@@ -547,6 +570,7 @@ class Exporter:
         self.seen = {}                                        # (group, key) -> (hash(values), relpath)
         self.manifest, self.excluded, self.cleaned = [], [], []
         self.n_records = self.n_cross_dup = 0
+        self.destinations = {}
 
     def record(self, rel, size, digest, info):
         self.manifest.append([rel, info.get("rows", ""), size, digest, info.get("nul_bytes", 0), info.get("torn", 0),
@@ -589,8 +613,11 @@ class Exporter:
         self.n_records += len(kept)
         if not self.dry_run:
             os.makedirs(os.path.dirname(d), exist_ok=True)
-            with open(d, "w", newline="") as out:
-                w = csv.writer(out); w.writerow(header); w.writerows(kept)
+            if not (n_nul or torn or info["dup_rows"] or note):
+                shutil.copy2(s, d)
+            else:
+                with open(d, "w", newline="") as out:
+                    w = csv.writer(out); w.writerow(header); w.writerows(kept)
         self.record(rel, os.path.getsize(s) if self.dry_run else os.path.getsize(d), "" if self.dry_run else sha256(d), info)
 
     def run(self):
@@ -600,13 +627,18 @@ class Exporter:
             if rel_root == "." and "summaries" in dirs:
                 dirs.remove("summaries")
             for dname in [x for x in dirs if x in EXCLUDE_DIRS]:
-                self.excluded.append((os.path.join(rel_root, dname) if rel_root != "." else dname, EXCLUDE_DIRS[dname]))
+                relative = os.path.join(rel_root, dname) if rel_root != "." else dname
+                self.excluded.append((str(grouped_relative_path(relative)), EXCLUDE_DIRS[dname]))
                 dirs.remove(dname)
             for name in sorted(files):
-                rel = os.path.join(rel_root, name) if rel_root != "." else name
-                if generated_path(rel):
+                source_rel = os.path.join(rel_root, name) if rel_root != "." else name
+                if generated_path(source_rel):
                     continue
-                family, sub = identify_family(rel)
+                family, sub = identify_family(source_rel)
+                rel = str(grouped_relative_path(source_rel))
+                if rel in self.destinations:
+                    raise SchemaError(f"output path collision: {source_rel} and {self.destinations[rel]} both map to {rel}")
+                self.destinations[rel] = source_rel
                 s, d = os.path.join(root, name), os.path.join(self.dst, rel)
                 if not name.endswith(".csv"):
                     self.copy(s, d, rel, "copied verbatim (not a result CSV)"); continue
@@ -1503,7 +1535,7 @@ def _summary_synthetic(data):
 
 def summaries_report(args):
     """Write readable paper summaries and retain every numerical onset record."""
-    output = Path(args.out or "data/summaries").expanduser()
+    output = Path(args.out or args.data).expanduser()
     rows = compute_onsets(args.data)
     lookup = {(row["tag"], row["mode"], row["stat"], row["budget"]):
               None if row["onset"] == "" else row["onset"] for row in rows}
@@ -1538,6 +1570,7 @@ def summaries_report(args):
                 item[_summary_method_name(method)] = _summary_cell(lookup, tags, mode, method, 1500)
             small.append(item)
     summaries.update({"main_results.csv": main, "batchnorm_comparison.csv": batchnorm,
+                      "regularization_interventions.csv": [row for row in main if row["tags"] in {"ablA", "ablB", "ablC", "ablD"}],
                       "raw_features.csv": raw, "nearest_neighbors.csv": neighbors, "small_sample.csv": small})
 
     reversed_rows = []
@@ -1558,9 +1591,10 @@ def summaries_report(args):
     output.mkdir(parents=True, exist_ok=True)
     counts = {}
     for filename, records in summaries.items():
-        write_records(output / filename, records)
+        relative = SUMMARY_PATHS[filename]
+        write_records(output / relative, records)
         counts[filename] = len(records)
-        print(f"{filename}: {len(records)} rows")
+        print(f"{relative}: {len(records)} rows")
     print(f"Summaries written to {output}")
     return counts
 
@@ -1588,14 +1622,14 @@ def main():
             p.add_argument("--no-validate", "--no_validate", action="store_true", dest="no_validate")
             p.add_argument("--no-protocol-check", "--no_protocol_check", action="store_true", dest="no_protocol_check")
         elif command == "summaries":
-            p.add_argument("--out", default="data/summaries", help="output directory for the summary CSVs")
+            p.add_argument("--out", help="output root for paper-section summaries (default: --data)")
         elif command == "validate":
             p.add_argument("--no-manifest", action="store_true", help="validate new files without a release manifest")
         elif command == "synthetic":
             p.add_argument("--latex", action="store_true", help="also print LaTeX table rows")
         else:
             p.add_argument("--out", help="also write the computed records to CSV")
-    p = sub.add_parser("export", help="validate and clean raw historical results into a new directory")
+    p = sub.add_parser("export", help="validate raw historical results and export the grouped release layout")
     p.add_argument("--src", required=True)
     p.add_argument("--dst", required=True)
     p.add_argument("--dry-run", "--dry_run", action="store_true", dest="dry_run")

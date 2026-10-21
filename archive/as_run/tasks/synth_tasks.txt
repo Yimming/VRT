@@ -1,0 +1,2 @@
+cd /scratch/p318770/ssl_supcon_code_s50 && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python synth_fig4a_clusters.py --jobs 16 --reps 200 --rep_offset 200 --out /home3/p318770/venvs/overfitting/benchmark_final/s50/synth/fig4a_clusters.csv
+cd /scratch/p318770/ssl_supcon_code_s50 && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python mmd_bandwidth_control.py --jobs 16 --reps 200 --rep_offset 200 --out /home3/p318770/venvs/overfitting/benchmark_final/s50/synth/mmd_bandwidth.csv

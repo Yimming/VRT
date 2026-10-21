@@ -1,0 +1,57 @@
+model                                          VRT                 MMD              MMDAgg                C2ST                  ED
+ResNet-18 C100 Zoo ($\times5$)      26-34 -> 20-26      43-45 -> 55-56         44-46 -> 52              - -> -      43-45 -> 54-55
+   zoo_c100_m0                            34 -> 22            45 -> 56            46 -> 52              - -> -            45 -> 55
+   zoo_c100_m1                            28 -> 20            43 -> 55            46 -> 52              - -> -            43 -> 54
+   zoo_c100_m2                            29 -> 26            45 -> 55            45 -> 52              - -> -            45 -> 55
+   zoo_c100_m3                            26 -> 22            43 -> 55            44 -> 52              - -> -            43 -> 54
+   zoo_c100_m4                            27 -> 22            45 -> 55            46 -> 52              - -> -            45 -> 54
+ResNet-18 C10 Zoo ($\times5$)       25-30 -> 26-32              - -> -  40-42 -> 42-48 (3/5)              - -> -              - -> -
+   zoo_c10_m0                             26 -> 26              - -> -            42 -> 48              - -> -              - -> -
+   zoo_c10_m1                             25 -> 32              - -> -             42 -> -              - -> -              - -> -
+   zoo_c10_m2                             30 -> 30              - -> -            40 -> 42              - -> -              - -> -
+   zoo_c10_m3                             29 -> 29              - -> -            42 -> 46              - -> -              - -> -
+   zoo_c10_m4                             30 -> 30              - -> -             41 -> -              - -> -              - -> -
+ResNet-50 (CIFAR-100)                     61 -> 61           73 -> 121           80 -> 121          121 -> 130           73 -> 121
+Phase Zoo bs8                           150 -> 150          150 -> 150          150 -> 150          150 -> 150          150 -> 150
+Phase Zoo bs128                     <=100 -> <=100      <=100 -> <=100      <=100 -> <=100      <=100 -> <=100      <=100 -> <=100
+Phase Zoo bs1{,}024                 <=100 -> <=100        <=100 -> 125      <=100 -> <=100          125 -> 125        <=100 -> 125
+SimCLR CIFAR-10                         229 -> 527          284 -> 690          483 -> 616          691 -> 758          283 -> 687
+SimCLR CIFAR-100                        191 -> 324          213 -> 579          348 -> 490          653 -> 744          213 -> 579
+A: baseline                               33 -> 31              - -> -            42 -> 44              - -> -             44 -> -
+B: $10\times$ wd                           - -> 48              - -> -              - -> -              - -> -              - -> -
+C: strong aug                             35 -> 35              - -> -              - -> -              - -> -              - -> -
+D: wd + aug                                 - -> -              - -> -              - -> -              - -> -              - -> -
+DeepResNet50 simple (ImageNet)              - -> -              1 -> -             5 -> 50              - -> -              1 -> -
+DeepResNet50 adv.\ (ImageNet)               - -> -              1 -> -            20 -> 20              - -> -              1 -> -
+
+complete train-mode epochs per model (VRT MMD MMDAgg C2ST ED):
+  ResNet-18 C100 Zoo ($\times5$) zoo_c100_m0: 61 61 17 61 61; zoo_c100_m1: 61 61 17 61 61; zoo_c100_m2: 61 61 17 61 61; zoo_c100_m3: 61 61 17 61 61; zoo_c100_m4: 61 61 17 61 61
+  ResNet-18 C10 Zoo ($\times5$)  zoo_c10_m0: 51 51 15 51 51; zoo_c10_m1: 51 51 11 51 51; zoo_c10_m2: 51 51 15 51 51; zoo_c10_m3: 51 51 15 51 51; zoo_c10_m4: 51 51 11 51 51
+  ResNet-50 (CIFAR-100)          r50: 200 200 45 200 200
+  Phase Zoo bs8                  phase_bs8: 3 3 3 3 3
+  Phase Zoo bs128                phase_bs128: 3 3 3 3 3
+  Phase Zoo bs1{,}024            phase_bs1024: 3 3 3 3 3
+  SimCLR CIFAR-10                simclr_cifar10: 1000 616 33 616 616
+  SimCLR CIFAR-100               simclr_cifar100: 1000 212 33 212 212
+  A: baseline                    ablA: 50 50 14 50 50
+  B: $10\times$ wd               ablB: 50 50 14 50 50
+  C: strong aug                  ablC: 50 50 14 50 50
+  D: wd + aug                    ablD: 50 50 14 50 50
+  DeepResNet50 simple (ImageNet) imgnet_simple: 9 9 9 9 9
+  DeepResNet50 adv.\ (ImageNet)  imgnet_adv: 9 9 9 9 9
+
+% rows for Table/table4.tex (eval -> train; empty = not computed yet)
+ResNet-18 C100 Zoo ($\times5$)       & 26--34 $\rightarrow$ 20--26 & 43--45 $\rightarrow$ 55--56 & 44--46 $\rightarrow$ 52 & \textemdash & 43--45 $\rightarrow$ 54--55 \\
+ResNet-18 C10 Zoo ($\times5$)        & 25--30 $\rightarrow$ 26--32 & \textemdash & 40--42 $\rightarrow$ 42--48 (3/5) & \textemdash & \textemdash \\
+ResNet-50 (CIFAR-100)                & 61 $\rightarrow$ 61 & 73 $\rightarrow$ 121 & 80 $\rightarrow$ 121 & 121 $\rightarrow$ 130 & 73 $\rightarrow$ 121 \\
+Phase Zoo bs8                        & 150 $\rightarrow$ 150 & 150 $\rightarrow$ 150 & 150 $\rightarrow$ 150 & 150 $\rightarrow$ 150 & 150 $\rightarrow$ 150 \\
+Phase Zoo bs128                      & $\leq$100 $\rightarrow$ $\leq$100 & $\leq$100 $\rightarrow$ $\leq$100 & $\leq$100 $\rightarrow$ $\leq$100 & $\leq$100 $\rightarrow$ $\leq$100 & $\leq$100 $\rightarrow$ $\leq$100 \\
+Phase Zoo bs1{,}024                  & $\leq$100 $\rightarrow$ $\leq$100 & $\leq$100 $\rightarrow$ 125 & $\leq$100 $\rightarrow$ $\leq$100 & 125 $\rightarrow$ 125 & $\leq$100 $\rightarrow$ 125 \\
+SimCLR CIFAR-10                      & 229 $\rightarrow$ 527 & 284 $\rightarrow$ 690 & 483 $\rightarrow$ 616 & 691 $\rightarrow$ 758 & 283 $\rightarrow$ 687 \\
+SimCLR CIFAR-100                     & 191 $\rightarrow$ 324 & 213 $\rightarrow$ 579 & 348 $\rightarrow$ 490 & 653 $\rightarrow$ 744 & 213 $\rightarrow$ 579 \\
+A: baseline                          & 33 $\rightarrow$ 31 & \textemdash & 42 $\rightarrow$ 44 & \textemdash & 44 $\rightarrow$ \textemdash \\
+B: $10\times$ wd                     & \textemdash\ $\rightarrow$ 48 & \textemdash & \textemdash & \textemdash & \textemdash \\
+C: strong aug                        & 35 $\rightarrow$ 35 & \textemdash & \textemdash & \textemdash & \textemdash \\
+D: wd + aug                          & \textemdash & \textemdash & \textemdash & \textemdash & \textemdash \\
+DeepResNet50 simple (ImageNet)       & \textemdash & 1 $\rightarrow$ \textemdash & 5 $\rightarrow$ 50 & \textemdash & 1 $\rightarrow$ \textemdash \\
+DeepResNet50 adv.\ (ImageNet)        & \textemdash & 1 $\rightarrow$ \textemdash & 20 $\rightarrow$ 20 & \textemdash & 1 $\rightarrow$ \textemdash \\

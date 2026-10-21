@@ -1,0 +1,119 @@
+accelerate==1.13.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.13.3
+aiosignal==1.4.0
+annotated-doc==0.0.4
+annotated-types==0.7.0
+antlr4-python3-runtime==4.9.3
+anyio==4.12.1
+attrs==25.4.0
+beautifulsoup4==4.14.3
+certifi==2026.1.4
+charset-normalizer==3.4.4
+click==8.3.1
+contourpy==1.3.1
+cycler==0.12.1
+datasets==2.19.1
+dill==0.3.8
+einops==0.8.2
+faiss-cpu==1.13.2
+filelock==3.20.3
+flit_core @ file:///dev/shm/p114691/Python/3.11.3/GCCcore-12.3.0/flit_core/flit_core-3.9.0
+fonttools==4.55.3
+frozenlist==1.8.0
+fsspec==2024.3.1
+gdown==5.2.1
+gitdb==4.0.12
+GitPython==3.1.46
+h11==0.16.0
+hf-xet==1.2.0
+httpcore==1.0.9
+httpx==0.28.1
+huggingface_hub==0.36.2
+idna==3.11
+joblib==1.5.3
+kiwisolver==1.4.7
+lightning-bolts==0.7.0
+lightning-utilities==0.15.2
+markdown-it-py==4.0.0
+matplotlib==3.10.0
+mdurl==0.1.2
+mmdagg @ git+https://github.com/antoninschrab/mmdagg.git@baca0a989273b0961b81135b4488fb5695a9e7ab
+mpmath==1.3.0
+mteb==2.10.5
+multidict==6.7.1
+multiprocess==0.70.16
+# Editable install with no version control (neural-graphs==0.0.1)
+-e /scratch/p318770/cnn_wild_park/neural-graphs
+numpy==1.26.4
+nvidia-cublas-cu12==12.8.4.1
+nvidia-cuda-cupti-cu12==12.8.90
+nvidia-cuda-nvrtc-cu12==12.8.93
+nvidia-cuda-runtime-cu12==12.8.90
+nvidia-cufile-cu12==1.13.1.3
+nvidia-curand-cu12==10.3.9.90
+nvidia-cusparselt-cu12==0.7.1
+nvidia-nccl-cu12==2.27.5
+nvidia-nvjitlink-cu12==12.8.93
+nvidia-nvshmem-cu12==3.4.5
+nvidia-nvtx-cu12==12.8.90
+omegaconf==2.3.0
+packaging==26.0
+pandas==3.0.1
+pillow==11.0.0
+polars==1.38.1
+polars-runtime-32==1.38.1
+portalocker @ file:///dev/shm/p114691/PyTorchbundle/2.1.2/foss-2023a-CUDA-12.1.1/portalocker/portalocker-2.8.2
+propcache==0.4.1
+pyarrow==15.0.2
+pyarrow-hotfix==0.7
+pydantic==2.12.5
+pydantic_core==2.41.5
+Pygments==2.19.2
+pyparsing==3.2.0
+PySocks==1.7.1
+pytest-mock @ file:///dev/shm/p114691/PyTorchbundle/2.1.2/foss-2023a-CUDA-12.1.1/pytestmock/pytest-mock-3.11.1
+python-dateutil==2.9.0.post0
+pytorch-ignite @ file:///dev/shm/p114691/PyTorchbundle/2.1.2/foss-2023a-CUDA-12.1.1/pytorchignite/ignite-0.4.13
+pytorch-lightning==1.9.5
+pytrec_eval-terrier==0.5.10
+pytz==2025.2
+PyYAML==6.0.3
+random-fourier-features-pytorch==1.0.1
+regex==2026.1.15
+requests==2.32.5
+rich==14.3.3
+safetensors==0.7.0
+scikit-learn==1.8.0
+scipy==1.17.0
+seaborn==0.13.2
+sentence-transformers==5.2.2
+sentencepiece==0.2.1
+sentry-sdk==2.55.0
+setuptools-scm @ file:///dev/shm/p114691/Python/3.11.3/GCCcore-12.3.0/setuptools_scm/setuptools_scm-7.1.0
+shellingham==1.5.4
+six==1.17.0
+smmap==5.0.3
+soupsieve==2.8.3
+sympy==1.14.0
+threadpoolctl==3.6.0
+tokenizers==0.21.4
+tomli @ file:///dev/shm/p114691/Python/3.11.3/GCCcore-12.3.0/tomli/tomli-2.0.1
+torch-tb-profiler @ file:///dev/shm/p114691/PyTorchbundle/2.1.2/foss-2023a-CUDA-12.1.1/torchtbprofiler/torch_tb_profiler-0.4.3
+torchaudio @ file:///dev/shm/p114691/PyTorchbundle/2.1.2/foss-2023a-CUDA-12.1.1/torchaudio/audio-2.1.2
+torchdata @ file:///dev/shm/p114691/PyTorchbundle/2.1.2/foss-2023a-CUDA-12.1.1/torchdata/data-0.7.1
+torchmetrics==1.8.2
+torchtext @ file:///dev/shm/p114691/PyTorchbundle/2.1.2/foss-2023a-CUDA-12.1.1/torchtext/text-0.16.2
+torchvision @ file:///dev/shm/p114691/PyTorchbundle/2.1.2/foss-2023a-CUDA-12.1.1/torchvision/vision-0.16.2
+tqdm==4.67.3
+transformers==4.51.0
+triton==3.6.0
+typer==0.23.1
+typer-slim==0.23.1
+typing-inspection==0.4.2
+typing_extensions==4.15.0
+tzdata==2025.3
+urllib3==2.6.3
+wandb==0.25.1
+xxhash==3.6.0
+yarl==1.22.0

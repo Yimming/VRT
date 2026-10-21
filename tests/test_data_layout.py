@@ -1,5 +1,6 @@
 """The grouped release and original experiment folders must aggregate identically."""
 import csv
+from argparse import Namespace
 from pathlib import Path
 import shutil
 import sys
@@ -8,8 +9,10 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from common import exact_perm_p
-from results import (Exporter, FAMILY_PATHS, ResultRoutes, SchemaError, compute_onsets,
-                     exact_p_cell, family_path, manifest_check, schema_for, validate_tree)
+import results
+from results import (Exporter, FAMILY_PATHS, SUMMARY_PATHS, ResultRoutes, SchemaError, compute_onsets,
+                     exact_p_cell, family_path, generated_path, grouped_relative_path, manifest_check,
+                     schema_for, summaries_report, validate_tree)
 
 
 def write(path, header, rows):
@@ -81,20 +84,56 @@ def test_grouped_export_keeps_paths_and_skips_generated_outputs(tmp_path):
     make_results(original)
     group_tree(original, grouped)
     (grouped / "README.md").write_text("Data guide\n")
-    (grouped / "benchmarks/README.md").write_text("Benchmarks\n")
+    section = Path(FAMILY_PATHS["vrt_fwd"]).parts[0]
+    (grouped / section / "README.md").write_text("Main results\n")
     (grouped / "MANIFEST.csv").write_text("previous,manifest\n")
     write(grouped / "summaries/onsets.csv", "stat,onset", [("vrt", 1)])
+    for relative in SUMMARY_PATHS.values():
+        write(grouped / relative, "method,onset", [("vrt", 1)])
     worker = Exporter(str(grouped), str(exported), False, False)
     worker.run()
     assert manifest_check(exported) == (9, 307)
     assert not (exported / "summaries").exists()
     assert not (exported / "README.md").exists()
-    assert not (exported / "benchmarks/README.md").exists()
+    assert not (exported / section / "README.md").exists()
+    assert not any((exported / relative).exists() for relative in SUMMARY_PATHS.values())
     assert not (exported / "vrt_fwd").exists()
     path = exported / FAMILY_PATHS["null_trtr"] / "knn_v2/knn_imgnet_rand_eval_trtr_n10000_part.csv"
     with path.open(newline="") as f:
         assert next(csv.DictReader(f))["p_henze_exact"] == f"{100 / 2001:.9f}"
     assert validate_tree(exported)["records"] == 307
+
+
+def test_raw_export_writes_grouped_layout_and_preserves_clean_bytes(tmp_path):
+    original, exported, second = tmp_path / "original", tmp_path / "exported", tmp_path / "second"
+    make_results(original)
+    vrt = original / "vrt_fwd/vrt_fwd_v7_large_c0-2.csv"
+    vrt.write_bytes(vrt.read_bytes().replace(b"\r\n", b"\n"))
+    Exporter(str(original), str(exported), False, False).run()
+    assert manifest_check(exported) == (9, 307)
+    assert not any((exported / family).exists() for family in FAMILY_PATHS)
+    for path in original.rglob("*.csv"):
+        relative = path.relative_to(original)
+        destination = exported / grouped_relative_path(relative)
+        assert destination.is_file()
+        if relative.parts[0] not in {"reversed", "null_trtr"}:
+            assert destination.read_bytes() == path.read_bytes()
+    assert compute_onsets(original) == compute_onsets(exported)
+    Exporter(str(exported), str(second), False, False).run()
+    assert manifest_check(second) == (9, 307)
+    with (exported / "MANIFEST.csv").open(newline="") as f:
+        for entry in csv.DictReader(f):
+            assert (exported / entry["path"]).read_bytes() == (second / entry["path"]).read_bytes()
+
+
+def test_merged_alias_filename_collision_is_never_overwritten(tmp_path):
+    original = tmp_path / "original"
+    name = "c2st_r50_bntrain_b1500_c0-0.csv"
+    for family in ["c2st", "bntrain_c2st"]:
+        write(original / family / name, "model,epoch,budget,stat,seed,acc,p",
+              [("r50_bntrain", 0, "b1500", "c2st", 42, .6, .01)])
+    with pytest.raises(SchemaError, match="output path collision"):
+        Exporter(str(original), str(tmp_path / "exported"), False, False).run()
 
 
 @pytest.mark.parametrize("family", ["vrt_fwd", "c2st", "bntrain_c2st", "mmdagg", "bntrain_mmdagg"])
@@ -116,11 +155,32 @@ def test_grouped_simclr_wrong_extraction_folder_rejected(tmp_path, family, tag):
 
 
 def test_grouped_schema_lookup_and_unknown_branch(tmp_path):
-    known, _ = schema_for("benchmarks/vrt", "vrt_fwd_v7_large_c0-0.csv")
-    nested, _ = schema_for("calibration/imagenet/disjoint_training/knn_v2",
+    known, _ = schema_for(FAMILY_PATHS["vrt_fwd"], "vrt_fwd_v7_large_c0-0.csv")
+    nested, _ = schema_for(FAMILY_PATHS["null_trtr"] + "/knn_v2",
                           "knn_imgnet_rand_eval_trtr_n10000_part.csv")
     assert known["group"] == "vrt_fwd"
     assert nested["group"] == "knn"
-    write(tmp_path / "benchmarks/unknown/wrong.csv", "p", [[.5]])
+    write(tmp_path / "4_3_regularization_interventions/wrong.csv", "p", [[.5]])
     with pytest.raises(SchemaError, match="unrecognised"):
         validate_tree(tmp_path)
+
+
+@pytest.mark.parametrize("custom_output", [False, True])
+def test_summaries_use_paper_sections_and_include_four_interventions(tmp_path, monkeypatch, custom_output):
+    data = tmp_path / "input"
+    output = tmp_path / "tables" if custom_output else data
+    rows = [dict(tag=tag, mode="eval", stat="vrt", budget=10000, onset=epoch)
+            for tag, epoch in [("ablA", 33), ("ablB", ""), ("ablC", 35), ("ablD", "")]]
+    monkeypatch.setattr(results, "compute_onsets", lambda _: rows)
+    monkeypatch.setattr(results, "_summary_capture", lambda *args: [dict(result="example")])
+    monkeypatch.setattr(results, "_summary_synthetic", lambda _: [dict(rejections=1)])
+    counts = summaries_report(Namespace(data=data, out=output if custom_output else None))
+    assert set(counts) == set(SUMMARY_PATHS)
+    assert counts["regularization_interventions.csv"] == 4
+    with (output / SUMMARY_PATHS["regularization_interventions.csv"]).open(newline="") as f:
+        interventions = list(csv.DictReader(f))
+    assert [row["tags"] for row in interventions] == ["ablA", "ablB", "ablC", "ablD"]
+    assert [row["VRT"] for row in interventions] == ["33", "null", "35", "null"]
+    assert {str(p.relative_to(output)) for p in output.rglob("*.csv")} == set(SUMMARY_PATHS.values())
+    assert all(generated_path(relative) for relative in SUMMARY_PATHS.values())
+    assert not generated_path("4_2_main_results/unexpected.csv")

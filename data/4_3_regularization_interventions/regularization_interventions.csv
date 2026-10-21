@@ -1,0 +1,5 @@
+model_name,tags,VRT,MMD,MMDAgg,C2ST,ED
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,33,null,42,null,44
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,null,null,null,null,null
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,35,null,null,null,null
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,null,null,null,null,null

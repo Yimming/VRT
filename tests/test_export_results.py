@@ -12,6 +12,8 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 TOOL = os.path.join(ROOT, "results.py")
+sys.path.insert(0, ROOT)
+from results import FAMILY_PATHS
 SEEDS = range(42, 92)
 
 
@@ -56,23 +58,23 @@ def test_export_cleans_validates_and_documents(tmp_path):
     make_tree(src)
     r = run(src, dst)
     assert r.returncode == 0, r.stderr + r.stdout
-    rows = list(csv.DictReader(open(dst / "vrt_fwd" / "vrt_fwd_r50_large_c10-19.csv")))
+    rows = list(csv.DictReader(open(dst / FAMILY_PATHS["vrt_fwd"] / "vrt_fwd_r50_large_c10-19.csv")))
     assert [(x["epoch"], x["seed"], x["p"]) for x in rows] == [("1", "42", "0.300350"), ("1", "43", "0.200400")]
-    rev = list(csv.DictReader(open(dst / "reversed" / "vrt_rev_zoo_c10_m3_large_c0-9.csv")))
+    rev = list(csv.DictReader(open(dst / FAMILY_PATHS["reversed"] / "vrt_rev_zoo_c10_m3_large_c0-9.csv")))
     assert [x["p_exact"] for x in rev] == [f"{94 / 2001:.9f}", f"{106 / 2001:.9f}"]
-    knn = list(csv.DictReader(open(dst / "knn_v2" / "knn_r50_n10000_part_c0-39.csv")))
+    knn = list(csv.DictReader(open(dst / FAMILY_PATHS["knn_v2"] / "knn_r50_n10000_part_c0-39.csv")))
     assert knn[0]["p_henze_exact"] == f"{100 / 2001:.9f}" and knn[0]["p_schilling"] == "0.0412"
-    assert not (dst / "knn_v2" / "_superseded").exists() and not (dst / "null10").exists()
-    assert not (dst / "mmd_on_chat" / "c100_nan_bug").exists() and not (dst / "chat_stats" / "dup_backup").exists()
-    assert (dst / "ssl" / "notes.txt").read_text() == "hello\n"
+    assert not (dst / FAMILY_PATHS["knn_v2"] / "_superseded").exists() and not (dst / "null10").exists()
+    assert not (dst / FAMILY_PATHS["mmd_on_chat"] / "c100_nan_bug").exists() and not (dst / FAMILY_PATHS["chat_stats"] / "dup_backup").exists()
+    assert (dst / FAMILY_PATHS["ssl"] / "notes.txt").read_text() == "hello\n"
     man = {x["path"]: x for x in csv.DictReader(open(dst / "MANIFEST.csv"))}
-    m = man[os.path.join("vrt_fwd", "vrt_fwd_r50_large_c10-19.csv")]
+    m = man[os.path.join(FAMILY_PATHS["vrt_fwd"], "vrt_fwd_r50_large_c10-19.csv")]
     assert m["nul_bytes_removed"] == "64" and m["torn_lines_dropped"] == "1" and m["duplicate_rows_dropped"] == "2"
     assert m["rows"] == "2" and len(m["sha256"]) == 64
-    assert man[os.path.join("ssl_baselines", "sslbase_cifar10_0-99.csv")]["note"].startswith("legacy")
+    assert man[os.path.join(FAMILY_PATHS["ssl_baselines"], "sslbase_cifar10_0-99.csv")]["note"].startswith("legacy")
     excluded = (dst / "EXCLUDED.txt").read_text()
     assert "null10" in excluded and "_superseded" in excluded and "c100_nan_bug" in excluded and "dup_backup" in excluded
-    assert "cleaned vrt_fwd" in r.stdout
+    assert f"cleaned {FAMILY_PATHS['vrt_fwd']}" in r.stdout
     # a second export into the same (non-empty) folder is refused
     r2 = run(src, dst)
     assert r2.returncode != 0 and "not empty" in r2.stderr
@@ -93,7 +95,7 @@ def test_export_refuses_conflicts_within_and_across_files(tmp_path):
     write(src / "c2st" / "c2st_r50_bntrain_b1500_c0-9.csv", "model,epoch,budget,stat,seed,acc,p\nr50_bntrain,0,b1500,c2st,42,0.6,0.01\n")
     write(src / "bntrain_c2st" / "c2st_r50_bntrain_b1500_c0-9.csv", "model,epoch,budget,stat,seed,acc,p\nr50_bntrain,0,b1500,c2st,42,0.6,0.02\n")
     r = run(src, dst)
-    assert r.returncode != 0 and "different values" in r.stderr
+    assert r.returncode != 0 and "output path collision" in r.stderr
 
 
 def test_export_refuses_foreign_rows_invalid_values_and_unknown_names(tmp_path):
@@ -115,7 +117,7 @@ def test_export_refuses_foreign_rows_invalid_values_and_unknown_names(tmp_path):
     r = run(src, dst, "--allow_unknown")
     assert r.returncode == 0, r.stderr
     man = {x["path"]: x for x in csv.DictReader(open(dst / "MANIFEST.csv"))}
-    assert man[os.path.join("mmdagg", "a.csv")]["note"].startswith("unrecognised")
+    assert man[os.path.join(FAMILY_PATHS["mmdagg"], "a.csv")]["note"].startswith("unrecognised")
 
 
 def test_type_one_families_are_validated(tmp_path):
@@ -135,7 +137,7 @@ def test_type_one_families_are_validated(tmp_path):
     r = run(src, dst)
     assert r.returncode == 0, r.stderr
     man = {x["path"]: x for x in csv.DictReader(open(dst / "MANIFEST.csv"))}
-    assert man[os.path.join("null_trtr", "knn_v2", "knn_imgnet_rand_eval_trtr_n10000_part.csv")]["note"] == "added p_henze_exact"
+    assert man[os.path.join(FAMILY_PATHS["null_trtr"], "knn_v2", "knn_imgnet_rand_eval_trtr_n10000_part.csv")]["note"] == "added p_henze_exact"
     assert all(man[k]["rows"] for k in man if k.endswith(".csv"))
     # an invalid MMDAgg decision in the CIFAR null family is refused like everywhere else
     write(src / "null_cifar_base" / "base_null_r50_c100_eval_cpu_r0-49.csv",
@@ -155,7 +157,7 @@ def test_features_column_of_the_released_runners_is_accepted(tmp_path):
     write(src / "c2st" / "c2st_r50_b1500_c0-9.csv", "model,epoch,budget,stat,seed,acc,p,features\nr50,0,b1500,c2st,42,0.6,0.01,l2\n")
     r = run(src, dst)
     assert r.returncode == 0, r.stderr
-    knn = list(csv.DictReader(open(dst / "knn_v2" / "knn_r50_n10000_part_c0-9.csv")))
+    knn = list(csv.DictReader(open(dst / FAMILY_PATHS["knn_v2"] / "knn_r50_n10000_part_c0-9.csv")))
     assert knn[0]["p_henze_exact"] == f"{100 / 2001:.9f}" and knn[0]["features"] == "raw"
     write(src / "c2st" / "c2st_r50_b1500_c0-9.csv", "model,epoch,budget,stat,seed,acc,p,features\nr50,0,b1500,c2st,42,0.6,0.01,both\n")
     r = run(src, tmp_path / "dst2")

@@ -1,0 +1,1 @@
+cd /scratch/p318770/ssl_supcon_code_s50 && python ssl_nll.py --ckpt_dir "$(ls -d /scratch/p318770/model_zoos/ssl_supcon/SimCLR_cifar10_* | head -1)" --dataset cifar10 --lo 1 --hi 2 --out_dir /home3/p318770/venvs/overfitting/benchmark_final/s50/ssl_nll_test

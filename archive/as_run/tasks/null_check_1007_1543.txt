@@ -1,0 +1,112 @@
+=== queue: tasks per job and state
+      1 32552191 RUNNING
+     38 32552192 RUNNING
+      6 32552243 RUNNING
+      1 32553644 PENDING
+      5 32553645 RUNNING
+    100 32553646 PENDING
+     37 32553647 RUNNING
+      2 32553648 RUNNING
+    101 32553649 PENDING
+    100 32553649 RUNNING
+=== queue: job -> task file
+  32552191 /scratch/p318770/ssl_supcon_code_s50/job_s50_cpu.sh
+  32552192 /scratch/p318770/ssl_supcon_code_s50/job_s50_cpu.sh
+  32552243 /scratch/p318770/ssl_supcon_code_s50/job_s50_cpu.sh
+  32553644 /scratch/p318770/ssl_supcon_code_s50/job_s50_gpu.sh
+  32553645 /scratch/p318770/ssl_supcon_code_s50/job_s50_cpu.sh
+  32553646 /scratch/p318770/ssl_supcon_code_s50/job_s50_gpu.sh
+  32553647 /scratch/p318770/ssl_supcon_code_s50/job_s50_cpu.sh
+  32553648 /scratch/p318770/ssl_supcon_code_s50/job_s50_cpu.sh
+  32553649 /scratch/p318770/ssl_supcon_code_s50/job_s50_cpu.sh
+
+=== 1. VRT on random networks, Type-I (resplit) and official split, both budgets
+25 files in /home3/p318770/venvs/overfitting/benchmark_final/s50/null_cifar_vrt
+
+model                  BN    split    budget    n         rej        95% CI  calibrated  p<.01  p<.10  med p
+ResNet-18 CIFAR-10     eval  resplit  10,000  500   23 ( 4.6%) [ 2.9,  6.8]    16 to 35    1.2%   8.4%  0.503
+ResNet-18 CIFAR-10     eval  resplit   1,500  500   33 ( 6.6%) [ 4.6,  9.1]    16 to 35    0.8%   9.6%  0.499
+ResNet-18 CIFAR-10     eval  official 10,000  500    6 ( 1.2%) [ 0.4,  2.6]    16 to 35    0.4%   2.4%  0.569  OUTSIDE
+ResNet-18 CIFAR-10     eval  official  1,500  500   34 ( 6.8%) [ 4.8,  9.4]    16 to 35    1.6%  12.2%  0.449
+ResNet-18 CIFAR-100    eval  resplit  10,000  500   20 ( 4.0%) [ 2.5,  6.1]    16 to 35    1.2%  10.4%  0.493
+ResNet-18 CIFAR-100    eval  resplit   1,500  500   24 ( 4.8%) [ 3.1,  7.1]    16 to 35    1.0%  10.2%  0.509
+ResNet-18 CIFAR-100    eval  official 10,000  500   56 (11.2%) [ 8.6, 14.3]    16 to 35    3.6%  20.2%  0.339  OUTSIDE
+ResNet-18 CIFAR-100    eval  official  1,500  500   25 ( 5.0%) [ 3.3,  7.3]    16 to 35    1.2%  10.2%  0.523
+ResNet-50 CIFAR-100    eval  resplit  10,000  500   31 ( 6.2%) [ 4.3,  8.7]    16 to 35    1.4%  12.8%  0.463
+ResNet-50 CIFAR-100    eval  resplit   1,500  500   20 ( 4.0%) [ 2.5,  6.1]    16 to 35    1.0%  11.8%  0.516
+ResNet-50 CIFAR-100    eval  official 10,000  500   68 (13.6%) [10.7, 16.9]    16 to 35    4.2%  24.2%  0.312  OUTSIDE
+ResNet-50 CIFAR-100    eval  official  1,500  500   34 ( 6.8%) [ 4.8,  9.4]    16 to 35    1.8%  12.2%  0.501
+SimCLR enc. CIFAR-10   eval  resplit  10,000  500   17 ( 3.4%) [ 2.0,  5.4]    16 to 35    0.8%   8.4%  0.540
+SimCLR enc. CIFAR-10   eval  resplit   1,500  500   28 ( 5.6%) [ 3.8,  8.0]    16 to 35    1.6%  11.0%  0.503
+SimCLR enc. CIFAR-10   eval  official 10,000  500   33 ( 6.6%) [ 4.6,  9.1]    16 to 35    0.4%  13.0%  0.484
+SimCLR enc. CIFAR-10   eval  official  1,500  500   34 ( 6.8%) [ 4.8,  9.4]    16 to 35    1.4%  12.2%  0.471
+ResNet20-FRN CIFAR-10  eval  resplit  10,000  500   25 ( 5.0%) [ 3.3,  7.3]    16 to 35    1.8%  10.2%  0.467
+ResNet20-FRN CIFAR-10  eval  resplit   1,500  500   34 ( 6.8%) [ 4.8,  9.4]    16 to 35    1.6%  11.8%  0.487
+ResNet20-FRN CIFAR-10  eval  official 10,000  500   24 ( 4.8%) [ 3.1,  7.1]    16 to 35    0.6%  10.8%  0.492
+ResNet20-FRN CIFAR-10  eval  official  1,500  500   23 ( 4.6%) [ 2.9,  6.8]    16 to 35    1.0%  10.0%  0.474
+
+all architectures together
+  eval  resplit  10,000  116/2500 (4.6%)  95% CI [3.8, 5.5]  calibrated range 104 to 147
+  eval  resplit   1,500  139/2500 (5.6%)  95% CI [4.7, 6.5]  calibrated range 104 to 147
+  eval  official 10,000  187/2500 (7.5%)  95% CI [6.5, 8.6]  calibrated range 104 to 147
+  eval  official  1,500  150/2500 (6.0%)  95% CI [5.1, 7.0]  calibrated range 104 to 147
+
+resplit = new random 50,000 / 10,000 split of the 60,000 images in every repetition (independent tests, Type-I estimate);
+official = official test images in every repetition (shared test sample, not independent; comparison only)
+
+=== 2. every method on random networks, 10,000 per split (empty rows = that job has not produced results yet)
+
+RANDOM SPLIT (independent repetitions: the Type-I estimate), 10,000 per split (MMDAgg 5,000)
+method                R18 C10         R18 C100         R50 C100       SimCLR C10      R20-FRN C10
+VRT            23/500 (4.6%)    20/500 (4.0%)    31/500 (6.2%)    17/500 (3.4%)    25/500 (5.0%) 
+MMD            26/500 (5.2%)    21/500 (4.2%)    27/500 (5.4%)    21/500 (4.2%)    20/500 (4.0%) 
+MMDAgg         29/500 (5.8%)    20/500 (4.0%)    22/500 (4.4%)    20/500 (4.0%)    23/500 (4.6%) 
+C2ST p<.05      5/500 (1.0%)-    5/500 (1.0%)-    1/500 (0.2%)-    4/500 (0.8%)-    2/500 (0.4%)-
+C2ST rule       0/500 (0.0%)-    0/500 (0.0%)-    0/500 (0.0%)-    0/500 (0.0%)-    0/500 (0.0%)-
+ED             25/500 (5.0%)    19/500 (3.8%)    30/500 (6.0%)    21/500 (4.2%)    19/500 (3.8%) 
+Henze          30/500 (6.0%)    27/500 (5.4%)    37/500 (7.4%)*   27/500 (5.4%)    26/500 (5.2%) 
+Schilling      29/500 (5.8%)    28/500 (5.6%)    38/500 (7.6%)*   26/500 (5.2%)    27/500 (5.4%) 
+
+OFFICIAL SPLIT (official test images in every repetition; comparison only), 10,000 per split (MMDAgg 5,000)
+method                R18 C10         R18 C100         R50 C100       SimCLR C10      R20-FRN C10
+VRT             6/500 (1.2%)-  56/500 (11.2%)*  68/500 (13.6%)*   33/500 (6.6%)    24/500 (4.8%) 
+MMD          169/500 (33.8%)*    5/500 (1.0%)-   11/500 (2.2%)-   36/500 (7.2%)*   32/500 (6.4%) 
+MMDAgg        72/500 (14.4%)*   24/500 (4.8%)    25/500 (5.0%)    32/500 (6.4%)    27/500 (5.4%) 
+C2ST p<.05     19/500 (3.8%)     3/500 (0.6%)-    3/500 (0.6%)-    2/500 (0.4%)-    6/500 (1.2%)-
+C2ST rule       0/500 (0.0%)-    0/500 (0.0%)-    0/500 (0.0%)-    0/500 (0.0%)-    0/500 (0.0%)-
+ED           165/500 (33.0%)*    5/500 (1.0%)-    6/500 (1.2%)-   31/500 (6.2%)    31/500 (6.2%) 
+Henze          23/500 (4.6%)    27/500 (5.4%)    25/500 (5.0%)    21/500 (4.2%)    29/500 (5.8%) 
+Schilling      22/500 (4.4%)    26/500 (5.2%)    26/500 (5.2%)    18/500 (3.6%)    29/500 (5.8%) 
+
+rejection = single test with p < 0.05 (MMDAgg: reject decision at 0.05; C2ST rule: also held-out accuracy > 0.55)
+* / - = above / below the central 95% range of Binomial(n, 0.05) (16 to 35 for n = 500); '-' = conservative
+R18 = ResNet-18, R50 = ResNet-50, SimCLR = SimCLR ResNet-50 encoder, R20-FRN = ResNet20-FRN; C10/C100 = CIFAR-10/100
+architectures of one dataset share the split and the draw of a repetition, so read each column on its own
+
+=== 3. blank control: the paper's rule (official split, seeds 42-91, median p) on untrained networks
+blank control: the paper's VRT decision on untrained networks (official split, the paper's seeds), /home3/p318770/venvs/overfitting/benchmark_final/s50/null_cifar_rule
+
+model                  budget networks  flagged  med p max seeds single tests
+ResNet-18 CIFAR-100    10,000       30     0/30  0.356     14/50         8.9%
+ResNet-18 CIFAR-100     1,500       30     0/30  0.442      6/50         6.9%
+ResNet-50 CIFAR-100    10,000       30     0/30  0.337     14/50        11.1%
+ResNet-50 CIFAR-100     1,500       30     0/30  0.487      6/50         6.6%
+SimCLR enc. CIFAR-100  10,000       30     0/30  0.395     16/50        11.6%
+SimCLR enc. CIFAR-100   1,500       30     0/30  0.477      6/50         6.3%
+ResNet-18 CIFAR-10     10,000       30     0/30  0.541      5/50         3.1%
+ResNet-18 CIFAR-10      1,500       30     0/30  0.489      7/50         6.7%
+SimCLR enc. CIFAR-10   10,000       30     0/30  0.453     10/50         5.5%
+SimCLR enc. CIFAR-10    1,500       30     0/30  0.497      7/50         4.7%
+ResNet20-FRN CIFAR-10  10,000       30     0/30  0.505      5/50         4.7%
+ResNet20-FRN CIFAR-10   1,500       30     0/30  0.486      7/50         5.1%
+
+flagged = median p over the seeds below 0.05, the paper's rule for a detection at a checkpoint;
+the 10,000 test images are the same for every seed and every network (the official test set)
+
+=== 4. SimCLR MMDAgg 1,500, every epoch (onset over the epochs finished so far)
+  cifar10
+mmdagg   b1500   epochs 1-1000, 1000 present, 0 missing below 1000, min seeds 50   first reject 681   sustained onset 713
+         not rejecting after the first rejection: [682, 683, 685, 687, 688, 689, 690, 692, 694, 699, 712]
+  cifar100
+mmdagg   b1500   epochs 1-1000, 1000 present, 0 missing below 1000, min seeds 50   first reject 519   sustained onset 581
+         not rejecting after the first rejection: [520, 521, 522, 523, 524, 526, 527, 528, 529, 530, 531, 535, 536, 540, 541, 543, 545, 546, 548, 550, 552, 553, 560, 565, 570, 576, 580]
