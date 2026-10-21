@@ -1,0 +1,4 @@
+TODO (authors): choose the license of this repository. The code of third_party/SupContrast keeps its own
+BSD 2-Clause License (third_party/SupContrast/LICENSE); mmdagg is installed from its repository and is not
+redistributed here. A permissive license (MIT or BSD 2-Clause) for the code and CC BY 4.0 for the result data
+under data/ is the usual choice for a paper release.

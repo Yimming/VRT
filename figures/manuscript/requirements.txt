@@ -1,0 +1,4 @@
+# Plot reconstruction dependencies; the parent release already requires NumPy and Matplotlib.
+numpy
+matplotlib
+pypdf

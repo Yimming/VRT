@@ -1,0 +1,14 @@
+# Versions of the cluster virtual environment the results were produced with (env/pip_freeze_venv311.txt, Python 3.11.3).
+# torch and torchvision came from the module PyTorch-bundle/2.1.2-foss-2023a-CUDA-12.1.1 (CUDA 12.1.1, cuDNN 8.9.2).
+numpy==1.26.4
+scipy==1.17.0
+scikit-learn==1.8.0
+torch==2.1.2
+torchvision==0.16.2
+matplotlib==3.10.0
+threadpoolctl==3.6.0
+safetensors==0.7.0
+pillow==11.0.0
+mmdagg @ git+https://github.com/antoninschrab/mmdagg.git@baca0a989273b0961b81135b4488fb5695a9e7ab
+pytest
+# optional: dcor (self-test of energy_tst_fast.py), pandas==3.0.1 (verify_ladder_onsets.py), jax (tools/mmdagg_timing.py --jax)

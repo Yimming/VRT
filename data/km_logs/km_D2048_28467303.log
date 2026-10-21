@@ -1,0 +1,68 @@
+D=2048, kb=1024, k2=1037.6
+k sweep (M=2000):
+  k=   5    7/50   14.0%
+  k=  10   16/50   32.0%
+  k=  20   26/50   52.0%
+  k=  30   32/50   64.0%
+  k=  40   33/50   66.0%
+  k=  60   45/50   90.0%
+  k=  80   46/50   92.0%
+  k= 100   49/50   98.0%
+  k= 150   50/50  100.0%
+  k= 200   50/50  100.0%
+  k= 300   50/50  100.0%
+  k= 500   50/50  100.0%
+M sweep (k=60):
+  M=  100   48/50   96.0%
+  M=  200   48/50   96.0%
+  M=  500   47/50   94.0%
+  M= 1000   48/50   96.0%
+  M= 2000   45/50   90.0%
+  M= 3000   43/50   86.0%
+  M= 5000   42/50   84.0%
+Done.
+
+###############################################################################
+Hábrók Cluster
+Job 28467303 for user p318770
+Finished at: Tue Apr 14 12:30:47 CEST 2026
+
+Job details:
+============
+
+Job ID                         : 28467303
+Name                           : km_D2048
+User                           : p318770
+Partition                      : regularshort
+Nodes                          : node71
+Number of Nodes                : 1
+Cores                          : 4
+Number of Tasks                : 1
+State                          : COMPLETED  
+Submit                         : 2026-04-14T11:09:14
+Start                          : 2026-04-14T11:09:54
+End                            : 2026-04-14T12:30:43
+Reserved walltime              : 03:00:00
+Used walltime                  : 01:20:49
+Used CPU time                  : 02:22:18 (Efficiency: 44.02%)
+% User (Computation)           : 91.99%
+% System (I/O)                 :  8.01%
+Total memory reserved          : 16G
+Maximum memory used            : 1.06G
+Hints and tips      :
+ 1) The program efficiency is low. Your program is not using the assigned cores
+    effectively. Please check if you are using all the cores you requested.
+    You may also need to check the file in- and output pattern of your program.
+ 2) You requested much more CPU memory than your program used.
+    Please reduce the requested amount of memory.
+ *) For more information on these issues see:
+    https://wiki.hpc.rug.nl/habrok/additional_information/job_hints
+
+Acknowledgements:
+=================
+
+Please see this page for information about acknowledging Hábrók in your publications:
+
+https://wiki.hpc.rug.nl/habrok/introduction/scientific_output
+
+################################################################################

@@ -1,0 +1,170 @@
+[
+  {
+    "tag": "v7",
+    "vrt": 38,
+    "chat_local": 24,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "r50",
+    "vrt": 61,
+    "chat_local": 61,
+    "embedding": 73,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "ablA",
+    "vrt": 33,
+    "chat_local": 31,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "ablB",
+    "vrt": null,
+    "chat_local": null,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "ablC",
+    "vrt": 35,
+    "chat_local": 35,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "ablD",
+    "vrt": null,
+    "chat_local": null,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c10_m0",
+    "vrt": 26,
+    "chat_local": 23,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c10_m1",
+    "vrt": 25,
+    "chat_local": 25,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c10_m2",
+    "vrt": 30,
+    "chat_local": 23,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c10_m3",
+    "vrt": 29,
+    "chat_local": 28,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c10_m4",
+    "vrt": 30,
+    "chat_local": 23,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c100_m0",
+    "vrt": 34,
+    "chat_local": 23,
+    "embedding": 45,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c100_m1",
+    "vrt": 28,
+    "chat_local": 28,
+    "embedding": 43,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c100_m2",
+    "vrt": 29,
+    "chat_local": 29,
+    "embedding": 45,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c100_m3",
+    "vrt": 26,
+    "chat_local": 25,
+    "embedding": 43,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "zoo_c100_m4",
+    "vrt": 27,
+    "chat_local": 27,
+    "embedding": 45,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "phase_bs8",
+    "vrt": 150,
+    "chat_local": 150,
+    "embedding": 150,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "phase_bs128",
+    "vrt": 100,
+    "chat_local": 100,
+    "embedding": 100,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "phase_bs1024",
+    "vrt": 100,
+    "chat_local": 100,
+    "embedding": 100,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "wp",
+    "vrt": null,
+    "chat_local": null,
+    "embedding": null,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "imgnet_simple",
+    "vrt": null,
+    "chat_local": null,
+    "embedding": 1,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "imgnet_adv",
+    "vrt": null,
+    "chat_local": null,
+    "embedding": 1,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "simclr_c10",
+    "vrt": 229,
+    "chat_local": 234,
+    "embedding": 284,
+    "claimed_value_verified": true
+  },
+  {
+    "tag": "simclr_c100",
+    "vrt": 191,
+    "chat_local": 187,
+    "embedding": 213,
+    "claimed_value_verified": true
+  }
+]

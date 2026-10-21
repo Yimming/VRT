@@ -1,0 +1,1 @@
+cd /scratch/p318770/ssl_supcon_code_s50 && OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 python synth_radial_fig4a.py --jobs 8 --ref synth_radial_results.csv --out /home3/p318770/venvs/overfitting/benchmark_final/s50/synth/fig4a_radial.csv

@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "Early Detection of Backbone Divergence via Neighborhood Structure in Learned Embeddings (code and data)"
+authors:
+  - family-names: Zhang
+    given-names: Yiming
+    affiliation: "Bernoulli Institute for Mathematics, Computer Science and Artificial Intelligence, Faculty of Science and Engineering, University of Groningen, Groningen, The Netherlands"
+  - family-names: Zare Hassanpour
+    given-names: Reza
+    affiliation: "Bernoulli Institute for Mathematics, Computer Science and Artificial Intelligence, Faculty of Science and Engineering, University of Groningen, Groningen, The Netherlands"
+  - family-names: Gaydadjiev
+    given-names: Georgi
+    affiliation: "Department of Quantum and Computer Engineering, Faculty of Electrical Engineering, Mathematics and Computer Science, Delft University of Technology, Delft, The Netherlands"
+preferred-citation:
+  type: conference-paper
+  title: "Early Detection of Backbone Divergence via Neighborhood Structure in Learned Embeddings"
+  authors:
+    - family-names: Zhang
+      given-names: Yiming
+      affiliation: "Bernoulli Institute for Mathematics, Computer Science and Artificial Intelligence, Faculty of Science and Engineering, University of Groningen, Groningen, The Netherlands"
+    - family-names: Zare Hassanpour
+      given-names: Reza
+      affiliation: "Bernoulli Institute for Mathematics, Computer Science and Artificial Intelligence, Faculty of Science and Engineering, University of Groningen, Groningen, The Netherlands"
+    - family-names: Gaydadjiev
+      given-names: Georgi
+      affiliation: "Department of Quantum and Computer Engineering, Faculty of Electrical Engineering, Mathematics and Computer Science, Delft University of Technology, Delft, The Netherlands"
+  collection-title: "Advances in Neural Information Processing Systems 39 (NeurIPS 2026)"
+  year: 2026
+# TODO: add repository-code, version, date-released and doi once the repository and the archived release exist

@@ -1,0 +1,82 @@
+null_cifar_vrt (arch, bn_mode): repetitions complete / seen, missing rows
+  ('frn_c10', 'eval'): 500/500 complete, max rep 499
+  ('r18_c10', 'eval'): 500/500 complete, max rep 499
+  ('r18_c100', 'eval'): 500/500 complete, max rep 499
+  ('r50_c100', 'eval'): 500/500 complete, max rep 499
+  ('simclr_c10', 'eval'): 500/500 complete, max rep 499
+null_cifar_base (arch, bn_mode, split, method, budget): repetitions
+  ('frn_c10', 'eval', 'official', 'c2st', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'official', 'ed', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'official', 'henze', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'official', 'mmd', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'official', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'official', 'schilling', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'resplit', 'c2st', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'resplit', 'ed', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'resplit', 'henze', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'resplit', 'mmd', '10000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'resplit', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('frn_c10', 'eval', 'resplit', 'schilling', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'official', 'c2st', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'official', 'ed', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'official', 'henze', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'official', 'mmd', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'official', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'official', 'schilling', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'resplit', 'c2st', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'resplit', 'ed', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'resplit', 'henze', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'resplit', 'mmd', '10000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'resplit', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('r18_c10', 'eval', 'resplit', 'schilling', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'official', 'c2st', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'official', 'ed', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'official', 'henze', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'official', 'mmd', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'official', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'official', 'schilling', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'resplit', 'c2st', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'resplit', 'ed', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'resplit', 'henze', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'resplit', 'mmd', '10000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'resplit', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('r18_c100', 'eval', 'resplit', 'schilling', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'official', 'c2st', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'official', 'ed', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'official', 'henze', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'official', 'mmd', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'official', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'official', 'schilling', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'resplit', 'c2st', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'resplit', 'ed', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'resplit', 'henze', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'resplit', 'mmd', '10000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'resplit', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('r50_c100', 'eval', 'resplit', 'schilling', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'official', 'c2st', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'official', 'ed', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'official', 'henze', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'official', 'mmd', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'official', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'official', 'schilling', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'resplit', 'c2st', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'resplit', 'ed', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'resplit', 'henze', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'resplit', 'mmd', '10000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'resplit', 'mmdagg', '5000'): 500 reps, max rep 499
+  ('simclr_c10', 'eval', 'resplit', 'schilling', '10000'): 500 reps, max rep 499
+null_cifar_rule (arch, budget): networks with exactly the 50 paper seeds / networks seen
+  ('frn_c10', 'large'): 30/30 networks with seeds 42-91 exactly
+  ('frn_c10', 'small'): 30/30 networks with seeds 42-91 exactly
+  ('r18_c10', 'large'): 30/30 networks with seeds 42-91 exactly
+  ('r18_c10', 'small'): 30/30 networks with seeds 42-91 exactly
+  ('r18_c100', 'large'): 30/30 networks with seeds 42-91 exactly
+  ('r18_c100', 'small'): 30/30 networks with seeds 42-91 exactly
+  ('r50_c100', 'large'): 30/30 networks with seeds 42-91 exactly
+  ('r50_c100', 'small'): 30/30 networks with seeds 42-91 exactly
+  ('simclr_c10', 'large'): 30/30 networks with seeds 42-91 exactly
+  ('simclr_c10', 'small'): 30/30 networks with seeds 42-91 exactly
+  ('simclr_c100', 'large'): 30/30 networks with seeds 42-91 exactly
+  ('simclr_c100', 'small'): 30/30 networks with seeds 42-91 exactly
+
+no anomalies: every p is a number in [0, 1], no conflicting duplicates, rule seeds are exactly 42 to 91

@@ -1,0 +1,1 @@
+cd /scratch/p318770/ssl_supcon_code_s50 && python chat_stats_s50.py --tag zoo_c10_m3 --npz_fmt '/scratch/p318770/model_zoos/ladder_feats/zoo_c10_m3/ep{ep:03d}.npz' --epochs 24,27,28 --seeds 42-91 --out /home3/p318770/venvs/overfitting/benchmark_final/s50/chat_stats/chatstats_zoo_c10_m3_c24-28fix.csv

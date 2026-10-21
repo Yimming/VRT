@@ -1,0 +1,2 @@
+mmd_on_chat/c100_nan_bug	SimCLR CIFAR-100 MMD on c-hat before the +inf cap (NaN statistics, p = 1/2001)
+chat_stats/dup_backup	c-hat diagnostic files before the duplicate-row cleanup (both concurrent jobs' rows)

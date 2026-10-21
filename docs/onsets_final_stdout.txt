@@ -1,0 +1,54 @@
+validated 4104 files, 4603050 records, 68 legacy files skipped, 0 keys repeated across files with equal values
+784 cells written to docs/onsets_final.csv (784 with at least one complete epoch, 0 with results but no complete epoch); 0 with unevaluated checkpoints before the onset, 0 with an epoch at median p = 0.05 exactly, 0 with epochs missing seeds (exact p for reversed VRT and Henze)
+
+Table 1 (eval mode): vrt | mmd | mmdagg | c2st | ed
+  ResNet20-FRN (CIFAR-10)          38 | null | null | null | null
+  ResNet-18 C100 Zoo (x5)          26--34 | 43--45 | 44--46 | null | 43--45
+  ResNet-18 C10 Zoo (x5)           25--30 | null | 40--42 | null | null
+  ResNet-50 (CIFAR-100)            61 | 73 | 80 | 121 | 73
+  Phase Zoo bs8                    150 | 150 | 150 | 150 | 150
+  Phase Zoo bs128                  100 | 100 | 100 | 100 | 100
+  Phase Zoo bs1024                 100 | 100 | 100 | 125 | 100
+  SimCLR CIFAR-10                  229 | 284 | 483 | 691 | 283
+  SimCLR CIFAR-100                 191 | 213 | 348 | 653 | 213
+  A: baseline                      33 | null | 42 | null | 44
+  B: 10x wd                        null | null | null | null | null
+  C: strong aug                    35 | null | null | null | null
+  D: wd + aug                      null | null | null | null | null
+  5-layer CNN (CIFAR-10)           null | null | null | null | null
+  DeepResNet50 simple (ImageNet)   null | 1 | 5 | null | 1
+  DeepResNet50 adv. (ImageNet)     null | 1 | 20 | null | 1
+
+Table 2 (eval -> train, BatchNorm models): vrt | mmd | mmdagg | c2st | ed
+  ResNet-18 C100 Zoo (x5)          26--34 -> 20--26 | 43--45 -> 55--56 | 44--46 -> 52 | null -> null | 43--45 -> 54--55
+  ResNet-18 C10 Zoo (x5)           25--30 -> 26--32 | null -> null | 40--42 -> 42--48 (3) | null -> null | null -> null
+  ResNet-50 (CIFAR-100)            61 -> 61 | 73 -> 121 | 80 -> 121 | 121 -> 130 | 73 -> 121
+  Phase Zoo bs8                    150 -> 150 | 150 -> 150 | 150 -> 150 | 150 -> 150 | 150 -> 150
+  Phase Zoo bs128                  100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100 | 100 -> 100
+  Phase Zoo bs1024                 100 -> 100 | 100 -> 125 | 100 -> 100 | 125 -> 125 | 100 -> 125
+  SimCLR CIFAR-10                  229 -> 527 | 284 -> 692 | 483 -> 632 | 691 -> 764 | 283 -> 687
+  SimCLR CIFAR-100                 191 -> 324 | 213 -> 583 | 348 -> 495 | 653 -> 744 | 213 -> 583
+  A: baseline                      33 -> 31 | null -> null | 42 -> 44 | null -> null | 44 -> null
+  B: 10x wd                        null -> 48 | null -> null | null -> null | null -> null | null -> null
+  C: strong aug                    35 -> 35 | null -> null | null -> null | null -> null | null -> null
+  D: wd + aug                      null -> null | null -> null | null -> null | null -> null | null -> null
+  DeepResNet50 simple (ImageNet)   null -> null | 1 -> null | 5 -> 50 | null -> null | 1 -> null
+  DeepResNet50 adv. (ImageNet)     null -> null | 1 -> null | 20 -> 20 | null -> null | 1 -> null
+
+Table 3 (unnormalized features, eval -> train): mmd_raw | ed_raw
+  ResNet20-FRN (CIFAR-10)          null | null
+  ResNet-18 C100 Zoo (x5)          33--39 -> null | 33--37 -> 55--56
+  ResNet-18 C10 Zoo (x5)           44--45 (3) -> null | 39--41 -> null
+  ResNet-50 (CIFAR-100)            63 -> 121 | 62 -> 121
+  Phase Zoo bs8                    150 -> 150 | 150 -> 150
+  Phase Zoo bs128                  100 -> 100 | 100 -> 100
+  Phase Zoo bs1024                 100 -> 125 | 100 -> 125
+  SimCLR CIFAR-10                  100 -> 658 | 100 -> 540
+  SimCLR CIFAR-100                 127 -> 440 | 127 -> 417
+  A: baseline                      null -> null | 43 -> null
+  B: 10x wd                        null -> null | null -> null
+  C: strong aug                    null -> null | 44 -> null
+  D: wd + aug                      null -> null | null -> null
+  5-layer CNN (CIFAR-10)           null | null
+  DeepResNet50 simple (ImageNet)   1 -> null | 1 -> null
+  DeepResNet50 adv. (ImageNet)     5 -> null | 1 -> null

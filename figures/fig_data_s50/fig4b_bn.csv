@@ -1,0 +1,7 @@
+model,epoch,eval_pct,train_pct,n_seeds
+imgnet_adv,200,100,4,50/50
+imgnet_adv,250,98,2,50/50
+imgnet_adv,300,100,2,50/50
+imgnet_simple,200,92,4,50/50
+imgnet_simple,250,98,2,50/50
+imgnet_simple,300,96,6,50/50

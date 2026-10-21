@@ -1,0 +1,1031 @@
+[
+  {
+    "source": "output/pdf/appf_final_1013/build_figure.py",
+    "source_sha256": "cc38899ae8d28a1f0a69661e364c188be249e9f906e20ac201926a0150196f03",
+    "packaged": "appendix_f/build_figure.py",
+    "packaged_sha256": "2545dd707591e984b8dde2343642dbf37c4ae0d922518db6a6f1b2cb492de348",
+    "transformation": "portable adaptation; see README"
+  },
+  {
+    "source": "output/pdf/trajectory_simclr_1013/plot_loss_with_simclr.py",
+    "source_sha256": "43fd405d5174430b5714bf35adaee373a7b67b532ff7305223af845dbbaabc4e",
+    "packaged": "appendix_f/plot_loss_with_simclr.py",
+    "packaged_sha256": "ec60e0001a9a951ad5482cf14678b5688a81f884169fdb5cefe0d41e64fb67f1",
+    "transformation": "portable adaptation; see README"
+  },
+  {
+    "source": "output/pdf/trajectory_options_1011/plot_loss_representatives.py",
+    "source_sha256": "8f8d7f9241a8ce7705803e78a6013dc7e34e39aad3121978a00f98b4715298b2",
+    "packaged": "appendix_f/plot_loss_representatives.py",
+    "packaged_sha256": "84077fc9c9bdbf69ddd34e2dd2ca85268fe6a83834350b955e33b12728e7b57f",
+    "transformation": "portable adaptation; see README"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/vrt_v7.csv",
+    "source_sha256": "b953ef7afb9ee7e4bf74d864c94f3f4fe8f43cbabeeaecb6ab580da3c30db2b8",
+    "packaged": "appendix_f/data/fig_data_s50/vrt_v7.csv",
+    "packaged_sha256": "b953ef7afb9ee7e4bf74d864c94f3f4fe8f43cbabeeaecb6ab580da3c30db2b8",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/vrt_r50.csv",
+    "source_sha256": "2dee7583120b05e58e66d7ddbf2f810e9b9fd6aedab9eea3cb0a8a9e7b432ac7",
+    "packaged": "appendix_f/data/fig_data_s50/vrt_r50.csv",
+    "packaged_sha256": "2dee7583120b05e58e66d7ddbf2f810e9b9fd6aedab9eea3cb0a8a9e7b432ac7",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/vrt_wp.csv",
+    "source_sha256": "c3914f6806e0aee3d833728be96ba3d6c2c3b04c88c2af70a9367627cb6d2f1f",
+    "packaged": "appendix_f/data/fig_data_s50/vrt_wp.csv",
+    "packaged_sha256": "c3914f6806e0aee3d833728be96ba3d6c2c3b04c88c2af70a9367627cb6d2f1f",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/vrt_zoo_c100_m0.csv",
+    "source_sha256": "6de00ee74fb2719f2ee736f3a5febbf7a814e2e880aa568d100d764c688076c4",
+    "packaged": "appendix_f/data/fig_data_s50/vrt_zoo_c100_m0.csv",
+    "packaged_sha256": "6de00ee74fb2719f2ee736f3a5febbf7a814e2e880aa568d100d764c688076c4",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/vrt_ablA.csv",
+    "source_sha256": "bc8bebe83db010dcf685957cd94b43ea25139b4bf7e21126ec67e93e77f0b5d6",
+    "packaged": "appendix_f/data/fig_data_s50/vrt_ablA.csv",
+    "packaged_sha256": "bc8bebe83db010dcf685957cd94b43ea25139b4bf7e21126ec67e93e77f0b5d6",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/vrt_ablB.csv",
+    "source_sha256": "1219fcaa310b6cd14ede2cbf379e84e79358e9b08dc30b5f198a56851fb2b2bd",
+    "packaged": "appendix_f/data/fig_data_s50/vrt_ablB.csv",
+    "packaged_sha256": "1219fcaa310b6cd14ede2cbf379e84e79358e9b08dc30b5f198a56851fb2b2bd",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/vrt_ablC.csv",
+    "source_sha256": "e45f46ce5ce5806d4b4e6c083e349e4aaef3e0f3185ed495216004819a1cd664",
+    "packaged": "appendix_f/data/fig_data_s50/vrt_ablC.csv",
+    "packaged_sha256": "e45f46ce5ce5806d4b4e6c083e349e4aaef3e0f3185ed495216004819a1cd664",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/vrt_ablD.csv",
+    "source_sha256": "7595f4246ade4cb83db0732c70c37b7c1e786b255c4be355c1bb5f2fc92a7d2b",
+    "packaged": "appendix_f/data/fig_data_s50/vrt_ablD.csv",
+    "packaged_sha256": "7595f4246ade4cb83db0732c70c37b7c1e786b255c4be355c1bb5f2fc92a7d2b",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/fig_data_s50/onsets.csv",
+    "source_sha256": "4c195e0846de9b9b3477eddb163cd346ab05ddf83060186a63577e8be9ed31e0",
+    "packaged": "appendix_f/data/fig_data_s50/onsets.csv",
+    "packaged_sha256": "4c195e0846de9b9b3477eddb163cd346ab05ddf83060186a63577e8be9ed31e0",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/benchmark_final/v7_losses.log",
+    "source_sha256": "e7a7ad34bb803b6487aa4bf4aa7ac9c38a42e487a5f28aa7870476f60f645fd8",
+    "packaged": "appendix_f/data/benchmark_final/v7_losses.log",
+    "packaged_sha256": "e7a7ad34bb803b6487aa4bf4aa7ac9c38a42e487a5f28aa7870476f60f645fd8",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/benchmark_final/r50_losses.log",
+    "source_sha256": "04dc7bbce4308b2a83d7317d5bb2dd69c4160bf009aef3eb5ad4faa86c441f67",
+    "packaged": "appendix_f/data/benchmark_final/r50_losses.log",
+    "packaged_sha256": "04dc7bbce4308b2a83d7317d5bb2dd69c4160bf009aef3eb5ad4faa86c441f67",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/benchmark_final/losses_wp.csv",
+    "source_sha256": "17a1e4c43a53a2480bbaf7ab303d4f9cf4a53b586f385d37c93e74e57223bdc4",
+    "packaged": "appendix_f/data/benchmark_final/losses_wp.csv",
+    "packaged_sha256": "17a1e4c43a53a2480bbaf7ab303d4f9cf4a53b586f385d37c93e74e57223bdc4",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/benchmark_final/losses_zoo_c100_m0.csv",
+    "source_sha256": "4e5b75a50568784198a17f6cc09ffd659a910f0bc25dc939acb127a7f330fd94",
+    "packaged": "appendix_f/data/benchmark_final/losses_zoo_c100_m0.csv",
+    "packaged_sha256": "4e5b75a50568784198a17f6cc09ffd659a910f0bc25dc939acb127a7f330fd94",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/benchmark_final/losses_ablation_A_baseline.csv",
+    "source_sha256": "c398ad1e181a13a5d057e6839b094ba6d16aa2de4c0c76eb67106aaa2d82dde1",
+    "packaged": "appendix_f/data/benchmark_final/losses_ablation_A_baseline.csv",
+    "packaged_sha256": "c398ad1e181a13a5d057e6839b094ba6d16aa2de4c0c76eb67106aaa2d82dde1",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/benchmark_final/losses_ablation_B_strong_wd.csv",
+    "source_sha256": "f3c065e5c9c7abc656058dfa9852098192ea107ebe81b9da76b3c0c24c91833f",
+    "packaged": "appendix_f/data/benchmark_final/losses_ablation_B_strong_wd.csv",
+    "packaged_sha256": "f3c065e5c9c7abc656058dfa9852098192ea107ebe81b9da76b3c0c24c91833f",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/benchmark_final/losses_ablation_C_strong_aug.csv",
+    "source_sha256": "a8008716dfa0a382e8b29e09cc715498ab4c4769449c1555c84a7600d07c73a1",
+    "packaged": "appendix_f/data/benchmark_final/losses_ablation_C_strong_aug.csv",
+    "packaged_sha256": "a8008716dfa0a382e8b29e09cc715498ab4c4769449c1555c84a7600d07c73a1",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/figs/benchmark_final/losses_ablation_D_wd_plus_aug.csv",
+    "source_sha256": "f5d10713fcd36fbc046218acff34d38425e7900fa7eb45093c41eaa2d75bfe25",
+    "packaged": "appendix_f/data/benchmark_final/losses_ablation_D_wd_plus_aug.csv",
+    "packaged_sha256": "f5d10713fcd36fbc046218acff34d38425e7900fa7eb45093c41eaa2d75bfe25",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c1-100.csv",
+    "source_sha256": "944043f88c5ef15dc73aa633349ac68ecf121e933d63728ee59cf14d501ae1b0",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c1-100.csv",
+    "packaged_sha256": "944043f88c5ef15dc73aa633349ac68ecf121e933d63728ee59cf14d501ae1b0",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c101-200.csv",
+    "source_sha256": "4410cf7e2d639f88dd20f3326ca2dda0b6c4624d43a187940ef308e022108bcc",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c101-200.csv",
+    "packaged_sha256": "4410cf7e2d639f88dd20f3326ca2dda0b6c4624d43a187940ef308e022108bcc",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c201-300.csv",
+    "source_sha256": "5cbced6d8472347483c5b32000eaabb4d38e2888b1c6f6ad55f5593f9a10e959",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c201-300.csv",
+    "packaged_sha256": "5cbced6d8472347483c5b32000eaabb4d38e2888b1c6f6ad55f5593f9a10e959",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c301-400.csv",
+    "source_sha256": "5a0fc655ff68dfb50ca545e8652bea222ca939b16ef5039d9bdda7b9aa903981",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c301-400.csv",
+    "packaged_sha256": "5a0fc655ff68dfb50ca545e8652bea222ca939b16ef5039d9bdda7b9aa903981",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c401-500.csv",
+    "source_sha256": "2e59d8dabf0406d02feab3845eeb831e687ced4aa9f74fe324c079fc269ea865",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c401-500.csv",
+    "packaged_sha256": "2e59d8dabf0406d02feab3845eeb831e687ced4aa9f74fe324c079fc269ea865",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c501-600.csv",
+    "source_sha256": "a66b838ed0c78461322e9a65a7d2be6352cf0f066050c17a44c193430f4f0868",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c501-600.csv",
+    "packaged_sha256": "a66b838ed0c78461322e9a65a7d2be6352cf0f066050c17a44c193430f4f0868",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c601-700.csv",
+    "source_sha256": "54f90698c34e62af1141d113b3973b880a56c160ecafba5180595e5bda12d4b3",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c601-700.csv",
+    "packaged_sha256": "54f90698c34e62af1141d113b3973b880a56c160ecafba5180595e5bda12d4b3",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c701-800.csv",
+    "source_sha256": "c0eb1b4bd3c5857bda2613cc9ff8361c0d1c4015cd46b687e4326b25666fcc79",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c701-800.csv",
+    "packaged_sha256": "c0eb1b4bd3c5857bda2613cc9ff8361c0d1c4015cd46b687e4326b25666fcc79",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c801-900.csv",
+    "source_sha256": "0dd57d5352214ca7f85d99860af117c586d1f4e1d041b365cde8e9b016b03d2c",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c801-900.csv",
+    "packaged_sha256": "0dd57d5352214ca7f85d99860af117c586d1f4e1d041b365cde8e9b016b03d2c",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar100_c901-1000.csv",
+    "source_sha256": "4b3a1a90df850b8af5e25db36d2dc0f110a9aabd7b4b1f5934fab58a3e0f6be0",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar100_c901-1000.csv",
+    "packaged_sha256": "4b3a1a90df850b8af5e25db36d2dc0f110a9aabd7b4b1f5934fab58a3e0f6be0",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c1-100.csv",
+    "source_sha256": "82c7ecec2d757b5c1e72848a01bf88bc077cf30ce76a7e03b3df88fb782c6957",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c1-100.csv",
+    "packaged_sha256": "82c7ecec2d757b5c1e72848a01bf88bc077cf30ce76a7e03b3df88fb782c6957",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c101-200.csv",
+    "source_sha256": "8bdb93d6578a94b305d64bfcff777e5fb1294e2a967600280a978575afd7036c",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c101-200.csv",
+    "packaged_sha256": "8bdb93d6578a94b305d64bfcff777e5fb1294e2a967600280a978575afd7036c",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c201-300.csv",
+    "source_sha256": "6af4e2f90855e8620408f6f7e4324d5ed3984b4a3f2ddc0d5a42b9ef8a44478c",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c201-300.csv",
+    "packaged_sha256": "6af4e2f90855e8620408f6f7e4324d5ed3984b4a3f2ddc0d5a42b9ef8a44478c",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c301-400.csv",
+    "source_sha256": "ac9b2780cbb58de7a4e03e8257789bf354792d01a02ca9a78f05b322f33b0974",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c301-400.csv",
+    "packaged_sha256": "ac9b2780cbb58de7a4e03e8257789bf354792d01a02ca9a78f05b322f33b0974",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c401-500.csv",
+    "source_sha256": "6e0127ceb21b7deb3d9ed1e1582e200d9fd2a78bbc1f45c2637276d20d307523",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c401-500.csv",
+    "packaged_sha256": "6e0127ceb21b7deb3d9ed1e1582e200d9fd2a78bbc1f45c2637276d20d307523",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c501-600.csv",
+    "source_sha256": "201e30058b0f252ed3092b3f6c9325e24a6f017f702eddf0e746ac43c4b32aed",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c501-600.csv",
+    "packaged_sha256": "201e30058b0f252ed3092b3f6c9325e24a6f017f702eddf0e746ac43c4b32aed",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c601-700.csv",
+    "source_sha256": "d525d7cc96ba9a870f8f588f1780711a2cadd3c5f2e190d0372071bccd7bc5e1",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c601-700.csv",
+    "packaged_sha256": "d525d7cc96ba9a870f8f588f1780711a2cadd3c5f2e190d0372071bccd7bc5e1",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c701-800.csv",
+    "source_sha256": "174f66e4f578b742261dc8c654fb5d389611e0a15fd49de01301624c6e9677d6",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c701-800.csv",
+    "packaged_sha256": "174f66e4f578b742261dc8c654fb5d389611e0a15fd49de01301624c6e9677d6",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c801-900.csv",
+    "source_sha256": "38e762b61f2a8c5a7f5be3f726b0428d402a618508bbbc1e0c1e5de428d3c3d5",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c801-900.csv",
+    "packaged_sha256": "38e762b61f2a8c5a7f5be3f726b0428d402a618508bbbc1e0c1e5de428d3c3d5",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl_nll/ssl_nll_cifar10_c901-1000.csv",
+    "source_sha256": "9dce2b5964337ccafaf92fcee3351896e6514d8cd8d76ab60823b1fb4afd970a",
+    "packaged": "appendix_f/data/ssl_nll/ssl_nll_cifar10_c901-1000.csv",
+    "packaged_sha256": "9dce2b5964337ccafaf92fcee3351896e6514d8cd8d76ab60823b1fb4afd970a",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c1-20.csv",
+    "source_sha256": "c323d81d55cff82b1b897dcfbd73916d2e924767c090b2efe4b8ddac24e80dec",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c101-120.csv",
+    "source_sha256": "35c46f7e5d9d6eb4a594f23ba5d01bee8767342f73f2d4673e070756be9e2e5e",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c121-140.csv",
+    "source_sha256": "91920ad2e02f261df1f55b16d16cf73dd47e3d9251fd140755d59a4b072eaedc",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c141-160.csv",
+    "source_sha256": "6cb7ced2c660aaee607b0161c123a31089a0bfac1188fb6d49e6f1d1cec29ddb",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c161-180.csv",
+    "source_sha256": "e5251e47527f5dc1833c6b0ff398bbea607a888358b7eca46dc4252a61622fd5",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c181-200.csv",
+    "source_sha256": "25ca67b3253063168a8e91b6917e675f9007a2ca8e2fdda5cd88d6eb9bf5d2cf",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c201-220.csv",
+    "source_sha256": "49eb9099ad6c82fc297374dc6b7e412bb158e0d83c15f7223ca1f7ffbc705841",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c21-40.csv",
+    "source_sha256": "05d7de173624e2b7ba8326b47bd861af507b703e6689b627d299de06298478b2",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c221-240.csv",
+    "source_sha256": "e11be59e304daf2773fb5d5c194039b45600d2bbc5fbc23000b992a83efdc7ce",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c241-260.csv",
+    "source_sha256": "352356410fcfdc2dcf74a668f6e8bfff1dfaa84d9a4055c764b583bad4f1b42e",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c261-280.csv",
+    "source_sha256": "451b7bf2f27a0cd78adf5005762d7cc47afc14b6f3cd2db8a756e074ca0bc865",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c281-300.csv",
+    "source_sha256": "6fa05f9493ffcbef08d4ad73c285cd48a8828dbca4c83aa06b624a434d258653",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c301-320.csv",
+    "source_sha256": "eb60622e7ae6081792b9cfe81b37edc6100ff1b1e56d8e2d9fc500bbe08edbf1",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c321-340.csv",
+    "source_sha256": "22a782cb92fa1653b49f716c02f6e69f5cb32de86b554c69be153823dd970be4",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c341-360.csv",
+    "source_sha256": "29e0cf3def5c16121f9caa266e4c2d2c56e2d3dc67fd7df858022742ad1efff2",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c361-380.csv",
+    "source_sha256": "38592d558cf8103687111daf744f47b2ebfa87d8fc00f5308bb5aad9b1007ffb",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c381-400.csv",
+    "source_sha256": "3107cbae77ec6640decd349de8aa7b5cc7c0b134d6e3bdc0d32fc04d0d9d4d8f",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c401-420.csv",
+    "source_sha256": "f60b132c13c0dfcd920ba2413d61072da09733221c3824a92818e6b428feb537",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c41-60.csv",
+    "source_sha256": "7c5ef1243aee47b8950dcb59ba9a27a833bca4e7c749f7de058ebb9b5a5f2da8",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c421-440.csv",
+    "source_sha256": "cf62605b79528e2a46bf20d8fe5bd246c0321a46b26b06fc48c1bd9055b1afe4",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c441-460.csv",
+    "source_sha256": "57cf8faf6c4519ea21ed4c0fdbcab3f76ad2ec5764ee88a11923624b20028ec7",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c461-480.csv",
+    "source_sha256": "280e9a7141a241e3d021d6afb36b4e7895a84069d7c4a45ee51f0b283e144b59",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c481-500.csv",
+    "source_sha256": "98b80cc9073d9af0b6796add27cb54864c90eb71df5e9ba3d0e2306a6b72cabd",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c501-520.csv",
+    "source_sha256": "8e4df49cce6852f1479f8ee0ef9677c97b9219e6d7a215eb7d5fd2514d6eab65",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c521-540.csv",
+    "source_sha256": "6648451c2ffe77095e9d13086ed838dd1f057f8de96caeee165f1ed1e2eeb975",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c541-560.csv",
+    "source_sha256": "fbac5dbc6706bce7b00110c0556e34d36beaed0549d70fba78e4d2c784d053cf",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c561-580.csv",
+    "source_sha256": "ba27bc1ae398427f4fca4372bdeb4bea62400494640c92e62ebfcd02d8d61abe",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c581-600.csv",
+    "source_sha256": "ac7cc412f7110deabddacf25a67f7a8d4a70b5ea6a9cb30ee2c9c3d5e01150ac",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c601-620.csv",
+    "source_sha256": "faf4df96cefe19397432ed4ed7a01df443bc3339675fa4c7c3ff505ec86ed543",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c61-80.csv",
+    "source_sha256": "129c965ba564e987889475d426fddb16dcd7f0995e51857428bb62b47a533247",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c621-640.csv",
+    "source_sha256": "88fdcf6ee0a650a84b9e8c7660b13f0124b6b3aa27276b535dc2cb4e6a6243c5",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c641-660.csv",
+    "source_sha256": "79d9f3e7c833cea341235c34299cafad6f7a7e5265220b7247ba990f48bf8fae",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c661-680.csv",
+    "source_sha256": "2da8e34147099ec7ee0e4259d5e2d9ea2843c5be5b4879d5b67d3d4183978e7d",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c681-700.csv",
+    "source_sha256": "06b721380d0029fe6f87cd4ae4868cb16d00a0d407f036ab1b9595f8684037bd",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c701-720.csv",
+    "source_sha256": "f273beafca167c9246a77ab5f05171cd11ac6ec4e725f63b606eaab8a68c3309",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c721-740.csv",
+    "source_sha256": "e3b15d3ee6f186f4e9c941b3fedad9778f889ed962d2635500f2d6232b74263f",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c741-760.csv",
+    "source_sha256": "973d4cff8a48f027d7d66ffd3eb36e0d4a1debcd48b7b80f835de080d2ac88b7",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c761-780.csv",
+    "source_sha256": "e7fc673b11f3a637546ca90ba03e52a353c1467d1dae6d709fb707e53352dae6",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c781-800.csv",
+    "source_sha256": "a74f078b8c2596f785b6aaac3262f88b6605f39e88bb198801dbe9b24ce9bb2e",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c801-820.csv",
+    "source_sha256": "788e98e2c901f423159ae249993e36b954a3a2276d4d9bd1cb10a69bf8e059ce",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c81-100.csv",
+    "source_sha256": "aa3b54a0c57fe6bfa08e5fda90e458d81570f1df91ef2426e891e9d92f8aaeff",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c821-840.csv",
+    "source_sha256": "4f084f5c6f053e63e5dec2ec7ff6ee219d1b258f0a0e2a79778bd4d2889d0d33",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c841-860.csv",
+    "source_sha256": "75dfe775929065a15c9dbe72f2244f4db79d84a7efff799b2e160bda7260beca",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c861-880.csv",
+    "source_sha256": "5020c2e2c334f00c2a67b6df3ffb535bc7069555424fab8f732f51f14df82ca9",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c881-900.csv",
+    "source_sha256": "624d6226b1c85c5553a66ee65a9d153755d6f21fe43c4992d2a424288f9e5e86",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c901-920.csv",
+    "source_sha256": "afe358502307b0f4d038b7dc48ca1e6d9d4255dd6a8e8d3fa853b865a3334bdb",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c921-940.csv",
+    "source_sha256": "ef69296f8f82b36dec428eed24a5bd608826fbd4438395e8c8640bae4f2b4fd8",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c941-960.csv",
+    "source_sha256": "6a247a931ae2d78bd260dee8209b4f6234dd4eda3aebb223f44433167d7fbc8f",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c961-980.csv",
+    "source_sha256": "6e8b456a2a8210acff78d061a99e1ad2fe7bc8d31d7a5520ae51a1fae77029ae",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar10_fast_c981-1000.csv",
+    "source_sha256": "37374d1840fad25ffe11ed0f40fe86aad3fcb753ee934c01aab16278cf25da9f",
+    "packaged": "appendix_f/data/ssl/ssl_cifar10_fast_c1-1000.csv",
+    "packaged_sha256": "590805f984f42c27d6f1b94a633a9a14455b8c26353e4cf0e7ca0de68e67033f",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c1-20.csv",
+    "source_sha256": "3c582e4113325eabd2251b827f1019b78399c94aaec3ca9e9fee8f1a79e03441",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c101-120.csv",
+    "source_sha256": "d9341f16970e3d53a1b048fb415e2fd54d9783c110d421e5d5e7c1f63d3b37f8",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c121-140.csv",
+    "source_sha256": "5b679965f81803b9874115db623472d5392f35680255bfc193dc7af13ae69514",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c141-160.csv",
+    "source_sha256": "94f143e70eaa5201388be5fd806821afe65d1217963ea8fec1f9273734e641c6",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c161-180.csv",
+    "source_sha256": "dd379d26f55dcbd74323b8428f473c83a1ce5902dda6980727a998a529186846",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c181-200.csv",
+    "source_sha256": "5fa93c1f5dd87cd72a025b30052331621bb29027de38be2a13d83e0fa7ae79a6",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c201-220.csv",
+    "source_sha256": "176cc78a2cc39321ee58d0f9cd575ac120e281c2fe6fa74ce50b1d61c7e60d54",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c21-40.csv",
+    "source_sha256": "5075b6772eae4532d63c007118e66cc18c892b78d3862ed08b6dbc312f33be7b",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c221-240.csv",
+    "source_sha256": "22c0a921c11841f33e48746293582564a3ad345a598dd1c33ede573d34262d39",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c241-260.csv",
+    "source_sha256": "069c36d124f977d6f83e07c0672d57a0e20448fa70d8e2b090876f132dab9d8a",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c261-280.csv",
+    "source_sha256": "b8b66239327c838051764e92089e71bbcbc96c929b97910153553bd4557152e2",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c281-300.csv",
+    "source_sha256": "5d0e6a17fcff1c62f5c12d3e94a5e80ac70fade78625acd603ebb9481ed23988",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c301-320.csv",
+    "source_sha256": "4ba4cacda7590364b059d1e81dbc592768c3f2768fadf98d14df37653408c403",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c321-340.csv",
+    "source_sha256": "5347d5a18c3082e03a761595c6186753c0bcaa43aebde774e42682542f7d4f64",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c341-360.csv",
+    "source_sha256": "c0b8e01913b362283bb6b76b34732397318101eb282421461267156bb8d3ac30",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c361-380.csv",
+    "source_sha256": "ce9a08ae76e231056f67a015e7b97051319f1c3c4e6a2e447b9fb6c002350147",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c381-400.csv",
+    "source_sha256": "0d859cb69db24e322784f665ff238a57f85bc85a426b874b5f53f7d29e1832e1",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c401-420.csv",
+    "source_sha256": "0573956598c7faa374c0c9b66c7189b2d013ecf2917ab3855216e8fe6ad9abe8",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c41-60.csv",
+    "source_sha256": "898f55730c22ea1f5594106ae691f7f47815afdfd0d6ddea67c3236bb1d8bbd3",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c421-440.csv",
+    "source_sha256": "62af28755acc075ee090b9ddc6d4fd2049f03c446ad81c763bcdf1f575d03531",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c441-460.csv",
+    "source_sha256": "a1cc6e962c6b93d70067eb7c5b4039f1bb4105e50e85830aa6bc8e6713a1d018",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c461-480.csv",
+    "source_sha256": "e49fd519cbbfa74aac6b0a2739468bed06f3f1a63a22f08f2cb0e0715703084a",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c481-500.csv",
+    "source_sha256": "0a76fcf871bc85f626c84c9323ac147554c063158cbefbbaa53f8d7c990a4bef",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c501-520.csv",
+    "source_sha256": "4071d02b4dff58d92af4bd2ca61b61d371de4a886335efc2647e7411ed1ab814",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c521-540.csv",
+    "source_sha256": "a3871ee85a1f93ab32d73bff96054848f8fc74c659238a7318eec752cc4edf36",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c541-560.csv",
+    "source_sha256": "20995a3052aeb9f09c76b111a65a8b090a63f5a878dad6b0e0fee51b5d6f0d01",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c561-580.csv",
+    "source_sha256": "87c1a78ad60eb32d108fc37f2b3105a418993610b72faf374df5ab3db5c5884d",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c581-600.csv",
+    "source_sha256": "00c1c9cf474e17295b18483461aac415566094ed00578a1127e58e33af6deabe",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c601-620.csv",
+    "source_sha256": "cd29bf1d97e88aafaa88ace5b58c4d19fc63fa7a5646a6b4c58daa21ecebfd6a",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c61-80.csv",
+    "source_sha256": "65d43fa8bc59961b22ca6b398e19248c64b0ff13ccefe45238d6e956511b068b",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c621-640.csv",
+    "source_sha256": "543d2b93027dcb9ef964d6adfbf8e0ffedd2df6802266f78cb8e6a4cd8a9275b",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c641-660.csv",
+    "source_sha256": "62a44ee2528ce368c338d2ba0276031f509d9f611764f3690a313929c0741e1b",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c661-680.csv",
+    "source_sha256": "faafa73f5682004918d5f9290096e90fc635fbcba03b7262680430ee46194364",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c681-700.csv",
+    "source_sha256": "3f700b59a087e7c359b06540554c983f41418b1f6e1cad2307e7f172f99548f0",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c701-720.csv",
+    "source_sha256": "997a3a4cb38007128723666309b28075fa86714080e0348c45958b0ec3b3f27f",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c721-740.csv",
+    "source_sha256": "c5c92f2d06620583ddae30a29be3ddac2e89cfc9973226e384698c4000c5644d",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c741-760.csv",
+    "source_sha256": "b534d256b5df3cbee9bdd1a23e1bc436858d905ee47a81dcae3f7fad8e36310e",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c761-780.csv",
+    "source_sha256": "44b7eda0fa43a1f903fdfa38b7cad145f241f9d73d6947a4e2f7fefb85b9f52d",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c781-800.csv",
+    "source_sha256": "9ad79ea5f8bfa4a61be5d13ee6c5b763fd6b950f8c82b69e52bd9b60fb4deb04",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c801-820.csv",
+    "source_sha256": "e36002a10985e7207eb1fcff242baf452f079cc8b7c455267e92a8e86d338089",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c81-100.csv",
+    "source_sha256": "755464ebccfe237882cd726d06bf4a78f41ba35bd3fe4bd8bb072a69fad7ff60",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c821-840.csv",
+    "source_sha256": "0e88598b355741f0912c8edc686f63490e42b9fbb604710a6ae993f61df21b70",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c841-860.csv",
+    "source_sha256": "668982a1e447425cb3391afaa2f1f114eda78b05df72bf63f1ac11ae35848560",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c861-880.csv",
+    "source_sha256": "62cd741c22beb9663ac50ba0e3ff6713fa5adb21f440328c90fe8dacdcab412b",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c881-900.csv",
+    "source_sha256": "af33d902692dfb8e0396139061ae898d5b90de4ec9ee5d4bc1fe0bdeecee8246",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c901-920.csv",
+    "source_sha256": "1aba70a3f30d11e1af0487f9169266ab49180e481601d103fe2ada5e3522c767",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c921-940.csv",
+    "source_sha256": "d57bfd0723d964b5fdd82054160bffe05fb4f0f9436ed0120bef7855df861054",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c941-960.csv",
+    "source_sha256": "3fd4c32db1d318a3147be13744bf3ce7fab3ad9dd4ed7d980616ca1c142b08f7",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c961-980.csv",
+    "source_sha256": "cabdc85a25c787607f89ff83503b7061ee0a33baecfca980423ee6f17bf964b6",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "s50/ssl_data/ssl/ssl_cifar100_fast_c981-1000.csv",
+    "source_sha256": "412d198492e5bab821bc71320c8d1a51049df2f4c1f47bec3228c431b86d0979",
+    "packaged": "appendix_f/data/ssl/ssl_cifar100_fast_c1-1000.csv",
+    "packaged_sha256": "1000aed1a8a421a150fa2b60194ac8a282a9daf11d6c5ffc1132caf26bd2476e",
+    "transformation": "Only existing stat=vrt, budget=b10000 rows and epoch/seed/stat/budget/p fields; concatenated and sorted; no values recalculated"
+  },
+  {
+    "source": "output/pdf/appi_horizontal_1015/plot_horizontal.py",
+    "source_sha256": "d31fbfd63f48bc1a62e65c9ddbe237e2f7060c8b95e7ca334c5e245efec1cc19",
+    "packaged": "appendix_i/plot_horizontal.py",
+    "packaged_sha256": "51975887d4c465906b42e299cb306c1693f546257b8093055f49ebaec6fa6c9d",
+    "transformation": "portable adaptation; see README"
+  },
+  {
+    "source": "output/reviews/changes_1015/chat_per_model_compact.json",
+    "source_sha256": "35f48e58c8462b0621e477653720429d308f58f7b9abba176798e3ecc34c768d",
+    "packaged": "appendix_i/onsets.json",
+    "packaged_sha256": "8c0345d6c38b917e14cab179fa56200018e8bc37e596cc319d762b0d844d43b5",
+    "transformation": "Only fields consumed by final plot retained; all 24 models and onset values unchanged; obsolete snapshot diagnostics excluded"
+  },
+  {
+    "source": "typeI_layout_preview/plot_official_paper.py",
+    "source_sha256": "b83b165751b1dd998cc5ef6d4b5669b8e5c9a499f2b4108acf07891fedf28a1c",
+    "packaged": "appendix_c/plot_official_paper.py",
+    "packaged_sha256": "b5c8b8605774a953424e1d7899d8538ef58b5dd06ffb81915cbbbf59698c5391",
+    "transformation": "portable adaptation; see README"
+  },
+  {
+    "source": "s50/status_1008.txt",
+    "source_sha256": "c64f47d2ec28d5a736ac591a755e1587c20abac7f57a810b81620048226fdfe0",
+    "packaged": "appendix_c/official_counts.csv",
+    "packaged_sha256": "b800da53303a5cc92d21526c0d6ceb9ef30ce92f922c885396bcb4d3c0761594",
+    "transformation": "Exact aggregate counts transcribed by parser from OFFICIAL SPLIT section; excludes accuracy-threshold C2ST rule and kNN methods absent from final figure"
+  },
+  {
+    "source": "output/pdf/appg_labels_1013/before.pdf",
+    "source_sha256": "549701935c20d8438ae1c78e88faa17994789100401d994490a5c1aefaee6e21",
+    "packaged": "appendix_g/source_before.pdf",
+    "packaged_sha256": "549701935c20d8438ae1c78e88faa17994789100401d994490a5c1aefaee6e21",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "output/pdf/appg_labels_1013/label_overlay.pdf",
+    "source_sha256": "85e547c247b7bed9d1550dc0a59af5b16359d3d2cdb5e54b903ca6cc725cb012",
+    "packaged": "appendix_g/label_overlay.pdf",
+    "packaged_sha256": "85e547c247b7bed9d1550dc0a59af5b16359d3d2cdb5e54b903ca6cc725cb012",
+    "transformation": "byte-identical copy"
+  },
+  {
+    "source": "original_supplement/synthetic_ref_asymmetry.py",
+    "source_sha256": "adbf0b6f9db542c86bba9e2f1e76be098f693c556820069b592e8111099b96c5",
+    "packaged": "appendix_g/synthetic_ref_asymmetry.py",
+    "packaged_sha256": "adbf0b6f9db542c86bba9e2f1e76be098f693c556820069b592e8111099b96c5",
+    "transformation": "byte-identical copy"
+  }
+]
