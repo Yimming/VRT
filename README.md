@@ -2,8 +2,6 @@
 
 Code and results for **Early Detection of Backbone Divergence via Neighborhood Structure in Learned Embeddings** (NeurIPS 2026).
 
-Yiming Zhang · Reza Zare Hassanpour · Georgi Gaydadjiev
-
 ## Reproduce saved tables
 
 Use Python 3.11. To reproduce the saved result tables on the CPU:
