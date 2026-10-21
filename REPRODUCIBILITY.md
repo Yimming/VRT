@@ -22,6 +22,37 @@ Each checkpoint uses analysis seeds 42–91. VRT, MMD, ED, Schilling and Henze r
 
 The Type-I comparison uses single-test decisions, including C2ST p-values without the accuracy threshold. Its random-partition and original-split results are reported separately. The separate 50-seed control reports decisions across randomly initialized networks.
 
+## Installation
+
+Use Python 3.11. The VRT API and saved-result summaries need NumPy and SciPy, as shown in the [quick start](README.md#run). For baselines, feature extraction, training and tests, also install:
+
+```bash
+python -m pip install -r requirements.txt
+```
+
+The experiment environment is recorded in [ENVIRONMENT.md](ENVIRONMENT.md).
+
+## Direct Python use
+
+For the main protocol, supply at least 10,000 training rows and exactly 10,000 test rows, with the same feature dimension. Each row must be finite and nonzero.
+
+```python
+import numpy as np
+from common import l2n, validate_features
+from vrt import vrt_full
+
+train = np.load("train.npy").astype(np.float64)
+test = np.load("test.npy").astype(np.float64)
+validate_features(train, test)
+
+statistic, p_value = vrt_full(
+    l2n(train), l2n(test), D=train.shape[1], seed=42
+)
+print(statistic, p_value)
+```
+
+This uses 2,000 training reference points, 8,000 disjoint training queries, 10,000 test queries, 60 neighbours and 2,000 permutations. The statistic is the test-minus-training median score difference; the p-value is two-sided. For 1,500 points per split, use `vrt_low` with its default 500 reference points and 15 neighbours.
+
 ## New tests on feature arrays
 
 An NPZ file must contain training and test arrays with the same feature dimension. Supported key pairs are `h_tr`/`h_te`, `X_tr`/`X_te` and `tr`/`te`. Main VRT needs at least 10,000 training rows and exactly 10,000 test rows. The small protocol needs at least 1,500 rows from each split.
@@ -178,6 +209,15 @@ python results.py export --src raw_results --dst clean_results
 ```
 
 The destination must be new or empty. Export from historical folders writes the current paper-section layout. The exporter validates records, rejects conflicting keys, removes mechanical file corruption and records cleaning and file hashes in `MANIFEST.csv`. It does not recompute p-values, except for recovering the recorded exact permutation-p columns. Fresh `evaluate.py` CSVs use `results.py new-runs` instead.
+
+## Execution checks
+
+After installing `requirements.txt`:
+
+```bash
+python -m pytest tests -q
+python evaluate.py smoke
+```
 
 ## Scope
 
