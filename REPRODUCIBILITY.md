@@ -1,6 +1,6 @@
 # Reproducing results
 
-Run commands from the repository root. [data/](data/README.md) holds the published per-seed and per-repetition results, grouped by paper section. Each section folder provides readable summary CSVs and links to shared source records. Write new experiments to `results/` so they remain separate from the archived result files.
+Run commands from the repository root. [data/](data/README.md) holds the saved per-seed and per-repetition results, grouped by paper section. Each section folder provides summary CSVs and links to individual test records. Write new experiments to `results/` to keep the supplied data unchanged.
 
 ## Saved results: no training or GPU required
 
@@ -24,7 +24,7 @@ The Type-I comparison uses single-test decisions, including C2ST p-values withou
 
 ## Installation
 
-Use Python 3.11. The VRT API and saved-result summaries need NumPy and SciPy, as shown in the [quick start](README.md#run). For baselines, feature extraction, training and tests, also install:
+Use Python 3.11. The direct VRT Python example and saved-result summaries need only NumPy and SciPy, as shown in the [quick start](README.md#reproduce-saved-tables). All `evaluate.py` commands, including VRT-only evaluation, need the full dependencies below. Install these also for feature extraction, training, controls, synthetic experiments and tests:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -146,7 +146,7 @@ python controls.py cifar-rule --arch r18_c10 --data-root datasets \
 
 Repeat with the other architectures listed by `--help`. `cifar-official` runs the separate pixel and shuffled-extraction controls; `imagenet-vrt` runs the original ImageNet random-network control. The GPU/CPU baseline groups retain the paper's implementation choices.
 
-These control outputs use the same record schemas as the archived data. Once all required CIFAR settings are present under `results/`, `python results.py type-i --data results` summarizes them. A single architecture is a partial experiment, not the complete paper table.
+These control outputs use the same record schemas as the supplied data. Once all required CIFAR settings are present under `results/`, `python results.py type-i --data results` summarizes them. A single architecture is a partial experiment, not the complete paper table.
 
 ## Synthetic sensitivity: Section 4.4 and Appendix D
 
@@ -169,7 +169,7 @@ python synthetic.py reference --reps 500 --jobs 4 \
   --out results/reference_direction.csv
 ```
 
-The output records each condition and both reference choices separately. The generator is included, but the original 500-repetition output file is unavailable; the saved figure remains in `figures/`.
+The output records each condition and both reference choices separately. See [Scope](#scope) for the available original inputs.
 
 ## Score and class statistics: Appendices I–J
 
@@ -222,11 +222,9 @@ python evaluate.py smoke
 ## Scope
 
 - The released numerical results reproduce the table summaries without checkpoints. Original image datasets, model checkpoints and extracted feature arrays are not included.
-- [figures/](figures/README.md) contains restored plotting scripts and additional numerical inputs, including matched synthetic repetitions and loss records. Generated figures are written to ignored `results/figures/`. Appendix G is reconstructed from its saved figure asset; its original per-repetition measurements are unavailable.
+- [figures/](figures/README.md) contains plotting scripts and additional numerical inputs, including matched synthetic repetitions and loss records. Generated figures are written to `results/figures/`, which is ignored by Git.
 - The original two-dimensional hyperparameter-sweep outputs (Appendix E) and the uniform-sphere calibration outputs are unavailable here. Saved one-dimensional sweep logs remain in [data/07_sensitivity_to_hyperparameters_and_sample_size/records/](data/07_sensitivity_to_hyperparameters_and_sample_size/records/).
-- Appendix G's reference-direction experiment can be rerun with `synthetic.py reference`; its original per-repetition output is unavailable. The extra 10-seed ImageNet diagnostics in Appendix H (class balancing, enlarged reference/query sets and test-vs-test controls) have no dedicated runner in the supplied source.
+- Appendix G's reference-direction experiment can be rerun with `synthetic.py reference`; its original 500-repetition output is unavailable, so the included plot build reconstructs the figure from its saved vector asset. The extra 10-seed ImageNet diagnostics in Appendix H (class balancing, enlarged reference/query sets and test-vs-test controls) have no dedicated runner in the supplied source.
 - Class-geometry measurements can be rerun with `evaluate.py geometry`, but the original Appendix J extraction inputs and plotting generator are not bundled.
 
 Training and statistical seeds serve different purposes; rerunning training is not expected to recover bit-identical checkpoints or onset epochs.
-
-The [archived execution workflow](archive/README.md) retains the earlier scripts and recorded task commands. Use the root modules for maintained entry points.

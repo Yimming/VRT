@@ -36,23 +36,12 @@ python figures/appD_numbers.py
 
 The exporter uses `results.family_path` to locate the paper-section data folders. It refuses an existing output directory and does not replace `fig_data_s50/`. `appD_numbers.py` prints the synthetic rejection counts and bandwidth summaries, using the saved matched repetitions and [Appendix D records](../data/06_synthetic_power_profile_details/records/).
 
-The archived `base_*.csv` snapshots predate the final MMDAgg checkpoint additions. Re-exporting adds 127 values in previously empty `mmdagg_frac` fields across six files; existing nonempty values are unchanged. Current manuscript plots do not use those fields. Use `results.py` for the final table onsets.
-
-## Earlier plots
-
-These scripts remain available for the earlier layouts and write under `results/figures/earlier/`:
-
-| Script | Output | Inputs |
-| --- | --- | --- |
-| `plot_fig2_s50.py` | `fig2_trajectory.pdf` | Two-model loss logs and `fig_data_s50/vrt_*`, `base_*` |
-| `plot_trajectories_s50.py` | `fig_trajectories_appendix.pdf` and the same plot under `Figures/fig_trajectories.pdf` | Supervised loss records and VRT summaries |
-
-The earlier two-model figure is commented out in the current paper. The earlier appendix layout does not replace `manuscript/appendix_f/build_figure.py`.
+The saved `base_*.csv` snapshots predate the final MMDAgg checkpoint additions. Re-exporting adds 127 values in previously empty `mmdagg_frac` fields across six files; existing nonempty values are unchanged. Current manuscript plots do not use those fields. Use `results.py` for the final table onsets.
 
 ## Scope
 
 Appendix C uses exact saved aggregate counts checked against the per-repetition results. Appendix F validates checkpoint and seed coverage and recomputes its VRT onsets; it applies the saved SimCLR loss conversion once. Appendix I retains all 24 model records and checks the reported comparison counts.
 
-Appendix G reconstructs the final vector figure from its saved bars and label overlay. The original 500-repetition output and bar-chart generator are unavailable, so this is not a regeneration of the bars from numerical records. The original experimental program `manuscript/appendix_g/synthetic_ref_asymmetry.py` is retained as background and is not run by `build_all.py`; the maintained experiment command is `python synthetic.py reference --out results/reference.csv`.
+Appendix G reconstructs the final vector figure from its saved bars and label overlay. The original 500-repetition output and bar-chart generator are unavailable, so this is not a regeneration of the bars from numerical records. To rerun the experiment, use `python synthetic.py reference --out results/reference.csv`.
 
 The original full two-dimensional sweep inputs for Appendix E and the original plotting generator for Appendix J are not included. These scripts do not claim to rebuild every figure in the paper.

@@ -79,4 +79,4 @@ python results.py summaries --data data --out results/paper_tables
 
 Original source bytes and filenames are preserved. The manifest differs from the original release only in its `path` column; [data_layout.csv](../docs/data_layout.csv) maps historical folders to the paper sections. [EXCLUDED.txt](EXCLUDED.txt) records the two excluded obsolete result directories. Earlier SimCLR files, including later seed-completion files, are kept separately in [the legacy folder](01_main_results/records/simclr/aggregation_and_earlier_runs/legacy_runs/) and excluded from final onset summaries.
 
-The [archived scripts and task commands](../archive/README.md) document the original execution workflow. Dataset images, checkpoints and embedding arrays are not bundled. See [REPRODUCIBILITY.md](../REPRODUCIBILITY.md#scope) for missing original figure inputs and additional controls.
+Dataset images, checkpoints and embedding arrays are not bundled. See [REPRODUCIBILITY.md](../REPRODUCIBILITY.md#scope) for available inputs and additional controls.

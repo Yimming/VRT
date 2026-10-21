@@ -1,6 +1,6 @@
 # SimCLR ResNet-50 / CIFAR-10
 
-SimCLR: MMDAgg at 5,000 points and earlier runs.
+Final MMDAgg results, eval-mode extraction, 5,000 points per split.
 
 `p` records the MMDAgg rejection decision (0 or 1). It is not a p-value.
 

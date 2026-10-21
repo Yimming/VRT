@@ -1,2 +1,0 @@
-cd /scratch/p318770/ssl_supcon_code_s50 && python tests_timing.py --npz /scratch/p318770/model_zoos/ladder_feats/r50/ep061.npz --tag r50_ep61 --seeds 42-44 --backend torch --rev --out /home3/p318770/venvs/overfitting/benchmark_final/s50/timing/tests_timing_r50_ep61_gpu.csv
-cd /scratch/p318770/ssl_supcon_code_s50 && python tests_timing.py --npz /scratch/p318770/model_zoos/ladder_feats/v7/ep038.npz --tag v7_ep38 --seeds 42-44 --backend torch --rev --out /home3/p318770/venvs/overfitting/benchmark_final/s50/timing/tests_timing_v7_ep38_gpu.csv

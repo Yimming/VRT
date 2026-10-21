@@ -4,7 +4,7 @@ Code and results for **Early Detection of Backbone Divergence via Neighborhood S
 
 Yiming Zhang · Reza Zare Hassanpour · Georgi Gaydadjiev
 
-## Run
+## Reproduce saved tables
 
 Use Python 3.11. To reproduce the saved result tables on the CPU:
 
@@ -46,6 +46,6 @@ Image datasets, checkpoints and extracted embeddings are not included. See the [
 | `results.py` | Validate data and regenerate tables | Tables 1–9 |
 | `common.py` | Shared utilities | Supporting code |
 
-[Full commands](REPRODUCIBILITY.md) · [Plotting scripts](figures/README.md) · [Original scripts and jobs](archive/README.md) · [Citation](CITATION.cff)
+[Full commands](REPRODUCIBILITY.md) · [Plotting scripts](figures/README.md) · [Citation](CITATION.cff)
 
 Code and data licenses are pending author selection; third-party licenses are preserved in `third_party/`.

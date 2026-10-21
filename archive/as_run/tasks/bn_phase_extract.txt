@@ -1,1 +1,0 @@
-cd /scratch/p318770/ssl_supcon_code_s50 && python extract_bntrain_phase.py
