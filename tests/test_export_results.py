@@ -13,7 +13,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 TOOL = os.path.join(ROOT, "results.py")
 sys.path.insert(0, ROOT)
-from results import FAMILY_PATHS
+from results import FAMILY_PATHS, grouped_relative_path
 SEEDS = range(42, 92)
 
 
@@ -58,20 +58,20 @@ def test_export_cleans_validates_and_documents(tmp_path):
     make_tree(src)
     r = run(src, dst)
     assert r.returncode == 0, r.stderr + r.stdout
-    rows = list(csv.DictReader(open(dst / FAMILY_PATHS["vrt_fwd"] / "vrt_fwd_r50_large_c10-19.csv")))
+    rows = list(csv.DictReader(open(dst / grouped_relative_path("vrt_fwd/vrt_fwd_r50_large_c10-19.csv"))))
     assert [(x["epoch"], x["seed"], x["p"]) for x in rows] == [("1", "42", "0.300350"), ("1", "43", "0.200400")]
-    rev = list(csv.DictReader(open(dst / FAMILY_PATHS["reversed"] / "vrt_rev_zoo_c10_m3_large_c0-9.csv")))
+    rev = list(csv.DictReader(open(dst / grouped_relative_path("reversed/vrt_rev_zoo_c10_m3_large_c0-9.csv"))))
     assert [x["p_exact"] for x in rev] == [f"{94 / 2001:.9f}", f"{106 / 2001:.9f}"]
-    knn = list(csv.DictReader(open(dst / FAMILY_PATHS["knn_v2"] / "knn_r50_n10000_part_c0-39.csv")))
+    knn = list(csv.DictReader(open(dst / grouped_relative_path("knn_v2/knn_r50_n10000_part_c0-39.csv"))))
     assert knn[0]["p_henze_exact"] == f"{100 / 2001:.9f}" and knn[0]["p_schilling"] == "0.0412"
     assert not (dst / FAMILY_PATHS["knn_v2"] / "_superseded").exists() and not (dst / "null10").exists()
     assert not (dst / FAMILY_PATHS["mmd_on_chat"] / "c100_nan_bug").exists() and not (dst / FAMILY_PATHS["chat_stats"] / "dup_backup").exists()
     assert (dst / FAMILY_PATHS["ssl"] / "notes.txt").read_text() == "hello\n"
     man = {x["path"]: x for x in csv.DictReader(open(dst / "MANIFEST.csv"))}
-    m = man[os.path.join(FAMILY_PATHS["vrt_fwd"], "vrt_fwd_r50_large_c10-19.csv")]
+    m = man[str(grouped_relative_path("vrt_fwd/vrt_fwd_r50_large_c10-19.csv"))]
     assert m["nul_bytes_removed"] == "64" and m["torn_lines_dropped"] == "1" and m["duplicate_rows_dropped"] == "2"
     assert m["rows"] == "2" and len(m["sha256"]) == 64
-    assert man[os.path.join(FAMILY_PATHS["ssl_baselines"], "sslbase_cifar10_0-99.csv")]["note"].startswith("legacy")
+    assert man[str(grouped_relative_path("ssl_baselines/sslbase_cifar10_0-99.csv"))]["note"].startswith("legacy")
     excluded = (dst / "EXCLUDED.txt").read_text()
     assert "null10" in excluded and "_superseded" in excluded and "c100_nan_bug" in excluded and "dup_backup" in excluded
     assert f"cleaned {FAMILY_PATHS['vrt_fwd']}" in r.stdout
@@ -157,7 +157,7 @@ def test_features_column_of_the_released_runners_is_accepted(tmp_path):
     write(src / "c2st" / "c2st_r50_b1500_c0-9.csv", "model,epoch,budget,stat,seed,acc,p,features\nr50,0,b1500,c2st,42,0.6,0.01,l2\n")
     r = run(src, dst)
     assert r.returncode == 0, r.stderr
-    knn = list(csv.DictReader(open(dst / FAMILY_PATHS["knn_v2"] / "knn_r50_n10000_part_c0-9.csv")))
+    knn = list(csv.DictReader(open(dst / grouped_relative_path("knn_v2/knn_r50_n10000_part_c0-9.csv"))))
     assert knn[0]["p_henze_exact"] == f"{100 / 2001:.9f}" and knn[0]["features"] == "raw"
     write(src / "c2st" / "c2st_r50_b1500_c0-9.csv", "model,epoch,budget,stat,seed,acc,p,features\nr50,0,b1500,c2st,42,0.6,0.01,both\n")
     r = run(src, tmp_path / "dst2")

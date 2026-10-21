@@ -10,7 +10,8 @@ from small execution tests.
 | Current onset tables, 21 October | 472 entries matched, including four BN annotations and 49 earliest-checkpoint qualifiers | [table_comparison_1021.csv](table_comparison_1021.csv) |
 | Independent onset reconstruction | 784 cells and 10,976 fields matched; 435 final detections and 349 completed null cells | [tables_1021.json](audit/tables_1021.json) |
 | Data validation and relocation | 5,061,086 records validated; 5,156 source-file hashes unchanged; only manifest paths changed | [MANIFEST.csv](../data/MANIFEST.csv), [folder map](data_layout.csv) |
-| Maintained regression tests | 95 tests passed | `python -m pytest tests -q` |
+| Model/mode/budget navigation | 784 onsets, 12 summary CSVs and 35 figure-input CSVs unchanged; complete export reproduces all 5,156 paths and payloads | [navigation verification](audit/record_navigation_1021.json) |
+| Maintained regression tests | 115 tests passed | `python -m pytest tests -q` |
 | Cluster scripts versus audited release | 30 fixed-input return-value and random-draw comparisons matched | [arithmetic_1018.json](audit/arithmetic_1018.json) |
 | Consolidated VRT | 18 recorded fixed-input cases cover full, small and reversed tests across dtypes and seeds | [test_compact_core.py](../tests/test_compact_core.py) |
 | CPU and V100 execution | Three smoke jobs completed, covering tests, synthetic generation, model training steps and feature extraction | [smoke_1021.json](audit/smoke_1021.json) |

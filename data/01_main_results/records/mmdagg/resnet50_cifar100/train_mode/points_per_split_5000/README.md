@@ -1,0 +1,115 @@
+# ResNet-50 / CIFAR-100
+
+MMDAgg. Train extraction (current-batch BatchNorm statistics) · 5,000 points per split.
+
+`p` records the MMDAgg rejection decision (0 or 1). It is not a p-value.
+
+Files are ordered by their actual checkpoint and seed ranges.
+
+| File | Checkpoints | Test seeds |
+| --- | --- | --- |
+| [mmdagg_r50_bntrain_b5000_c199-199.csv (empty job shard)](mmdagg_r50_bntrain_b5000_c199-199.csv) | — | — |
+| [mmdagg_r50_bntrain_b5000_c0-0.csv](mmdagg_r50_bntrain_b5000_c0-0.csv) | 0 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c5-5.csv](mmdagg_r50_bntrain_b5000_c5-5.csv) | 5 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c10-10.csv](mmdagg_r50_bntrain_b5000_c10-10.csv) | 10 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c15-15.csv](mmdagg_r50_bntrain_b5000_c15-15.csv) | 15 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c20-20.csv](mmdagg_r50_bntrain_b5000_c20-20.csv) | 20 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c25-25.csv](mmdagg_r50_bntrain_b5000_c25-25.csv) | 25 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c30-30.csv](mmdagg_r50_bntrain_b5000_c30-30.csv) | 30 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c35-35.csv](mmdagg_r50_bntrain_b5000_c35-35.csv) | 35 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c40-40.csv](mmdagg_r50_bntrain_b5000_c40-40.csv) | 40 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c45-45.csv](mmdagg_r50_bntrain_b5000_c45-45.csv) | 45 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c50-50.csv](mmdagg_r50_bntrain_b5000_c50-50.csv) | 50 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c55-55.csv](mmdagg_r50_bntrain_b5000_c55-55.csv) | 55 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c60-60.csv](mmdagg_r50_bntrain_b5000_c60-60.csv) | 60 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c65-65.csv](mmdagg_r50_bntrain_b5000_c65-65.csv) | 65 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c70-70.csv](mmdagg_r50_bntrain_b5000_c70-70.csv) | 70 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c75-75.csv](mmdagg_r50_bntrain_b5000_c75-75.csv) | 75 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c80-80.csv](mmdagg_r50_bntrain_b5000_c80-80.csv) | 80 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c85-85.csv](mmdagg_r50_bntrain_b5000_c85-85.csv) | 85 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c90-90.csv](mmdagg_r50_bntrain_b5000_c90-90.csv) | 90 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c95-95.csv](mmdagg_r50_bntrain_b5000_c95-95.csv) | 95 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c100-100.csv](mmdagg_r50_bntrain_b5000_c100-100.csv) | 100 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c105-105.csv](mmdagg_r50_bntrain_b5000_c105-105.csv) | 105 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c110-110.csv](mmdagg_r50_bntrain_b5000_c110-110.csv) | 110 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c115-115.csv](mmdagg_r50_bntrain_b5000_c115-115.csv) | 115 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c120-120.csv](mmdagg_r50_bntrain_b5000_c120-120.csv) | 120 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c121-121.csv](mmdagg_r50_bntrain_b5000_c121-121.csv) | 121 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c122-122.csv](mmdagg_r50_bntrain_b5000_c122-122.csv) | 122 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c123-123.csv](mmdagg_r50_bntrain_b5000_c123-123.csv) | 123 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c124-124.csv](mmdagg_r50_bntrain_b5000_c124-124.csv) | 124 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c125-125.csv](mmdagg_r50_bntrain_b5000_c125-125.csv) | 125 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c126-126.csv](mmdagg_r50_bntrain_b5000_c126-126.csv) | 126 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c127-127.csv](mmdagg_r50_bntrain_b5000_c127-127.csv) | 127 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c128-128.csv](mmdagg_r50_bntrain_b5000_c128-128.csv) | 128 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c129-129.csv](mmdagg_r50_bntrain_b5000_c129-129.csv) | 129 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c130-130.csv](mmdagg_r50_bntrain_b5000_c130-130.csv) | 130 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c131-131.csv](mmdagg_r50_bntrain_b5000_c131-131.csv) | 131 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c132-132.csv](mmdagg_r50_bntrain_b5000_c132-132.csv) | 132 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c133-133.csv](mmdagg_r50_bntrain_b5000_c133-133.csv) | 133 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c134-134.csv](mmdagg_r50_bntrain_b5000_c134-134.csv) | 134 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c135-135.csv](mmdagg_r50_bntrain_b5000_c135-135.csv) | 135 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c136-136.csv](mmdagg_r50_bntrain_b5000_c136-136.csv) | 136 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c137-137.csv](mmdagg_r50_bntrain_b5000_c137-137.csv) | 137 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c138-138.csv](mmdagg_r50_bntrain_b5000_c138-138.csv) | 138 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c139-139.csv](mmdagg_r50_bntrain_b5000_c139-139.csv) | 139 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c140-140.csv](mmdagg_r50_bntrain_b5000_c140-140.csv) | 140 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c141-141.csv](mmdagg_r50_bntrain_b5000_c141-141.csv) | 141 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c142-142.csv](mmdagg_r50_bntrain_b5000_c142-142.csv) | 142 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c143-143.csv](mmdagg_r50_bntrain_b5000_c143-143.csv) | 143 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c144-144.csv](mmdagg_r50_bntrain_b5000_c144-144.csv) | 144 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c145-145.csv](mmdagg_r50_bntrain_b5000_c145-145.csv) | 145 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c146-146.csv](mmdagg_r50_bntrain_b5000_c146-146.csv) | 146 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c147-147.csv](mmdagg_r50_bntrain_b5000_c147-147.csv) | 147 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c148-148.csv](mmdagg_r50_bntrain_b5000_c148-148.csv) | 148 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c149-149.csv](mmdagg_r50_bntrain_b5000_c149-149.csv) | 149 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c150-150.csv](mmdagg_r50_bntrain_b5000_c150-150.csv) | 150 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c151-151.csv](mmdagg_r50_bntrain_b5000_c151-151.csv) | 151 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c152-152.csv](mmdagg_r50_bntrain_b5000_c152-152.csv) | 152 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c153-153.csv](mmdagg_r50_bntrain_b5000_c153-153.csv) | 153 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c154-154.csv](mmdagg_r50_bntrain_b5000_c154-154.csv) | 154 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c155-155.csv](mmdagg_r50_bntrain_b5000_c155-155.csv) | 155 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c156-156.csv](mmdagg_r50_bntrain_b5000_c156-156.csv) | 156 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c157-157.csv](mmdagg_r50_bntrain_b5000_c157-157.csv) | 157 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c158-158.csv](mmdagg_r50_bntrain_b5000_c158-158.csv) | 158 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c159-159.csv](mmdagg_r50_bntrain_b5000_c159-159.csv) | 159 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c160-160.csv](mmdagg_r50_bntrain_b5000_c160-160.csv) | 160 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c161-161.csv](mmdagg_r50_bntrain_b5000_c161-161.csv) | 161 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c162-162.csv](mmdagg_r50_bntrain_b5000_c162-162.csv) | 162 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c163-163.csv](mmdagg_r50_bntrain_b5000_c163-163.csv) | 163 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c164-164.csv](mmdagg_r50_bntrain_b5000_c164-164.csv) | 164 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c165-165.csv](mmdagg_r50_bntrain_b5000_c165-165.csv) | 165 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c166-166.csv](mmdagg_r50_bntrain_b5000_c166-166.csv) | 166 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c167-167.csv](mmdagg_r50_bntrain_b5000_c167-167.csv) | 167 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c168-168.csv](mmdagg_r50_bntrain_b5000_c168-168.csv) | 168 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c169-169.csv](mmdagg_r50_bntrain_b5000_c169-169.csv) | 169 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c170-170.csv](mmdagg_r50_bntrain_b5000_c170-170.csv) | 170 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c171-171.csv](mmdagg_r50_bntrain_b5000_c171-171.csv) | 171 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c172-172.csv](mmdagg_r50_bntrain_b5000_c172-172.csv) | 172 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c173-173.csv](mmdagg_r50_bntrain_b5000_c173-173.csv) | 173 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c174-174.csv](mmdagg_r50_bntrain_b5000_c174-174.csv) | 174 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c175-175.csv](mmdagg_r50_bntrain_b5000_c175-175.csv) | 175 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c176-176.csv](mmdagg_r50_bntrain_b5000_c176-176.csv) | 176 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c177-177.csv](mmdagg_r50_bntrain_b5000_c177-177.csv) | 177 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c178-178.csv](mmdagg_r50_bntrain_b5000_c178-178.csv) | 178 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c179-179.csv](mmdagg_r50_bntrain_b5000_c179-179.csv) | 179 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c180-180.csv](mmdagg_r50_bntrain_b5000_c180-180.csv) | 180 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c181-181.csv](mmdagg_r50_bntrain_b5000_c181-181.csv) | 181 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c182-182.csv](mmdagg_r50_bntrain_b5000_c182-182.csv) | 182 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c183-183.csv](mmdagg_r50_bntrain_b5000_c183-183.csv) | 183 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c184-184.csv](mmdagg_r50_bntrain_b5000_c184-184.csv) | 184 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c185-185.csv](mmdagg_r50_bntrain_b5000_c185-185.csv) | 185 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c186-186.csv](mmdagg_r50_bntrain_b5000_c186-186.csv) | 186 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c187-187.csv](mmdagg_r50_bntrain_b5000_c187-187.csv) | 187 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c188-188.csv](mmdagg_r50_bntrain_b5000_c188-188.csv) | 188 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c189-189.csv](mmdagg_r50_bntrain_b5000_c189-189.csv) | 189 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c190-190.csv](mmdagg_r50_bntrain_b5000_c190-190.csv) | 190 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c191-191.csv](mmdagg_r50_bntrain_b5000_c191-191.csv) | 191 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c192-192.csv](mmdagg_r50_bntrain_b5000_c192-192.csv) | 192 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c193-193.csv](mmdagg_r50_bntrain_b5000_c193-193.csv) | 193 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c194-194.csv](mmdagg_r50_bntrain_b5000_c194-194.csv) | 194 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c195-195.csv](mmdagg_r50_bntrain_b5000_c195-195.csv) | 195 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c196-196.csv](mmdagg_r50_bntrain_b5000_c196-196.csv) | 196 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c197-197.csv](mmdagg_r50_bntrain_b5000_c197-197.csv) | 197 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c198-198.csv](mmdagg_r50_bntrain_b5000_c198-198.csv) | 198 | 42–91 (50) |
+| [mmdagg_r50_bntrain_b5000_c200-200.csv](mmdagg_r50_bntrain_b5000_c200-200.csv) | 200 | 42–91 (50) |

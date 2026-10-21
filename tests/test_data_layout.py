@@ -12,7 +12,7 @@ from common import exact_perm_p
 import results
 from results import (Exporter, FAMILY_PATHS, SUMMARY_PATHS, ResultRoutes, SchemaError, compute_onsets,
                      exact_p_cell, family_path, generated_path, grouped_relative_path, manifest_check,
-                     schema_for, summaries_report, validate_tree)
+                     result_files, csv_records, schema_for, summaries_report, validate_tree)
 
 
 def write(path, header, rows):
@@ -46,19 +46,21 @@ def make_results(root):
               [(tag, 5, "b10000", "vrt", 42, "nan", .5)])
 
 
-def group_tree(source, target):
+def group_tree(source, target, deep=False):
     for path in source.rglob("*"):
         if path.is_file():
             rel = path.relative_to(source)
-            dst = target / FAMILY_PATHS[rel.parts[0]] / Path(*rel.parts[1:])
+            dst = target / (grouped_relative_path(rel) if deep else
+                            Path(FAMILY_PATHS[rel.parts[0]]).joinpath(*rel.parts[1:]))
             dst.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(path, dst)
 
 
-def test_grouped_counts_routes_onsets_and_exact_p_equal_legacy(tmp_path):
+@pytest.mark.parametrize("deep", [False, True])
+def test_grouped_counts_routes_onsets_and_exact_p_equal_legacy(tmp_path, deep):
     original, grouped = tmp_path / "original", tmp_path / "grouped"
     make_results(original)
-    group_tree(original, grouped)
+    group_tree(original, grouped, deep=deep)
     before, after = validate_tree(original), validate_tree(grouped)
     assert before == after
     assert after["files"] == 9 and after["records"] == 307
@@ -147,8 +149,12 @@ def test_ambiguous_original_and_grouped_folders_rejected(tmp_path, family):
 
 
 @pytest.mark.parametrize("family,tag", [("ssl", "cifar10_bntrain"), ("ssl_bntrain", "cifar10")])
-def test_grouped_simclr_wrong_extraction_folder_rejected(tmp_path, family, tag):
-    write(tmp_path / FAMILY_PATHS[family] / f"ssl_{tag}_fast_c1-100.csv",
+@pytest.mark.parametrize("deep", [False, True])
+def test_grouped_simclr_wrong_extraction_folder_rejected(tmp_path, family, tag, deep):
+    directory = tmp_path / FAMILY_PATHS[family]
+    if deep:
+        directory = directory / "simclr_resnet50_cifar10/vrt_mmd_ed_c2st/multiple_budgets"
+    write(directory / f"ssl_{tag}_fast_c1-100.csv",
           "model,epoch,budget,stat,seed,acc,p", [(tag, 5, "b10000", "vrt", 42, "nan", .5)])
     with pytest.raises(SchemaError, match="belongs in"):
         validate_tree(tmp_path)
@@ -184,3 +190,84 @@ def test_summaries_use_paper_sections_and_include_four_interventions(tmp_path, m
     assert {str(p.relative_to(output)) for p in output.rglob("*.csv")} == set(SUMMARY_PATHS.values())
     assert all(generated_path(relative) for relative in SUMMARY_PATHS.values())
     assert not generated_path("01_main_results/unexpected.csv")
+
+
+@pytest.mark.parametrize("family,filename,folders", [
+    ("vrt_fwd", "vrt_fwd_v7_large_c0-9.csv",
+     "resnet20_frn_cifar10/no_batchnorm/points_per_split_10000"),
+    ("mmd_p2000", "mmd_r50_bntrain_n1500_c10-19.csv",
+     "resnet50_cifar100/train_mode/points_per_split_1500"),
+    ("knn_v2", "knn_zoo_c100_m3_n10000_part0.csv",
+     "resnet18_cifar100_zoo_model3/eval_mode/points_per_split_10000"),
+    ("c2st", "c2st_r50_b1500-10000_c0-9.csv",
+     "resnet50_cifar100/eval_mode/multiple_budgets"),
+    ("ssl_bntrain", "ssl_cifar100_bntrain_fast_c1-100.csv",
+     "simclr_resnet50_cifar100/vrt_mmd_ed_c2st/multiple_budgets"),
+    ("ssl_baselines", "sslbase_cifar10_0-99.csv",
+     "legacy_runs/simclr_resnet50_cifar10"),
+    ("ssl_nll", "ssl_nll_cifar100_c1-100.csv", "simclr_resnet50_cifar100"),
+    ("chat_stats", "chatstats_ablD_c0-49.csv",
+     "resnet18_cifar10_weight_decay_and_augmentation/eval_mode"),
+])
+def test_navigation_paths_accept_all_layouts_and_are_idempotent(family, filename, folders):
+    historical = Path(family) / filename
+    section_flat = Path(FAMILY_PATHS[family]) / filename
+    expected = Path(FAMILY_PATHS[family]) / folders / filename
+    assert grouped_relative_path(historical) == expected
+    assert grouped_relative_path(section_flat) == expected
+    assert grouped_relative_path(expected) == expected
+
+
+@pytest.mark.parametrize("historical", [
+    "null/typeI_verbatim_paper_full.csv",
+    "null/vrt_fwd/vrt_fwd_imgnet_rand_eval_large.csv",
+    "null_trtr/knn_v2/knn_imgnet_rand_eval_trtr_n10000_part.csv",
+    "synth/fig4a_clusters.csv",
+    "km_logs/km_D64.log",
+    "timing/tests_timing_r50_ep61_vrt64.csv",
+    "knn_v2/_superseded/knn_r50_n10000_part0.csv",
+])
+def test_navigation_keeps_nested_controls_and_special_families(historical):
+    path = Path(historical)
+    expected = Path(FAMILY_PATHS[path.parts[0]]).joinpath(*path.parts[1:])
+    assert grouped_relative_path(path) == expected
+    assert grouped_relative_path(expected) == expected
+
+
+def test_score_statistics_npz_moves_with_its_csv_and_exports_verbatim(tmp_path):
+    original = tmp_path / "original"
+    csv_name = "chatstats_r50_c53-68.csv"
+    npz_name = "chatstats_r50_c53-68_chat_s42.npz"
+    expected = Path(FAMILY_PATHS["chat_stats"]) / "resnet50_cifar100/eval_mode"
+    assert grouped_relative_path(Path("chat_stats") / csv_name) == expected / csv_name
+    assert grouped_relative_path(Path("chat_stats") / npz_name) == expected / npz_name
+    assert grouped_relative_path(Path(FAMILY_PATHS["chat_stats"]) / npz_name) == expected / npz_name
+    assert grouped_relative_path(expected / npz_name) == expected / npz_name
+    source = original / "chat_stats" / npz_name
+    source.parent.mkdir(parents=True)
+    payload = b"NPZ payload copied without interpreting its numerical arrays"
+    source.write_bytes(payload)
+    exported = tmp_path / "exported"
+    Exporter(str(original), str(exported), False, False).run()
+    assert (exported / expected / npz_name).read_bytes() == payload
+    assert manifest_check(exported) == (1, 0)
+
+
+def test_recursive_discovery_is_family_scoped_and_excludes_backups(tmp_path):
+    family = tmp_path / FAMILY_PATHS["vrt_fwd"]
+    first = family / "vrt_fwd_v7_large_c0-0.csv"
+    second = family / "resnet20_frn_cifar10/no_batchnorm/points_per_split_10000/vrt_fwd_v7_large_c1-1.csv"
+    header = "tag,budget,epoch,seed,dc,p"
+    write(first, header, [("v7", "large", 0, 42, .1, .5)])
+    write(second, header, [("v7", "large", 1, 42, .1, .01)])
+    write(family / "resnet20_frn_cifar10/dup_backup/vrt_fwd_v7_large_c2-2.csv",
+          header, [("v7", "large", 2, 42, .1, .001)])
+    write(tmp_path / FAMILY_PATHS["reversed"] / "vrt_fwd_v7_large_c3-3.csv",
+          header, [("v7", "large", 3, 42, .1, .001)])
+    pattern = family / "vrt_fwd_v7_large_c*.csv"
+    assert set(result_files(pattern)) == {first.resolve(), second.resolve()}
+    assert len(list(csv_records(pattern))) == 2
+    routes = ResultRoutes(tmp_path)
+    values = routes.read([str(pattern), str(pattern)])
+    assert set(values) == {0, 1}
+    assert values[0][42][0] == .5 and values[1][42][0] == .01

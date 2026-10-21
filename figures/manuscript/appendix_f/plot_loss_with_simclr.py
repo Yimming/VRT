@@ -15,7 +15,7 @@ from matplotlib.ticker import MaxNLocator
 SOURCE = OUT / 'data'
 REPO = Path(__file__).resolve().parents[3]
 sys.path.insert(0, str(REPO))
-from results import family_path
+from results import family_path, result_files
 LOSS_SOURCE = family_path(REPO / 'data', 'ssl_nll')
 plt.rcParams.update({'font.size': 8, 'axes.labelsize': 8,
                      'axes.titlesize': 8, 'xtick.labelsize': 7,
@@ -32,7 +32,7 @@ def rows(path):
 
 
 def load_ssl(ds, expected_onset):
-    loss_files = sorted(LOSS_SOURCE.glob(f'ssl_nll_{ds}_c*.csv'))
+    loss_files = result_files(LOSS_SOURCE / f'ssl_nll_{ds}_c*.csv')
     records = [r for path in loss_files for r in rows(path)]
     records.sort(key=lambda r: int(r['epoch']))
     a = np.array([[float(r[k]) for k in ('epoch', 'tr_eval', 'te_eval', 'gap_eval')]

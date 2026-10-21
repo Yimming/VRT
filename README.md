@@ -26,7 +26,7 @@ To run VRT on your own embeddings, use the [Python example](REPRODUCIBILITY.md#d
 [data/](data/README.md) is ordered by paper section (`01`–`11`). For the main results:
 
 - [Summary table](data/01_main_results/main_results.csv): sustained detection epochs.
-- [Per-seed test results](data/01_main_results/records/): p-values and MMDAgg rejection decisions, grouped by method.
+- [Per-seed test results](data/01_main_results/records/): choose a model, method, extraction mode and sample size.
 
 The [data guide](data/README.md) maps every folder to the paper and explains columns and names such as `bntrain`.
 

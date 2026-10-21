@@ -6,7 +6,6 @@ model checkpoints are not needed.
 import argparse
 import collections
 import csv
-import glob
 import hashlib
 import io
 import math
@@ -106,12 +105,151 @@ def identify_family(relative_path):
     return None, None
 
 
+NAVIGATION_MODEL_NAMES = {
+    "v7": "resnet20_frn_cifar10",
+    "r50": "resnet50_cifar100",
+    "wp": "5layer_cnn_cifar10",
+    "ablA": "resnet18_cifar10_baseline",
+    "ablB": "resnet18_cifar10_10x_weight_decay",
+    "ablC": "resnet18_cifar10_strong_augmentation",
+    "ablD": "resnet18_cifar10_weight_decay_and_augmentation",
+    "imgnet_simple": "deepresnet50_imagenet_simple_augmentation",
+    "imgnet_adv": "deepresnet50_imagenet_advanced_augmentation",
+    "simclr_c10": "simclr_resnet50_cifar10",
+    "simclr_c100": "simclr_resnet50_cifar100",
+    "r18_c10": "resnet18_cifar10",
+    "r18_c100": "resnet18_cifar100",
+    "r50_c100": "resnet50_cifar100",
+    "frn_c10": "resnet20_frn_cifar10",
+}
+
+
+def navigation_model_name(tag):
+    if tag in NAVIGATION_MODEL_NAMES:
+        return NAVIGATION_MODEL_NAMES[tag]
+    m = re.fullmatch(r"zoo_c(10|100)_m([0-4])", tag)
+    if m:
+        return f"resnet18_cifar{m[1]}_zoo_model{m[2]}"
+    m = re.fullmatch(r"phase_bs(8|128|1024)", tag)
+    if m:
+        return f"resnet50_cifar100_phase_zoo_batch{m[1]}"
+    raise ValueError(f"unknown model tag: {tag}")
+
+
+def navigation_model_mode(tag):
+    base = tag.removesuffix("_bntrain")
+    mode = "no_batchnorm" if base in {"v7", "wp", "frn_c10"} else (
+        "train_mode" if tag.endswith("_bntrain") else "eval_mode")
+    return navigation_model_name(base), mode
+
+
+def navigation_budget_folder(values):
+    values = {str(v) for v in values}
+    return "points_per_split_" + next(iter(values)) if len(values) == 1 else "multiple_budgets"
+
+
+def navigation_parts(family, basename, sub=None):
+    """Extra path components inside an existing family root, from its filename only."""
+    if family in {"null", "null_trtr", "synth", "km_logs", "timing"}:
+        return ()
+    if family in {"ssl", "ssl_bntrain", "ssl_baselines"}:
+        m = re.fullmatch(r"(sslbase|sslvrt|sslseeds)_(cifar10|cifar100)_\d+-\d+\.csv", basename)
+        if m:
+            return ("legacy_runs", f"simclr_resnet50_{m[2]}")
+        m = re.match(r"sslagg_(cifar10|cifar100)(?:_bntrain)?_", basename)
+        if m:
+            return (f"simclr_resnet50_{m[1]}", "mmdagg", "points_per_split_5000")
+        m = re.match(r"ssl_(cifar10|cifar100)(?:_bntrain)?_([a-z]+)_", basename)
+        if not m:
+            raise ValueError(f"unknown SimCLR filename: {basename}")
+        group = m[2]
+        method = {
+            "fast": "vrt_mmd_ed_c2st", "extra": "reversed_vrt_schilling_henze",
+            "base": "mmd_ed_c2st", "knn": "schilling_henze",
+            "raw": "mmd_ed_raw_features", "slow": "mmdagg", "vrt": "vrt",
+        }[group]
+        budget = "points_per_split_1500" if group == "slow" else (
+            "points_per_split_10000" if group == "raw" else "multiple_budgets")
+        return (f"simclr_resnet50_{m[1]}", method, budget)
+    if family == "ssl_nll":
+        m = re.match(r"ssl_nll_(cifar10|cifar100)_", basename)
+        if not m:
+            raise ValueError(basename)
+        return (f"simclr_resnet50_{m[1]}",)
+    if family in {"null_cifar_vrt", "null_cifar_rule", "null_cifar_base"}:
+        m = re.match(r"(?:vrt_null|vrt_rule|base_null)_(frn_c10|r18_c10|r18_c100|r50_c100|simclr_c10|simclr_c100)_(eval|train)(?:_(cpu|gpu))?_[rn]\d+-\d+(_official)?\.csv$", basename)
+        if not m:
+            raise ValueError(basename)
+        mode = "no_batchnorm" if m[1] == "frn_c10" else m[2] + "_mode"
+        path = (navigation_model_name(m[1]), mode)
+        if family == "null_cifar_rule":
+            return path
+        split = "combined_splits"
+        if family == "null_cifar_base" and m[3] == "cpu":
+            split = "official_split" if m[4] else "random_splits"
+        return path + (split,)
+    if family == "official_check":
+        m = re.fullmatch(r"official_check_(pixels|r18_shuffled)_(cifar10|cifar100)_r\d+-\d+\.csv", basename)
+        if not m:
+            raise ValueError(basename)
+        features = "input_pixels" if m[1] == "pixels" else "resnet18_shuffled_extraction"
+        return (m[2], features)
+    if family in {"chat_stats", "mmd_on_chat"}:
+        m = re.match(r"(?:chatstats|mmdchat)_(.+)_c\d", basename)
+        if not m:
+            raise ValueError(basename)
+        return navigation_model_mode(m[1])
+    if family in {"vrt_fwd", "reversed"}:
+        m = re.fullmatch(r"vrt_(?:fwd|rev)_(.+?)_(large|small)(?:_c\d+(?:-\d+)?)?\.csv", basename)
+        if not m:
+            raise ValueError(basename)
+        return navigation_model_mode(m[1]) + (navigation_budget_folder([10000 if m[2] == "large" else 1500]),)
+    if family in {"mmd_p2000", "mmd_raw_p2000", "ed_p2000", "ed_raw_p2000", "knn_v2"}:
+        m = re.match(r"(?:mmd|ed|knn)_(.+?)_n(\d+)(?:_|\.csv)", basename)
+        if not m:
+            raise ValueError(basename)
+        return navigation_model_mode(m[1]) + (navigation_budget_folder([m[2]]),)
+    if family in {"c2st", "bntrain_c2st", "mmdagg", "bntrain_mmdagg"}:
+        m = re.match(r"(?:c2st|mmdagg)_(.+?)_b([\d-]+)(?:_|\.csv)", basename)
+        if not m:
+            raise ValueError(basename)
+        return navigation_model_mode(m[1]) + (navigation_budget_folder(m[2].split("-")),)
+    raise ValueError(f"no navigation rule for {family}/{basename}")
+
+
 def grouped_relative_path(relative_path):
-    """Map an original payload path to the release layout; grouped paths stay unchanged."""
+    """Canonical release path for historical, section-grouped or deep result files."""
     path = Path(relative_path)
     if path.parts and path.parts[0] in FAMILY_PATHS:
-        return Path(FAMILY_PATHS[path.parts[0]]).joinpath(*path.parts[1:])
-    return path
+        path = Path(FAMILY_PATHS[path.parts[0]]).joinpath(*path.parts[1:])
+    if path.suffix not in {".csv", ".npz"} or generated_path(path) or any(part in EXCLUDE_DIRS for part in path.parts):
+        return path
+    family, sub = identify_family(path)
+    if family is None or family in {"null", "null_trtr", "synth", "km_logs", "timing"}:
+        return path
+    if path.suffix == ".npz":
+        if family != "chat_stats":
+            return path
+    else:
+        schema, _ = schema_for(family, path.name, sub)
+        if schema is None:
+            return path
+    try:
+        parts = navigation_parts(family, path.name, sub)
+    except (ValueError, KeyError):
+        # Other valid experiment tags remain readable in their original family folder.
+        return path
+    return Path(FAMILY_PATHS[family]).joinpath(*parts, path.name)
+
+
+def result_files(pattern):
+    """Find a family's matching result files at any depth, excluding archived runs."""
+    pattern = Path(pattern)
+    paths = set()
+    for path in pattern.parent.rglob(pattern.name):
+        if path.is_file() and not any(part in EXCLUDE_DIRS for part in path.relative_to(pattern.parent).parts):
+            paths.add(path.resolve())
+    return sorted(paths)
 
 
 def generated_path(relative_path):
@@ -701,7 +839,7 @@ class ResultRoutes:
         """epoch -> {seed: (p, acc)} over the files of the patterns, rows matching filt (model / stat / budget)"""
         d = collections.defaultdict(dict)
         for pat in dict.fromkeys(patterns):
-            for f in sorted(glob.glob(pat)):
+            for f in result_files(pat):
                 for (model, stat, budget), eps in self.parse(f, pcol, acccol).items():
                     if filt and any({"model": model, "stat": stat, "budget": budget}.get(k) != v for k, v in filt.items()):
                         continue
@@ -807,7 +945,7 @@ def exact_p_cell(routes, exact_perm_p, tag, mode, stat, N):
         pats, pcol, ccol = [routes.pattern("knn_v2", f"knn_{t}_n{N}_part*.csv")], "p_henze", "henze_count"
     out = {}
     for pat in pats:
-        for f in sorted(glob.glob(pat)):
+        for f in result_files(pat):
             raw = open(f, "rb").read().replace(b"\x00", b"")
             for r in csv.DictReader(io.StringIO(raw.decode())):
                 ep, sd = int(r["epoch"]), int(r["seed"])
@@ -1022,7 +1160,7 @@ def validate_report(args):
 
 
 def csv_records(pattern):
-    for path in sorted(glob.glob(str(pattern))):
+    for path in result_files(pattern):
         with open(path, newline="") as f:
             for row in csv.DictReader(f):
                 yield path, row

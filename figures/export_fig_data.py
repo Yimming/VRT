@@ -15,12 +15,12 @@ scripts read instead of the old 10-seed logs and single-seed benchmark files:
   onsets.csv             tag, sustained VRT onset under the paper's rule (median p < 0.05 at every later evaluated epoch)
 Usage:  python figures/export_fig_data.py <data folder> <new output folder>
 """
-import sys, os, glob, csv, collections
+import sys, os, csv, collections
 import numpy as np
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from results import family_path
+from results import family_path, result_files
 
 S50, OUT = sys.argv[1], sys.argv[2]
 os.makedirs(OUT, exist_ok=False)
@@ -33,7 +33,7 @@ def read(pattern, val, filt=lambda r: True, val2=None):
     d = collections.defaultdict(dict)                     # epoch -> seed -> value (or (value, value2))
     relative = Path(pattern).relative_to(Path(S50))
     pattern = str(family_path(S50, relative.parts[0]).joinpath(*relative.parts[1:]))
-    for f in glob.glob(pattern):
+    for f in result_files(pattern):
         for r in csv.DictReader(open(f)):
             if not filt(r) or int(r["seed"]) not in SEEDS:
                 continue

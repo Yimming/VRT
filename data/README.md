@@ -1,6 +1,6 @@
 # Data by paper section
 
-Open the section you are reading. Summary CSVs are at the top of each folder; `records/` contains the individual test results. Shared source records are stored once and referenced from the other sections.
+Open the section you are reading. Summary CSVs are at the top of each folder; `records/` contains the individual test results, organized by full model name, extraction mode and sample size. Shared source records are stored once and referenced from the other sections.
 
 The `01`–`11` prefixes keep folders in reading order: Sections 4.2–4.4 first, followed by the appendix folders. The numbers are navigation order; the table below gives the actual paper sections.
 
@@ -21,6 +21,8 @@ The `01`–`11` prefixes keep folders in reading order: Sections 4.2–4.4 first
 Counts cover the 5,156 source files in [MANIFEST.csv](MANIFEST.csv), excluding generated summaries and README files. Section 4.3 uses the shared Section 4.2 records. The complete [784-cell onset table](01_main_results/all_onsets.csv) includes all models, methods, extraction modes and budgets.
 
 Appendix A contains derivations. Appendix H's main trajectories use the forward and reversed VRT records in folders 01 and 09, plus saved figure inputs. Its additional ten-seed diagnostics and Appendix J's original figure inputs are not bundled; see the [scope notes](../REPRODUCIBILITY.md#scope).
+
+Start with the [model-to-method index](01_main_results/records/). File tables show the actual checkpoints, statistical-test seeds and methods in each CSV. Files containing several budgets or splits remain intact and are labelled accordingly.
 
 ## Names used in the files
 
@@ -44,7 +46,7 @@ Appendix A contains derivations. Appendix H's main trajectories use the forward 
 
 Method names: `vrt` is the Volume Ratio Test; `mmd` is maximum mean discrepancy; `ed` is Energy Distance; `c2st` is the classifier two-sample test; `mmdagg` is aggregated MMD. `knn` stores the nearest-neighbour graph tests of Schilling and Henze.
 
-For example, `vrt_fwd_r50_bntrain_large_c0-83.csv` contains standard-reference VRT on ResNet-50/CIFAR-100, using current-batch BatchNorm statistics, 10,000 points per split, and checkpoints in epochs 0–83. The file is one batch of statistical tests on saved checkpoints.
+For example, the [ResNet-50 VRT CSV](01_main_results/records/vrt/resnet50_cifar100/train_mode/points_per_split_10000/vrt_fwd_r50_bntrain_large_c0-83.csv) contains standard-reference VRT on ResNet-50/CIFAR-100, using current-batch BatchNorm statistics, 10,000 points per split, and checkpoints in epochs 0–83. The file is one batch of statistical tests on saved checkpoints.
 
 ## Model identifiers
 
@@ -75,6 +77,6 @@ python results.py validate --data data
 python results.py summaries --data data --out results/paper_tables
 ```
 
-Original source bytes and filenames are preserved. The manifest differs from the original release only in its `path` column; [data_layout.csv](../docs/data_layout.csv) maps historical folders to the paper sections. [EXCLUDED.txt](EXCLUDED.txt) records the two excluded obsolete result directories. Earlier ten-seed SimCLR files are retained under `01_main_results/records/simclr/aggregation_and_earlier_runs/` and excluded from final onset summaries.
+Original source bytes and filenames are preserved. The manifest differs from the original release only in its `path` column; [data_layout.csv](../docs/data_layout.csv) maps historical folders to the paper sections. [EXCLUDED.txt](EXCLUDED.txt) records the two excluded obsolete result directories. Earlier SimCLR files, including later seed-completion files, are kept separately in [the legacy folder](01_main_results/records/simclr/aggregation_and_earlier_runs/legacy_runs/) and excluded from final onset summaries.
 
 The [archived scripts and task commands](../archive/README.md) document the original execution workflow. Dataset images, checkpoints and embedding arrays are not bundled. See [REPRODUCIBILITY.md](../REPRODUCIBILITY.md#scope) for missing original figure inputs and additional controls.
