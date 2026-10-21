@@ -1,2 +1,2 @@
-I_sensitivity_advantage_of_score_transformation/records/mmd/c100_nan_bug	SimCLR CIFAR-100 MMD on c-hat before the +inf cap (NaN statistics, p = 1/2001)
-I_sensitivity_advantage_of_score_transformation/records/statistics/dup_backup	c-hat diagnostic files before the duplicate-row cleanup (both concurrent jobs' rows)
+10_sensitivity_advantage_of_score_transformation/records/mmd/c100_nan_bug	SimCLR CIFAR-100 MMD on c-hat before the +inf cap (NaN statistics, p = 1/2001)
+10_sensitivity_advantage_of_score_transformation/records/statistics/dup_backup	c-hat diagnostic files before the duplicate-row cleanup (both concurrent jobs' rows)

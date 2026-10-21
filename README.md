@@ -2,6 +2,10 @@
 
 Code and per-seed results for **Early Detection of Backbone Divergence via Neighborhood Structure in Learned Embeddings** (NeurIPS 2026).
 
+Yiming Zhang · Reza Zare Hassanpour · Georgi Gaydadjiev
+
+[Use VRT](#use-vrt-on-your-embeddings) · [Reproduce results](#reproduce-the-reported-results) · [Data](data/README.md) · [Figures](figures/README.md) · [Citation](#citation)
+
 VRT tests whether training and test embeddings differ in their local neighbourhood geometry. It runs on the CPU using NumPy and SciPy.
 
 ## Setup
@@ -23,17 +27,6 @@ python -m pip install -r requirements.txt
 ```
 
 The original experiment environment is recorded in [ENVIRONMENT.md](ENVIRONMENT.md).
-
-## Reproduce the reported results
-
-Start with [data/](data/README.md), organized by paper section and appendix. Each section has its summary CSVs and source records. The guide explains filenames such as `bntrain`, model names and fields. To regenerate the summaries without retraining models or downloading checkpoints:
-
-```bash
-python results.py validate --data data
-python results.py summaries --data data --out results/paper_tables
-```
-
-The summaries include all 784 onset records and the supplementary comparisons. `python results.py onsets --data data --out results/onsets.csv` prints Tables 1–3 and reproduces [docs/onsets_final.csv](docs/onsets_final.csv). Further commands are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 ## Use VRT on your embeddings
 
@@ -69,6 +62,17 @@ python results.py new-runs \
 
 Feature normalization is applied by the runner. The 50 seeds repeat the statistical analysis of each fixed checkpoint; they are not 50 independently trained networks.
 
+## Reproduce the reported results
+
+Start with [data/](data/README.md), organized by paper section and appendix. Each section has its summary CSVs and source records. The guide explains filenames such as `bntrain`, model names and fields. To regenerate the summaries without retraining models or downloading checkpoints:
+
+```bash
+python results.py validate --data data
+python results.py summaries --data data --out results/paper_tables
+```
+
+The summaries include all 784 onset records and the supplementary comparisons. `python results.py onsets --data data --out results/onsets.csv` prints Tables 1–3 and reproduces [docs/onsets_final.csv](docs/onsets_final.csv). Further commands are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+
 ## Code map
 
 There are nine main Python modules:
@@ -89,11 +93,22 @@ There are nine main Python modules:
 
 Original checkpoints, extracted feature arrays and third-party image datasets are not bundled. Saved results reproduce the reported summaries; new training runs need not yield identical checkpoints or detection epochs. The remaining figure-source gaps are listed in [REPRODUCIBILITY.md](REPRODUCIBILITY.md#scope).
 
-## Tests and citation
+## Tests
 
 ```bash
 python -m pytest tests -q
 python evaluate.py smoke
 ```
 
-Citation metadata is in [CITATION.cff](CITATION.cff). Code and data licenses are pending author selection; third-party code retains its existing license.
+## Citation
+
+```bibtex
+@inproceedings{zhang2026vrt,
+  title={Early Detection of Backbone Divergence via Neighborhood Structure in Learned Embeddings},
+  author={Zhang, Yiming and Zare Hassanpour, Reza and Gaydadjiev, Georgi},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2026}
+}
+```
+
+Citation metadata is also available in [CITATION.cff](CITATION.cff). Code and data licenses are pending author selection; third-party code retains its existing license.

@@ -19,7 +19,7 @@ PDFs and PNG previews go to `results/figures/`, which is ignored by Git. Set `VR
 | Figure 3, synthetic sensitivity and BatchNorm | `plot_fig4_s50.py` | `fig4_diagnosis.pdf` | `fig_data_s50/fig4a_clusters.csv`, `fig4a_matched.csv`, `fig4b_r50.csv` |
 | Figure 8, reference-set score trajectories | `plot_dc_trajectory_s50.py` | `fig_dc_trajectory.pdf` | `fig_data_s50/dc_*.csv`, `onsets.csv` |
 | Appendix C, original CIFAR split | `manuscript/appendix_c/plot_official_paper.py` | `appendix_c/fig_cifar_official_control.pdf` | `manuscript/appendix_c/official_counts.csv` |
-| Appendix F, ten loss panels | `manuscript/appendix_f/build_figure.py` | `appendix_f/fig_trajectories_appendix.pdf` | `benchmark_final/`, `fig_data_s50/`, filtered SimCLR rows under `manuscript/appendix_f/data/ssl/`, and [SimCLR losses](../data/F_per_model_trajectories/records/simclr_loss/) |
+| Appendix F, ten loss panels | `manuscript/appendix_f/build_figure.py` | `appendix_f/fig_trajectories_appendix.pdf` | `benchmark_final/`, `fig_data_s50/`, filtered SimCLR rows under `manuscript/appendix_f/data/ssl/`, and [SimCLR losses](../data/08_per_model_trajectories/records/simclr_loss/) |
 | Appendix G, synthetic reference choice | `manuscript/appendix_g/build_figure.py` | `appendix_g/fig_ref_asymmetry.pdf` | Saved `source_before.pdf` and `label_overlay.pdf`; see limitation below |
 | Appendix I, MMD on scores | `manuscript/appendix_i/plot_horizontal.py` | `appendix_i/fig_mmd_on_chat.pdf` | `manuscript/appendix_i/onsets.json` |
 
@@ -34,7 +34,7 @@ python figures/export_fig_data.py data results/figure_data
 python figures/appD_numbers.py
 ```
 
-The exporter uses `results.family_path` to locate the paper-section data folders. It refuses an existing output directory and does not replace `fig_data_s50/`. `appD_numbers.py` prints the synthetic rejection counts and bandwidth summaries, using the saved matched repetitions and [Appendix D records](../data/D_synthetic_power_profile_details/records/).
+The exporter uses `results.family_path` to locate the paper-section data folders. It refuses an existing output directory and does not replace `fig_data_s50/`. `appD_numbers.py` prints the synthetic rejection counts and bandwidth summaries, using the saved matched repetitions and [Appendix D records](../data/06_synthetic_power_profile_details/records/).
 
 The archived `base_*.csv` snapshots predate the final MMDAgg checkpoint additions. Re-exporting adds 127 values in previously empty `mmdagg_frac` fields across six files; existing nonempty values are unchanged. Current manuscript plots do not use those fields. Use `results.py` for the final table onsets.
 

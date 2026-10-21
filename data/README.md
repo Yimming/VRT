@@ -2,21 +2,25 @@
 
 Open the section you are reading. Summary CSVs are at the top of each folder; `records/` contains the individual test results. Shared source records are stored once and referenced from the other sections.
 
+The `01`–`11` prefixes keep folders in reading order: Sections 4.2–4.4 first, followed by the appendix folders. The numbers are navigation order; the table below gives the actual paper sections.
+
 | Folder / paper element | Runner | Main fields | Source files |
 | --- | --- | --- | --- |
-| [4_2_main_results/](4_2_main_results/) — 4.2 Main results; Tables 1–2 | `evaluate.py test` | `epoch, seed, budget, p, acc` | 3,576 |
-| [4_3_regularization_interventions/](4_3_regularization_interventions/) — 4.3 Regularization interventions | `train.py regularization; evaluate.py test` | `VRT, MMD, MMDAgg, C2ST, ED` | 0 |
-| [4_4_synthetic_experiments_and_feature_extraction/](4_4_synthetic_experiments_and_feature_extraction/) — 4.4 Synthetic experiments and feature extraction; Table 3 | `evaluate.py test --raw` | `epoch, seed, n_samples, p` | 336 |
-| [B_nearest_neighbor_two_sample_baselines/](B_nearest_neighbor_two_sample_baselines/) — Appendix B; Table 4 | `evaluate.py test` | `epoch, seed, k, p_schilling, p_henze` | 168 |
-| [C_type_i_calibration_and_controls_before_training/](C_type_i_calibration_and_controls_before_training/) — Appendix C; Table 5 | `controls.py` | `arch, split, bn_mode, rep, p, reject` | 669 |
-| [D_synthetic_power_profile_details/](D_synthetic_power_profile_details/) — Appendix D; Table 6 and Figure 3(a) | `synthetic.py` | `cond, C, budget, rep, test, p, scale` | 4 |
-| [E_sensitivity_to_hyperparameters_and_sample_size/](E_sensitivity_to_hyperparameters_and_sample_size/) — Appendix E; Table 7 | `evaluate.py test; synthetic.py` | `mode, budget, onset; sweep logs` | 10 |
-| [F_per_model_trajectories/](F_per_model_trajectories/) — Appendix F; Figures 2 and 6 | `train.py evaluate-loss` | `epoch, split, loss` | 20 |
-| [G_reference_set_selection/](G_reference_set_selection/) — Appendix G; Table 8; also Appendix H | `evaluate.py test --methods reversed` | `epoch, seed, direction, M, k, delta_c, p` | 92 |
-| [I_sensitivity_advantage_of_score_transformation/](I_sensitivity_advantage_of_score_transformation/) — Appendix I | `evaluate.py test; evaluate.py score-statistics` | `epoch, seed, p, score statistics` | 272 |
-| [K_compute_resources_and_runtime/](K_compute_resources_and_runtime/) — Appendix K; Table 9 | `evaluate.py timing` | `model, budget, seed, seconds` | 9 |
+| [01_main_results/](01_main_results/) — 4.2 Main results; Tables 1–2 | `evaluate.py test` | `epoch, seed, budget, p, acc` | 3,576 |
+| [02_regularization_interventions/](02_regularization_interventions/) — 4.3 Regularization interventions | `train.py regularization; evaluate.py test` | `VRT, MMD, MMDAgg, C2ST, ED` | 0 |
+| [03_synthetic_experiments_and_feature_extraction/](03_synthetic_experiments_and_feature_extraction/) — 4.4 Synthetic experiments and feature extraction; Table 3 | `evaluate.py test --raw` | `epoch, seed, n_samples, p` | 336 |
+| [04_nearest_neighbor_two_sample_baselines/](04_nearest_neighbor_two_sample_baselines/) — Appendix B; Table 4 | `evaluate.py test` | `epoch, seed, k, p_schilling, p_henze` | 168 |
+| [05_type_i_calibration_and_controls_before_training/](05_type_i_calibration_and_controls_before_training/) — Appendix C; Table 5 | `controls.py` | `arch, split, bn_mode, rep, p, reject` | 669 |
+| [06_synthetic_power_profile_details/](06_synthetic_power_profile_details/) — Appendix D; Table 6 and Figure 3(a) | `synthetic.py` | `cond, C, budget, rep, test, p, scale` | 4 |
+| [07_sensitivity_to_hyperparameters_and_sample_size/](07_sensitivity_to_hyperparameters_and_sample_size/) — Appendix E; Table 7 | `evaluate.py test; synthetic.py` | `mode, budget, onset; sweep logs` | 10 |
+| [08_per_model_trajectories/](08_per_model_trajectories/) — Appendix F; Figures 2 and 6 | `train.py evaluate-loss` | `epoch, split, loss` | 20 |
+| [09_reference_set_selection/](09_reference_set_selection/) — Appendix G; Table 8; also Appendix H | `evaluate.py test --methods reversed` | `epoch, seed, direction, M, k, delta_c, p` | 92 |
+| [10_sensitivity_advantage_of_score_transformation/](10_sensitivity_advantage_of_score_transformation/) — Appendix I | `evaluate.py test; evaluate.py score-statistics` | `epoch, seed, p, score statistics` | 272 |
+| [11_compute_resources_and_runtime/](11_compute_resources_and_runtime/) — Appendix K; Table 9 | `evaluate.py timing` | `model, budget, seed, seconds` | 9 |
 
-Counts cover the 5,156 source files in [MANIFEST.csv](MANIFEST.csv), excluding generated summaries and README files. Section 4.3 uses the shared Section 4.2 records. The complete [784-cell onset table](4_2_main_results/all_onsets.csv) includes all models, methods, extraction modes and budgets.
+Counts cover the 5,156 source files in [MANIFEST.csv](MANIFEST.csv), excluding generated summaries and README files. Section 4.3 uses the shared Section 4.2 records. The complete [784-cell onset table](01_main_results/all_onsets.csv) includes all models, methods, extraction modes and budgets.
+
+Appendix A contains derivations. Appendix H's main trajectories use the forward and reversed VRT records in folders 01 and 09, plus saved figure inputs. Its additional ten-seed diagnostics and Appendix J's original figure inputs are not bundled; see the [scope notes](../REPRODUCIBILITY.md#scope).
 
 ## Names used in the files
 
@@ -71,6 +75,6 @@ python results.py validate --data data
 python results.py summaries --data data --out results/paper_tables
 ```
 
-Original source bytes and filenames are preserved. The manifest differs from the original release only in its `path` column; [data_layout.csv](../docs/data_layout.csv) maps historical folders to the paper sections. [EXCLUDED.txt](EXCLUDED.txt) records the two excluded obsolete result directories. Earlier ten-seed SimCLR files are retained under `4_2_main_results/records/simclr/aggregation_and_earlier_runs/` and excluded from final onset summaries.
+Original source bytes and filenames are preserved. The manifest differs from the original release only in its `path` column; [data_layout.csv](../docs/data_layout.csv) maps historical folders to the paper sections. [EXCLUDED.txt](EXCLUDED.txt) records the two excluded obsolete result directories. Earlier ten-seed SimCLR files are retained under `01_main_results/records/simclr/aggregation_and_earlier_runs/` and excluded from final onset summaries.
 
 The [archived scripts and task commands](../archive/README.md) document the original execution workflow. Dataset images, checkpoints and embedding arrays are not bundled. See [REPRODUCIBILITY.md](../REPRODUCIBILITY.md#scope) for missing original figure inputs and additional controls.

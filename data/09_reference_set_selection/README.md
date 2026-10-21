@@ -1,6 +1,6 @@
 # Appendix G; Table 8; also Appendix H
 
-Reversed-reference VRT. The ImageNet records also support Appendix H reference-set trajectories. Standard-reference records remain under ../4_2_main_results/records/.
+Reversed-reference VRT. The ImageNet records also support Appendix H reference-set trajectories. Standard-reference records remain under ../01_main_results/records/.
 
 Summary CSVs: [reversed_onsets.csv](reversed_onsets.csv).
 

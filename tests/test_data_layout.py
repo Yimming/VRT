@@ -160,7 +160,7 @@ def test_grouped_schema_lookup_and_unknown_branch(tmp_path):
                           "knn_imgnet_rand_eval_trtr_n10000_part.csv")
     assert known["group"] == "vrt_fwd"
     assert nested["group"] == "knn"
-    write(tmp_path / "4_3_regularization_interventions/wrong.csv", "p", [[.5]])
+    write(tmp_path / "02_regularization_interventions/wrong.csv", "p", [[.5]])
     with pytest.raises(SchemaError, match="unrecognised"):
         validate_tree(tmp_path)
 
@@ -183,4 +183,4 @@ def test_summaries_use_paper_sections_and_include_four_interventions(tmp_path, m
     assert [row["VRT"] for row in interventions] == ["33", "null", "35", "null"]
     assert {str(p.relative_to(output)) for p in output.rglob("*.csv")} == set(SUMMARY_PATHS.values())
     assert all(generated_path(relative) for relative in SUMMARY_PATHS.values())
-    assert not generated_path("4_2_main_results/unexpected.csv")
+    assert not generated_path("01_main_results/unexpected.csv")

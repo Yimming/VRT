@@ -94,7 +94,7 @@ python train.py evaluate-loss --dataset cifar10 --data-root datasets \
   --epochs 1-1000 --out results/simclr_cifar10_loss.csv
 ```
 
-Point the checkpoint pattern to the directory produced by training. This evaluates two fixed augmented views of 10,000 training and 10,000 test images, using complete batches of 512 images in both BatchNorm modes. The released curves are in [data/F_per_model_trajectories/records/simclr_loss/](data/F_per_model_trajectories/records/simclr_loss/).
+Point the checkpoint pattern to the directory produced by training. This evaluates two fixed augmented views of 10,000 training and 10,000 test images, using complete batches of 512 images in both BatchNorm modes. The released curves are in [data/08_per_model_trajectories/records/simclr_loss/](data/08_per_model_trajectories/records/simclr_loss/).
 
 ## Calibration and split controls: Appendix C
 
@@ -102,15 +102,15 @@ Each command runs independently. The first example evaluates 500 randomly initia
 
 ```bash
 python controls.py cifar-vrt --arch r18_c10 --data-root datasets \
-  --reps 0-499 --out_dir results/C_type_i_calibration_and_controls_before_training/records/cifar/vrt
+  --reps 0-499 --out_dir results/05_type_i_calibration_and_controls_before_training/records/cifar/vrt
 python controls.py cifar-baselines --arch r18_c10 --data-root datasets \
   --part gpu --splits resplit,official --reps 0-499 \
-  --out_dir results/C_type_i_calibration_and_controls_before_training/records/cifar/baselines
+  --out_dir results/05_type_i_calibration_and_controls_before_training/records/cifar/baselines
 python controls.py cifar-baselines --arch r18_c10 --data-root datasets \
   --part cpu --splits resplit,official --reps 0-499 \
-  --out_dir results/C_type_i_calibration_and_controls_before_training/records/cifar/baselines
+  --out_dir results/05_type_i_calibration_and_controls_before_training/records/cifar/baselines
 python controls.py cifar-rule --arch r18_c10 --data-root datasets \
-  --nets 0-29 --seeds 42-91 --out_dir results/C_type_i_calibration_and_controls_before_training/records/cifar/decision_rule
+  --nets 0-29 --seeds 42-91 --out_dir results/05_type_i_calibration_and_controls_before_training/records/cifar/decision_rule
 ```
 
 Repeat with the other architectures listed by `--help`. `cifar-official` runs the separate pixel and shuffled-extraction controls; `imagenet-vrt` runs the original ImageNet random-network control. The GPU/CPU baseline groups retain the paper's implementation choices.
@@ -121,11 +121,11 @@ These control outputs use the same record schemas as the archived data. Once all
 
 ```bash
 python synthetic.py clusters --reps 200 --jobs 4 \
-  --out results/D_synthetic_power_profile_details/records/fig4a_clusters.csv
+  --out results/06_synthetic_power_profile_details/records/fig4a_clusters.csv
 python synthetic.py single-cluster --reps 200 --jobs 4 \
-  --out results/D_synthetic_power_profile_details/records/fig4a_matched.csv
+  --out results/06_synthetic_power_profile_details/records/fig4a_matched.csv
 python synthetic.py bandwidth --reps 200 --jobs 4 \
-  --out results/D_synthetic_power_profile_details/records/mmd_bandwidth.csv
+  --out results/06_synthetic_power_profile_details/records/mmd_bandwidth.csv
 python results.py synthetic --data results
 ```
 
@@ -183,7 +183,7 @@ The destination must be new or empty. Export from historical folders writes the 
 
 - The released numerical results reproduce the table summaries without checkpoints. Original image datasets, model checkpoints and extracted feature arrays are not included.
 - [figures/](figures/README.md) contains restored plotting scripts and additional numerical inputs, including matched synthetic repetitions and loss records. Generated figures are written to ignored `results/figures/`. Appendix G is reconstructed from its saved figure asset; its original per-repetition measurements are unavailable.
-- The original two-dimensional hyperparameter-sweep outputs (Appendix E) and the uniform-sphere calibration outputs are unavailable here. Saved one-dimensional sweep logs remain in [data/E_sensitivity_to_hyperparameters_and_sample_size/records/](data/E_sensitivity_to_hyperparameters_and_sample_size/records/).
+- The original two-dimensional hyperparameter-sweep outputs (Appendix E) and the uniform-sphere calibration outputs are unavailable here. Saved one-dimensional sweep logs remain in [data/07_sensitivity_to_hyperparameters_and_sample_size/records/](data/07_sensitivity_to_hyperparameters_and_sample_size/records/).
 - Appendix G's reference-direction experiment can be rerun with `synthetic.py reference`; its original per-repetition output is unavailable. The extra 10-seed ImageNet diagnostics in Appendix H (class balancing, enlarged reference/query sets and test-vs-test controls) have no dedicated runner in the supplied source.
 - Class-geometry measurements can be rerun with `evaluate.py geometry`, but the original Appendix J extraction inputs and plotting generator are not bundled.
 

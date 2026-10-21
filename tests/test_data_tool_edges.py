@@ -127,7 +127,7 @@ def test_export_uses_a_partial_folder_and_refuses_an_empty_source(tmp_path):
           [["v7", "large", 0, 42, "+0.1", "0.5"]])
     r = run(EXPORT, "--src", str(src), "--dst", str(dst))
     assert r.returncode == 0, r.stderr
-    assert sorted(os.listdir(dst)) == ["4_2_main_results", "EXCLUDED.txt", "MANIFEST.csv"]
+    assert sorted(os.listdir(dst)) == ["01_main_results", "EXCLUDED.txt", "MANIFEST.csv"]
     empty = tmp_path / "nothing"; os.makedirs(empty)
     r = run(EXPORT, "--src", str(empty), "--dst", str(tmp_path / "dst2"))
     assert r.returncode != 0 and "no files found" in r.stderr and not (tmp_path / "dst2").exists()
