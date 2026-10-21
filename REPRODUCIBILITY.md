@@ -34,7 +34,7 @@ The experiment environment is recorded in [ENVIRONMENT.md](ENVIRONMENT.md).
 
 ## Direct Python use
 
-For the main protocol, supply at least 10,000 training rows and exactly 10,000 test rows, with the same feature dimension. Each row must be finite and nonzero.
+Supply two arrays of shape `(N, D)`, with one embedding per row and the same feature dimension `D`. For the main protocol, use at least 10,000 training rows and exactly 10,000 test rows. Each row must be finite and nonzero.
 
 ```python
 import numpy as np
@@ -57,6 +57,29 @@ This uses 2,000 training reference points, 8,000 disjoint training queries, 10,0
 
 An NPZ file must contain training and test arrays with the same feature dimension. Supported key pairs are `h_tr`/`h_te`, `X_tr`/`X_te` and `tr`/`te`. Main VRT needs at least 10,000 training rows and exactly 10,000 test rows. The small protocol needs at least 1,500 rows from each split.
 
+Save the same `train.npy` and `test.npy` arrays in one NPZ file:
+
+```python
+import numpy as np
+
+np.savez("features.npz", h_tr=np.load("train.npy"), h_te=np.load("test.npy"))
+```
+
+Run one VRT test; the runner normalizes the rows automatically:
+
+```bash
+python evaluate.py test \
+  --features features.npz --model my_model --epochs 0 \
+  --methods vrt --budget 10000 --seeds 42 --permutations 2000 \
+  --out results/my_vrt.csv
+```
+
+This writes one row to `results/my_vrt.csv`, including `statistic` and the two-sided p-value `p`. Here `0` labels the supplied checkpoint; replace it with its actual epoch if known. `--model` is an output label; use distinct labels for different training runs or extraction modes.
+
+The analysis seed controls reference/query sampling and permutations, not model training. A single test does not establish sustained onset; the paper evaluates 50 analysis seeds at each checkpoint using the decision rule above.
+
+### Checkpoint trajectories
+
 ```bash
 python evaluate.py test \
   --features 'features/r50_eval/ep{ep:03d}.npz' --model r50_eval \
@@ -67,7 +90,7 @@ python evaluate.py test \
 
 `knn` produces both Schilling and Henze results. At the main budget, MMDAgg uses 5,000 points per split. Use `--budget 1500` for the small-budget comparison, omitting `mmd-scores`, whose paper protocol uses the main budget. Use `--protocol simclr` for the SimCLR preprocessing choices.
 
-The runner normalizes features by default. For Table 3's unnormalized comparison, select MMD and ED with `--raw`:
+For Table 3's unnormalized comparison, select MMD and ED with `--raw`:
 
 ```bash
 python evaluate.py test \
@@ -86,7 +109,7 @@ python results.py new-runs \
   --seeds 42-91 --out results/new_onsets.csv
 ```
 
-This format records method, budget, normalization, protocol, seed, permutation count and backend. Separate settings are not pooled. Missing-seed checks are explicit; checkpoint coverage is measured against epochs present for that model in the supplied files. Checkpoints absent from every input cannot be inferred.
+This format records method, budget, normalization, protocol, analysis seed and requested permutation/backend options. C2ST and Schilling do not use permutations; MMDAgg uses its own defaults. Separate settings are not pooled. When aggregating a smaller seed set, pass the same `--seeds` as the test run. Missing-seed checks are explicit; checkpoint coverage is measured against epochs present for that model in the supplied files. Checkpoints absent from every input cannot be inferred.
 
 ## Feature extraction and BatchNorm comparisons
 

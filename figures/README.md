@@ -15,15 +15,15 @@ PDFs and PNG previews go to `results/figures/`, which is ignored by Git. Set `VR
 
 | Paper figure | Script under `figures/` | Output under `results/figures/` | Inputs |
 | --- | --- | --- | --- |
-| Figure 2, regularization | `plot_fig3_s50.py` | `fig3_regularization.pdf` | `fig_data_s50/vrt_abl*.csv` |
-| Figure 3, synthetic sensitivity and BatchNorm | `plot_fig4_s50.py` | `fig4_diagnosis.pdf` | `fig_data_s50/fig4a_clusters.csv`, `fig4a_matched.csv`, `fig4b_r50.csv` |
-| Figure 8, reference-set score trajectories | `plot_dc_trajectory_s50.py` | `fig_dc_trajectory.pdf` | `fig_data_s50/dc_*.csv`, `onsets.csv` |
-| Appendix C, original CIFAR split | `manuscript/appendix_c/plot_official_paper.py` | `appendix_c/fig_cifar_official_control.pdf` | `manuscript/appendix_c/official_counts.csv` |
-| Appendix F, ten loss panels | `manuscript/appendix_f/build_figure.py` | `appendix_f/fig_trajectories_appendix.pdf` | `benchmark_final/`, `fig_data_s50/`, filtered SimCLR rows under `manuscript/appendix_f/data/ssl/`, and [SimCLR losses](../data/08_per_model_trajectories/records/simclr_loss/) |
-| Appendix G, synthetic reference choice | `manuscript/appendix_g/build_figure.py` | `appendix_g/fig_ref_asymmetry.pdf` | Saved `source_before.pdf` and `label_overlay.pdf`; see limitation below |
-| Appendix I, MMD on scores | `manuscript/appendix_i/plot_horizontal.py` | `appendix_i/fig_mmd_on_chat.pdf` | `manuscript/appendix_i/onsets.json` |
+| Figure 2, regularization | [plot_fig3_s50.py](plot_fig3_s50.py) | `fig3_regularization.pdf` | `vrt_abl*.csv` in [fig_data_s50/](fig_data_s50/) |
+| Figure 3, synthetic sensitivity and BatchNorm | [plot_fig4_s50.py](plot_fig4_s50.py) | `fig4_diagnosis.pdf` | [fig4a_clusters.csv](fig_data_s50/fig4a_clusters.csv), [fig4a_matched.csv](fig_data_s50/fig4a_matched.csv), [fig4b_r50.csv](fig_data_s50/fig4b_r50.csv) |
+| Figure 8, reference-set score trajectories | [plot_dc_trajectory_s50.py](plot_dc_trajectory_s50.py) | `fig_dc_trajectory.pdf` | `dc_*.csv` in [fig_data_s50/](fig_data_s50/), [onsets.csv](fig_data_s50/onsets.csv) |
+| Appendix C, original CIFAR split | [manuscript/appendix_c/plot_official_paper.py](manuscript/appendix_c/plot_official_paper.py) | `appendix_c/fig_cifar_official_control.pdf` | [official_counts.csv](manuscript/appendix_c/official_counts.csv) |
+| Figure 6, Appendix F, ten loss panels | [manuscript/appendix_f/build_figure.py](manuscript/appendix_f/build_figure.py) | `appendix_f/fig_trajectories_appendix.pdf` | [benchmark_final/](benchmark_final/), [fig_data_s50/](fig_data_s50/), [filtered SimCLR rows](manuscript/appendix_f/data/ssl/), and [SimCLR losses](../data/08_per_model_trajectories/records/simclr_loss/) |
+| Appendix G, synthetic reference choice | [manuscript/appendix_g/build_figure.py](manuscript/appendix_g/build_figure.py) | `appendix_g/fig_ref_asymmetry.pdf` | Saved [source_before.pdf](manuscript/appendix_g/source_before.pdf) and [label_overlay.pdf](manuscript/appendix_g/label_overlay.pdf); see limitation below |
+| Appendix I, MMD on scores | [manuscript/appendix_i/plot_horizontal.py](manuscript/appendix_i/plot_horizontal.py) | `appendix_i/fig_mmd_on_chat.pdf` | [onsets.json](manuscript/appendix_i/onsets.json) |
 
-`manuscript/build_all.py` runs the four appendix builds. Each can also be run separately. Fonts use Times New Roman when installed, with serif fallbacks; font substitution can change text spacing.
+[manuscript/build_all.py](manuscript/build_all.py) runs the four appendix builds. Each can also be run separately. Fonts use Times New Roman when installed, with serif fallbacks; font substitution can change text spacing.
 
 ## Intermediate summaries
 

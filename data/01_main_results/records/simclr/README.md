@@ -1,4 +1,4 @@
-# SimCLR raw test results
+# SimCLR per-seed test results
 
 Some CSVs contain multiple tests or both budgets. Their file tables list the contents explicitly.
 

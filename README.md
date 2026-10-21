@@ -17,7 +17,7 @@ python -m pip install numpy==1.26.4 scipy==1.17.0
 python results.py summaries --data data --out results/paper_tables
 ```
 
-The summary CSVs are written to `results/paper_tables/`; no training or GPU is needed.
+Open `results/paper_tables/01_main_results/main_results.csv` for Table 1. The command validates the saved records and writes 12 summary CSVs under `results/paper_tables/`; no training or GPU is needed.
 
 To run VRT on your own embeddings, use the [Python example](REPRODUCIBILITY.md#direct-python-use) or [checkpoint commands](REPRODUCIBILITY.md#new-tests-on-feature-arrays).
 
@@ -25,7 +25,7 @@ To run VRT on your own embeddings, use the [Python example](REPRODUCIBILITY.md#d
 
 [data/](data/README.md) is ordered by paper section (`01`–`11`). For the main results:
 
-- [Summary table](data/01_main_results/main_results.csv): sustained detection epochs.
+- [Table 1 summary](data/01_main_results/main_results.csv): sustained detection epochs.
 - [Per-seed test results](data/01_main_results/records/): choose a model, method, extraction mode and sample size.
 
 The [data guide](data/README.md) maps every folder to the paper and explains columns and names such as `bntrain`.

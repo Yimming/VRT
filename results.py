@@ -1777,6 +1777,9 @@ def main():
     p.add_argument("--out", default="results/new_onsets.csv")
     p.add_argument("--seeds", default="42-91")
     args = parser.parse_args()
+    if args.command == "summaries":
+        print("Validating saved results and recomputing table summaries; this can take a few minutes.",
+              file=sys.stderr, flush=True)
     commands = {"summaries": summaries_report, "onsets": onset_report, "validate": validate_report, "export": export_results,
                 "type-i": type_i_report, "synthetic": synthetic_report, "small-sample": supplementary_onsets,
                 "reversed": supplementary_onsets, "score-transform": score_transform_report,
