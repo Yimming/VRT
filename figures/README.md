@@ -9,5 +9,5 @@ These are numerical inputs and reference assets, not plotting programs.
 - `manuscript/`: supplementary counts and reference figure assets.
 
 The per-seed test records are in `../data/`; `results.py` recomputes their
-summaries. SimCLR loss records are in `../data/ssl_nll/`. Historical filenames
+summaries. SimCLR loss records are in `../data/analyses/contrastive_loss/`. Historical filenames
 retain their original figure numbering, which differs from the final paper.

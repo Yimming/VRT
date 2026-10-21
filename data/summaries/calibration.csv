@@ -1,0 +1,81 @@
+model_name,split,arch,mode,method,rejections,repetitions,method_name
+ResNet20-FRN (CIFAR-10),official,frn_c10,eval,c2st,6,500,C2ST
+ResNet20-FRN (CIFAR-10),official,frn_c10,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+ResNet20-FRN (CIFAR-10),official,frn_c10,eval,ed,31,500,ED
+ResNet20-FRN (CIFAR-10),official,frn_c10,eval,henze,29,500,Henze
+ResNet20-FRN (CIFAR-10),official,frn_c10,eval,mmd,32,500,MMD
+ResNet20-FRN (CIFAR-10),official,frn_c10,eval,mmdagg,27,500,MMDAgg
+ResNet20-FRN (CIFAR-10),official,frn_c10,eval,schilling,29,500,Schilling
+ResNet20-FRN (CIFAR-10),official,frn_c10,eval,vrt,24,500,VRT
+ResNet-18 (CIFAR-10),official,r18_c10,eval,c2st,19,500,C2ST
+ResNet-18 (CIFAR-10),official,r18_c10,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+ResNet-18 (CIFAR-10),official,r18_c10,eval,ed,165,500,ED
+ResNet-18 (CIFAR-10),official,r18_c10,eval,henze,23,500,Henze
+ResNet-18 (CIFAR-10),official,r18_c10,eval,mmd,169,500,MMD
+ResNet-18 (CIFAR-10),official,r18_c10,eval,mmdagg,72,500,MMDAgg
+ResNet-18 (CIFAR-10),official,r18_c10,eval,schilling,22,500,Schilling
+ResNet-18 (CIFAR-10),official,r18_c10,eval,vrt,6,500,VRT
+ResNet-18 (CIFAR-100),official,r18_c100,eval,c2st,3,500,C2ST
+ResNet-18 (CIFAR-100),official,r18_c100,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+ResNet-18 (CIFAR-100),official,r18_c100,eval,ed,5,500,ED
+ResNet-18 (CIFAR-100),official,r18_c100,eval,henze,27,500,Henze
+ResNet-18 (CIFAR-100),official,r18_c100,eval,mmd,5,500,MMD
+ResNet-18 (CIFAR-100),official,r18_c100,eval,mmdagg,24,500,MMDAgg
+ResNet-18 (CIFAR-100),official,r18_c100,eval,schilling,26,500,Schilling
+ResNet-18 (CIFAR-100),official,r18_c100,eval,vrt,56,500,VRT
+ResNet-50 (CIFAR-100),official,r50_c100,eval,c2st,3,500,C2ST
+ResNet-50 (CIFAR-100),official,r50_c100,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+ResNet-50 (CIFAR-100),official,r50_c100,eval,ed,6,500,ED
+ResNet-50 (CIFAR-100),official,r50_c100,eval,henze,25,500,Henze
+ResNet-50 (CIFAR-100),official,r50_c100,eval,mmd,11,500,MMD
+ResNet-50 (CIFAR-100),official,r50_c100,eval,mmdagg,25,500,MMDAgg
+ResNet-50 (CIFAR-100),official,r50_c100,eval,schilling,26,500,Schilling
+ResNet-50 (CIFAR-100),official,r50_c100,eval,vrt,68,500,VRT
+SimCLR ResNet-50 (CIFAR-10),official,simclr_c10,eval,c2st,2,500,C2ST
+SimCLR ResNet-50 (CIFAR-10),official,simclr_c10,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+SimCLR ResNet-50 (CIFAR-10),official,simclr_c10,eval,ed,31,500,ED
+SimCLR ResNet-50 (CIFAR-10),official,simclr_c10,eval,henze,21,500,Henze
+SimCLR ResNet-50 (CIFAR-10),official,simclr_c10,eval,mmd,36,500,MMD
+SimCLR ResNet-50 (CIFAR-10),official,simclr_c10,eval,mmdagg,32,500,MMDAgg
+SimCLR ResNet-50 (CIFAR-10),official,simclr_c10,eval,schilling,18,500,Schilling
+SimCLR ResNet-50 (CIFAR-10),official,simclr_c10,eval,vrt,33,500,VRT
+ResNet20-FRN (CIFAR-10),resplit,frn_c10,eval,c2st,2,500,C2ST
+ResNet20-FRN (CIFAR-10),resplit,frn_c10,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+ResNet20-FRN (CIFAR-10),resplit,frn_c10,eval,ed,19,500,ED
+ResNet20-FRN (CIFAR-10),resplit,frn_c10,eval,henze,26,500,Henze
+ResNet20-FRN (CIFAR-10),resplit,frn_c10,eval,mmd,20,500,MMD
+ResNet20-FRN (CIFAR-10),resplit,frn_c10,eval,mmdagg,23,500,MMDAgg
+ResNet20-FRN (CIFAR-10),resplit,frn_c10,eval,schilling,27,500,Schilling
+ResNet20-FRN (CIFAR-10),resplit,frn_c10,eval,vrt,25,500,VRT
+ResNet-18 (CIFAR-10),resplit,r18_c10,eval,c2st,5,500,C2ST
+ResNet-18 (CIFAR-10),resplit,r18_c10,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+ResNet-18 (CIFAR-10),resplit,r18_c10,eval,ed,25,500,ED
+ResNet-18 (CIFAR-10),resplit,r18_c10,eval,henze,30,500,Henze
+ResNet-18 (CIFAR-10),resplit,r18_c10,eval,mmd,26,500,MMD
+ResNet-18 (CIFAR-10),resplit,r18_c10,eval,mmdagg,29,500,MMDAgg
+ResNet-18 (CIFAR-10),resplit,r18_c10,eval,schilling,29,500,Schilling
+ResNet-18 (CIFAR-10),resplit,r18_c10,eval,vrt,23,500,VRT
+ResNet-18 (CIFAR-100),resplit,r18_c100,eval,c2st,5,500,C2ST
+ResNet-18 (CIFAR-100),resplit,r18_c100,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+ResNet-18 (CIFAR-100),resplit,r18_c100,eval,ed,19,500,ED
+ResNet-18 (CIFAR-100),resplit,r18_c100,eval,henze,27,500,Henze
+ResNet-18 (CIFAR-100),resplit,r18_c100,eval,mmd,21,500,MMD
+ResNet-18 (CIFAR-100),resplit,r18_c100,eval,mmdagg,20,500,MMDAgg
+ResNet-18 (CIFAR-100),resplit,r18_c100,eval,schilling,28,500,Schilling
+ResNet-18 (CIFAR-100),resplit,r18_c100,eval,vrt,20,500,VRT
+ResNet-50 (CIFAR-100),resplit,r50_c100,eval,c2st,1,500,C2ST
+ResNet-50 (CIFAR-100),resplit,r50_c100,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+ResNet-50 (CIFAR-100),resplit,r50_c100,eval,ed,30,500,ED
+ResNet-50 (CIFAR-100),resplit,r50_c100,eval,henze,37,500,Henze
+ResNet-50 (CIFAR-100),resplit,r50_c100,eval,mmd,27,500,MMD
+ResNet-50 (CIFAR-100),resplit,r50_c100,eval,mmdagg,22,500,MMDAgg
+ResNet-50 (CIFAR-100),resplit,r50_c100,eval,schilling,38,500,Schilling
+ResNet-50 (CIFAR-100),resplit,r50_c100,eval,vrt,31,500,VRT
+SimCLR ResNet-50 (CIFAR-10),resplit,simclr_c10,eval,c2st,4,500,C2ST
+SimCLR ResNet-50 (CIFAR-10),resplit,simclr_c10,eval,c2st_acc55,0,500,C2ST with accuracy > 0.55
+SimCLR ResNet-50 (CIFAR-10),resplit,simclr_c10,eval,ed,21,500,ED
+SimCLR ResNet-50 (CIFAR-10),resplit,simclr_c10,eval,henze,27,500,Henze
+SimCLR ResNet-50 (CIFAR-10),resplit,simclr_c10,eval,mmd,21,500,MMD
+SimCLR ResNet-50 (CIFAR-10),resplit,simclr_c10,eval,mmdagg,20,500,MMDAgg
+SimCLR ResNet-50 (CIFAR-10),resplit,simclr_c10,eval,schilling,26,500,Schilling
+SimCLR ResNet-50 (CIFAR-10),resplit,simclr_c10,eval,vrt,17,500,VRT

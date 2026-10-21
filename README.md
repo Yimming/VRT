@@ -26,14 +26,14 @@ The original experiment environment is recorded in [ENVIRONMENT.md](ENVIRONMENT.
 
 ## Reproduce the reported results
 
-The released per-seed data can be used without retraining models or downloading checkpoints:
+Start with [data/summaries/](data/summaries/) for the paper results in CSV form. The [data guide](data/README.md) explains the folders, model names and fields. To regenerate the summaries without retraining models or downloading checkpoints:
 
 ```bash
 python results.py validate --data data
-python results.py onsets --data data --out results/onsets.csv
+python results.py summaries --data data --out results/summaries
 ```
 
-The second command prints Tables 1–3 and writes all 784 onset records, including the supplementary comparisons. The reference output is [docs/onsets_final.csv](docs/onsets_final.csv). Commands for the other tables and controls are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
+The summaries include all 784 onset records and the supplementary comparisons. `python results.py onsets --data data --out results/onsets.csv` prints Tables 1–3 and reproduces [docs/onsets_final.csv](docs/onsets_final.csv). Further commands are in [REPRODUCIBILITY.md](REPRODUCIBILITY.md).
 
 ## Use VRT on your embeddings
 
@@ -85,7 +85,7 @@ There are nine main Python modules:
 | `results.py` | Validation, export and paper summaries | Tables 1–9 and supplementary results |
 | `common.py` | Shared input, numerical and file utilities | Supporting code |
 
-`data/` contains the cleaned result records and their manifest. `figures/` contains additional saved numerical inputs and figure assets. `tests/` contains regression tests. SupContrast-derived code retains its attribution in `third_party/`.
+[data/](data/README.md) contains summaries and source records grouped into benchmarks, calibration, synthetic experiments, additional analyses and runtime. `figures/` contains additional saved numerical inputs and figure assets. `tests/` contains regression tests. SupContrast-derived code retains its attribution in `third_party/`.
 
 Original checkpoints, extracted feature arrays and third-party image datasets are not bundled. Saved results reproduce the reported summaries; new training runs need not yield identical checkpoints or detection epochs. The remaining figure-source gaps are listed in [REPRODUCIBILITY.md](REPRODUCIBILITY.md#scope).
 

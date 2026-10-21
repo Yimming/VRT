@@ -1,0 +1,25 @@
+model_name,tag,budget,standard_onset,reversed_onset,delay_epochs
+ResNet20-FRN (CIFAR-10),v7,10000,38,41,3
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,10000,34,34,0
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,10000,28,29,1
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,10000,29,29,0
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,10000,26,26,0
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,10000,27,28,1
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,10000,26,27,1
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,10000,25,31,6
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,10000,30,34,4
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,10000,29,29,0
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,10000,30,30,0
+ResNet-50 (CIFAR-100),r50,10000,61,61,0
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,10000,150,150,0
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,10000,<=100,<=100,0
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,10000,<=100,<=100,0
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,10000,229,256,27
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,10000,191,238,47
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,10000,33,33,0
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,10000,null,null,
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,10000,35,35,0
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,10000,null,null,
+5-layer CNN (CIFAR-10),wp,10000,null,null,
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,10000,null,20,
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,10000,null,200,

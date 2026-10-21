@@ -1,0 +1,785 @@
+model_name,tag,mode,stat,budget,n_epochs,first_epoch,last_epoch,last_checkpoint,onset,gap_before_onset,unevaluated_after_onset,borderline_epochs,partial_epochs,status
+ResNet20-FRN (CIFAR-10),v7,eval,vrt,10000,200,0,199,199,38,0,0,,0,final
+ResNet20-FRN (CIFAR-10),v7,eval,mmd,10000,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,mmdagg,5000,44,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,c2st,10000,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,ed,10000,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,mmd_raw,10000,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,ed_raw,10000,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,henze,10000,200,0,199,199,118,0,0,,0,final
+ResNet20-FRN (CIFAR-10),v7,eval,schilling,10000,200,0,199,199,118,0,0,,0,final
+ResNet20-FRN (CIFAR-10),v7,eval,vrt_rev,10000,200,0,199,199,41,0,0,,0,final
+ResNet20-FRN (CIFAR-10),v7,eval,vrt,1500,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,mmd,1500,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,mmdagg,1500,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,c2st,1500,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,ed,1500,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,henze,1500,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,schilling,1500,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet20-FRN (CIFAR-10),v7,eval,vrt_rev,1500,200,0,199,199,,,0,,0,"null, last checkpoint evaluated"
+ResNet-50 (CIFAR-100),r50,eval,vrt,10000,200,0,200,200,61,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,mmd,10000,200,0,200,200,73,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,mmdagg,5000,144,0,200,200,80,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,c2st,10000,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,ed,10000,200,0,200,200,73,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,mmd_raw,10000,200,0,200,200,63,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,ed_raw,10000,200,0,200,200,62,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,henze,10000,200,0,200,200,81,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,schilling,10000,200,0,200,200,81,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,vrt_rev,10000,200,0,200,200,61,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,vrt,1500,200,0,200,200,86,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,mmd,1500,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,mmdagg,1500,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,c2st,1500,200,0,200,200,196,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,ed,1500,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,henze,1500,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,schilling,1500,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,eval,vrt_rev,1500,200,0,200,200,93,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,vrt,10000,200,0,200,200,61,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,mmd,10000,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,mmdagg,5000,104,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,c2st,10000,200,0,200,200,130,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,ed,10000,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,mmd_raw,10000,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,ed_raw,10000,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,henze,10000,200,0,200,200,94,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,schilling,10000,200,0,200,200,94,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,vrt,1500,200,0,200,200,93,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,mmd,1500,200,0,200,200,155,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,mmdagg,1500,200,0,200,200,126,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,c2st,1500,200,0,200,200,,,0,,0,"null, last checkpoint evaluated"
+ResNet-50 (CIFAR-100),r50,train,ed,1500,200,0,200,200,147,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,henze,1500,200,0,200,200,121,0,0,,0,final
+ResNet-50 (CIFAR-100),r50,train,schilling,1500,200,0,200,200,121,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,vrt,10000,50,0,49,49,33,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,mmd,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,mmdagg,5000,18,0,49,49,42,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,c2st,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,ed,10000,50,0,49,49,44,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,mmd_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,ed_raw,10000,50,0,49,49,43,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,henze,10000,50,0,49,49,41,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,schilling,10000,50,0,49,49,41,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,vrt_rev,10000,50,0,49,49,33,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,vrt,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,mmd,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,mmdagg,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,c2st,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,ed,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,henze,1500,50,0,49,49,46,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,schilling,1500,50,0,49,49,46,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,eval,vrt_rev,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,vrt,10000,50,0,49,49,31,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,mmd,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,mmdagg,5000,18,0,49,49,44,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,c2st,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,ed,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,mmd_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,ed_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,henze,10000,50,0,49,49,40,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,schilling,10000,50,0,49,49,40,0,0,,0,final
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,vrt,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,mmd,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,mmdagg,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,c2st,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,ed,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,henze,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,train,schilling,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,vrt,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,mmd,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,mmdagg,5000,14,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,c2st,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,ed,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,mmd_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,ed_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,henze,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,schilling,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,vrt_rev,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,vrt,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,mmd,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,mmdagg,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,c2st,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,ed,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,henze,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,schilling,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,eval,vrt_rev,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,vrt,10000,50,0,49,49,48,0,0,,0,final
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,mmd,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,mmdagg,5000,14,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,c2st,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,ed,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,mmd_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,ed_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,henze,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,schilling,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,vrt,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,mmd,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,mmdagg,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,c2st,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,ed,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,henze,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,train,schilling,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,vrt,10000,50,0,49,49,35,0,0,,0,final
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,mmd,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,mmdagg,5000,14,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,c2st,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,ed,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,mmd_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,ed_raw,10000,50,0,49,49,44,0,0,,0,final
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,henze,10000,50,0,49,49,45,0,0,,0,final
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,schilling,10000,50,0,49,49,45,0,0,,0,final
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,vrt_rev,10000,50,0,49,49,35,0,0,,0,final
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,vrt,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,mmd,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,mmdagg,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,c2st,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,ed,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,henze,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,schilling,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,eval,vrt_rev,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,vrt,10000,50,0,49,49,35,0,0,,0,final
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,mmd,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,mmdagg,5000,14,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,c2st,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,ed,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,mmd_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,ed_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,henze,10000,50,0,49,49,42,0,0,,0,final
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,schilling,10000,50,0,49,49,45,0,0,,0,final
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,vrt,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,mmd,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,mmdagg,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,c2st,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,ed,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,henze,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,train,schilling,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,vrt,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,mmd,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,mmdagg,5000,14,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,c2st,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,ed,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,mmd_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,ed_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,henze,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,schilling,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,vrt_rev,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,vrt,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,mmd,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,mmdagg,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,c2st,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,ed,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,henze,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,schilling,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,eval,vrt_rev,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,vrt,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,mmd,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,mmdagg,5000,14,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,c2st,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,ed,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,mmd_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,ed_raw,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,henze,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,schilling,10000,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,vrt,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,mmd,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,mmdagg,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,c2st,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,ed,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,henze,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,train,schilling,1500,50,0,49,49,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,vrt,10000,51,0,50,50,26,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,mmdagg,5000,19,0,50,50,42,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,mmd_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,ed_raw,10000,51,0,50,50,40,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,henze,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,schilling,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,vrt_rev,10000,51,0,50,50,27,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,eval,vrt_rev,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,vrt,10000,51,0,50,50,26,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,mmdagg,5000,15,0,50,50,48,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,mmd_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,ed_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,henze,10000,51,0,50,50,38,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,schilling,10000,51,0,50,50,38,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,train,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,vrt,10000,51,0,50,50,25,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,mmdagg,5000,19,0,50,50,42,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,mmd_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,ed_raw,10000,51,0,50,50,41,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,henze,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,schilling,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,vrt_rev,10000,51,0,50,50,31,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,eval,vrt_rev,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,vrt,10000,51,0,50,50,32,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,mmdagg,5000,11,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,mmd_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,ed_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,henze,10000,51,0,50,50,40,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,schilling,10000,51,0,50,50,40,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,train,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,vrt,10000,51,0,50,50,30,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,mmdagg,5000,23,0,50,50,40,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,mmd_raw,10000,51,0,50,50,44,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,ed_raw,10000,51,0,50,50,39,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,henze,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,schilling,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,vrt_rev,10000,51,0,50,50,34,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,henze,1500,51,0,50,50,46,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,schilling,1500,51,0,50,50,48,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,eval,vrt_rev,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,vrt,10000,51,0,50,50,30,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,mmdagg,5000,19,0,50,50,42,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,mmd_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,ed_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,henze,10000,51,0,50,50,38,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,schilling,10000,51,0,50,50,38,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,train,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,vrt,10000,51,0,50,50,29,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,mmdagg,5000,19,0,50,50,42,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,mmd_raw,10000,51,0,50,50,44,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,ed_raw,10000,51,0,50,50,39,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,henze,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,schilling,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,vrt_rev,10000,51,0,50,50,29,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,eval,vrt_rev,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,vrt,10000,51,0,50,50,29,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,mmdagg,5000,15,0,50,50,46,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,mmd_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,ed_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,henze,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,schilling,10000,51,0,50,50,35,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,train,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,vrt,10000,51,0,50,50,30,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,mmdagg,5000,19,0,50,50,41,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,mmd_raw,10000,51,0,50,50,45,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,ed_raw,10000,51,0,50,50,40,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,henze,10000,51,0,50,50,38,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,schilling,10000,51,0,50,50,38,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,vrt_rev,10000,51,0,50,50,30,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,eval,vrt_rev,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,vrt,10000,51,0,50,50,30,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,mmd,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,mmdagg,5000,11,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,c2st,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,ed,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,mmd_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,ed_raw,10000,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,henze,10000,51,0,50,50,38,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,schilling,10000,51,0,50,50,38,0,0,,0,final
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,vrt,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,mmd,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,mmdagg,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,c2st,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,ed,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,henze,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,train,schilling,1500,51,0,50,50,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,vrt,10000,61,0,60,60,34,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,mmd,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,mmdagg,5000,25,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,ed,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,mmd_raw,10000,61,0,60,60,39,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,ed_raw,10000,61,0,60,60,37,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,henze,10000,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,schilling,10000,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,vrt_rev,10000,61,0,60,60,34,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,vrt,1500,61,0,60,60,44,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,mmd,1500,61,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,mmdagg,1500,61,0,60,60,51,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,ed,1500,61,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,henze,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,schilling,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,eval,vrt_rev,1500,61,0,60,60,44,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,vrt,10000,61,0,60,60,22,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,mmd,10000,61,0,60,60,56,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,mmdagg,5000,21,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,ed,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,mmd_raw,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,ed_raw,10000,61,0,60,60,56,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,henze,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,schilling,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,vrt,1500,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,mmd,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,mmdagg,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,ed,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,henze,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,train,schilling,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,vrt,10000,61,0,60,60,28,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,mmd,10000,61,0,60,60,43,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,mmdagg,5000,25,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,ed,10000,61,0,60,60,43,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,mmd_raw,10000,61,0,60,60,35,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,ed_raw,10000,61,0,60,60,35,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,henze,10000,61,0,60,60,43,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,schilling,10000,61,0,60,60,43,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,vrt_rev,10000,61,0,60,60,29,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,vrt,1500,61,0,60,60,44,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,mmd,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,mmdagg,1500,61,0,60,60,51,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,ed,1500,61,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,henze,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,schilling,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,eval,vrt_rev,1500,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,vrt,10000,61,0,60,60,20,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,mmd,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,mmdagg,5000,21,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,ed,10000,61,0,60,60,54,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,mmd_raw,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,ed_raw,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,henze,10000,61,0,60,60,49,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,schilling,10000,61,0,60,60,49,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,vrt,1500,61,0,60,60,47,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,mmd,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,mmdagg,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,ed,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,henze,1500,61,0,60,60,56,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,train,schilling,1500,61,0,60,60,56,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,vrt,10000,61,0,60,60,29,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,mmd,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,mmdagg,5000,29,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,ed,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,mmd_raw,10000,61,0,60,60,33,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,ed_raw,10000,61,0,60,60,34,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,henze,10000,61,0,60,60,44,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,schilling,10000,61,0,60,60,44,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,vrt_rev,10000,61,0,60,60,29,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,vrt,1500,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,mmd,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,mmdagg,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,ed,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,henze,1500,61,0,60,60,49,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,schilling,1500,61,0,60,60,49,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,eval,vrt_rev,1500,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,vrt,10000,61,0,60,60,26,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,mmd,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,mmdagg,5000,21,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,ed,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,mmd_raw,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,ed_raw,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,henze,10000,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,schilling,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,vrt,1500,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,mmd,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,mmdagg,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,ed,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,henze,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,train,schilling,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,vrt,10000,61,0,60,60,26,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,mmd,10000,61,0,60,60,43,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,mmdagg,5000,29,0,60,60,44,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,ed,10000,61,0,60,60,43,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,mmd_raw,10000,61,0,60,60,34,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,ed_raw,10000,61,0,60,60,34,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,henze,10000,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,schilling,10000,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,vrt_rev,10000,61,0,60,60,26,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,vrt,1500,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,mmd,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,mmdagg,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,ed,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,henze,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,schilling,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,eval,vrt_rev,1500,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,vrt,10000,61,0,60,60,22,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,mmd,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,mmdagg,5000,21,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,ed,10000,61,0,60,60,54,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,mmd_raw,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,ed_raw,10000,61,0,60,60,56,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,henze,10000,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,schilling,10000,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,vrt,1500,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,mmd,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,mmdagg,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,ed,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,henze,1500,61,0,60,60,54,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,train,schilling,1500,61,0,60,60,54,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,vrt,10000,61,0,60,60,27,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,mmd,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,mmdagg,5000,25,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,ed,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,mmd_raw,10000,61,0,60,60,33,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,ed_raw,10000,61,0,60,60,33,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,henze,10000,61,0,60,60,44,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,schilling,10000,61,0,60,60,44,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,vrt_rev,10000,61,0,60,60,28,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,vrt,1500,61,0,60,60,43,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,mmd,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,mmdagg,1500,61,0,60,60,51,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,ed,1500,61,0,60,60,53,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,henze,1500,61,0,60,60,50,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,schilling,1500,61,0,60,60,49,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,eval,vrt_rev,1500,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,vrt,10000,61,0,60,60,22,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,mmd,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,mmdagg,5000,21,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,c2st,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,ed,10000,61,0,60,60,54,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,mmd_raw,10000,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,ed_raw,10000,61,0,60,60,55,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,henze,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,schilling,10000,61,0,60,60,45,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,vrt,1500,61,0,60,60,46,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,mmd,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,mmdagg,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,c2st,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,ed,1500,61,0,60,60,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,henze,1500,61,0,60,60,52,0,0,,0,final
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,train,schilling,1500,61,0,60,60,52,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,vrt,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,mmd,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,mmdagg,5000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,c2st,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,ed,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,mmd_raw,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,ed_raw,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,henze,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,schilling,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,vrt_rev,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,vrt,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,mmd,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,mmdagg,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,c2st,1500,3,100,150,150,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,ed,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,henze,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,schilling,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,eval,vrt_rev,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,vrt,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,mmd,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,mmdagg,5000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,c2st,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,ed,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,mmd_raw,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,ed_raw,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,henze,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,schilling,10000,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,vrt,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,mmd,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,mmdagg,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,c2st,1500,3,100,150,150,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,ed,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,henze,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,train,schilling,1500,3,100,150,150,150,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,vrt,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,mmd,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,mmdagg,5000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,c2st,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,ed,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,mmd_raw,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,ed_raw,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,henze,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,schilling,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,vrt_rev,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,vrt,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,mmd,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,mmdagg,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,c2st,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,ed,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,henze,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,schilling,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,eval,vrt_rev,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,vrt,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,mmd,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,mmdagg,5000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,c2st,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,ed,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,mmd_raw,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,ed_raw,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,henze,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,schilling,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,vrt,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,mmd,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,mmdagg,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,c2st,1500,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,ed,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,henze,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,train,schilling,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,vrt,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,mmd,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,mmdagg,5000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,c2st,10000,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,ed,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,mmd_raw,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,ed_raw,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,henze,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,schilling,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,vrt_rev,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,vrt,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,mmd,1500,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,mmdagg,1500,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,c2st,1500,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,ed,1500,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,henze,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,schilling,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,eval,vrt_rev,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,vrt,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,mmd,10000,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,mmdagg,5000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,c2st,10000,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,ed,10000,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,mmd_raw,10000,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,ed_raw,10000,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,henze,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,schilling,10000,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,vrt,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,mmd,1500,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,mmdagg,1500,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,c2st,1500,3,100,150,150,,,0,,0,"null, last checkpoint evaluated"
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,ed,1500,3,100,150,150,125,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,henze,1500,3,100,150,150,100,0,0,,0,final
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,train,schilling,1500,3,100,150,150,100,0,0,,0,final
+5-layer CNN (CIFAR-10),wp,eval,vrt,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,mmd,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,mmdagg,5000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,c2st,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,ed,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,mmd_raw,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,ed_raw,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,henze,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,schilling,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,vrt_rev,10000,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,vrt,1500,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,mmd,1500,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,mmdagg,1500,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,c2st,1500,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,ed,1500,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,henze,1500,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,schilling,1500,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+5-layer CNN (CIFAR-10),wp,eval,vrt_rev,1500,101,0,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,vrt,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,mmd,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,mmdagg,5000,9,1,300,300,5,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,c2st,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,ed,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,mmd_raw,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,ed_raw,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,henze,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,schilling,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,vrt_rev,10000,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,vrt,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,mmd,1500,9,1,300,300,150,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,mmdagg,1500,9,1,300,300,150,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,c2st,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,ed,1500,9,1,300,300,150,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,henze,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,schilling,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,eval,vrt_rev,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,vrt,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,mmd,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,mmdagg,5000,9,1,300,300,50,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,c2st,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,ed,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,mmd_raw,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,ed_raw,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,henze,10000,9,1,300,300,5,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,schilling,10000,9,1,300,300,5,0,0,,0,final
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,vrt,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,mmd,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,mmdagg,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,c2st,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,ed,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,henze,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,train,schilling,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,vrt,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,mmd,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,mmdagg,5000,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,c2st,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,ed,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,mmd_raw,10000,9,1,300,300,5,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,ed_raw,10000,9,1,300,300,1,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,henze,10000,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,schilling,10000,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,vrt_rev,10000,9,1,300,300,200,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,vrt,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,mmd,1500,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,mmdagg,1500,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,c2st,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,ed,1500,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,henze,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,schilling,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,eval,vrt_rev,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,vrt,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,mmd,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,mmdagg,5000,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,c2st,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,ed,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,mmd_raw,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,ed_raw,10000,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,henze,10000,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,schilling,10000,9,1,300,300,20,0,0,,0,final
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,vrt,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,mmd,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,mmdagg,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,c2st,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,ed,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,henze,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,train,schilling,1500,9,1,300,300,,,0,,0,"null, last checkpoint evaluated"
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,vrt,10000,1000,1,1000,1000,229,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,mmd,10000,1000,1,1000,1000,284,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,mmdagg,5000,572,50,1000,1000,483,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,c2st,10000,1000,1,1000,1000,691,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,ed,10000,1000,1,1000,1000,283,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,mmd_raw,10000,1000,1,1000,1000,100,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,ed_raw,10000,1000,1,1000,1000,100,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,henze,10000,796,5,1000,1000,487,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,schilling,10000,796,5,1000,1000,487,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,vrt_rev,10000,796,5,1000,1000,256,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,vrt,1500,1000,1,1000,1000,689,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,mmd,1500,1000,1,1000,1000,675,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,mmdagg,1500,1000,1,1000,1000,713,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,c2st,1500,1000,1,1000,1000,810,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,ed,1500,1000,1,1000,1000,679,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,henze,1500,796,5,1000,1000,753,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,schilling,1500,796,5,1000,1000,753,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,eval,vrt_rev,1500,796,5,1000,1000,693,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,vrt,10000,1000,1,1000,1000,527,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,mmd,10000,852,1,1000,1000,692,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,mmdagg,5000,403,50,1000,1000,632,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,c2st,10000,852,1,1000,1000,764,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,ed,10000,852,1,1000,1000,687,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,mmd_raw,10000,972,1,1000,1000,658,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,ed_raw,10000,972,1,1000,1000,540,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,henze,10000,488,5,1000,1000,690,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,schilling,10000,488,5,1000,1000,690,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,vrt,1500,1000,1,1000,1000,846,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,mmd,1500,852,1,1000,1000,946,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,mmdagg,1500,360,5,1000,1000,801,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,c2st,1500,852,1,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,ed,1500,852,1,1000,1000,959,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,henze,1500,488,5,1000,1000,954,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,train,schilling,1500,488,5,1000,1000,943,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,vrt,10000,1000,1,1000,1000,191,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,mmd,10000,1000,1,1000,1000,213,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,mmdagg,5000,706,50,1000,1000,348,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,c2st,10000,1000,1,1000,1000,653,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,ed,10000,1000,1,1000,1000,213,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,mmd_raw,10000,1000,1,1000,1000,127,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,ed_raw,10000,1000,1,1000,1000,127,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,henze,10000,836,5,1000,1000,500,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,schilling,10000,836,5,1000,1000,484,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,vrt_rev,10000,836,5,1000,1000,238,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,vrt,1500,1000,1,1000,1000,465,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,mmd,1500,1000,1,1000,1000,504,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,mmdagg,1500,1000,1,1000,1000,581,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,c2st,1500,1000,1,1000,1000,741,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,ed,1500,1000,1,1000,1000,504,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,henze,1500,836,5,1000,1000,684,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,schilling,1500,836,5,1000,1000,684,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,eval,vrt_rev,1500,836,5,1000,1000,565,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,vrt,10000,1000,1,1000,1000,324,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,mmd,10000,540,5,1000,1000,583,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,mmdagg,5000,532,50,1000,1000,495,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,c2st,10000,540,5,1000,1000,744,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,ed,10000,540,5,1000,1000,583,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,mmd_raw,10000,680,5,1000,1000,440,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,ed_raw,10000,680,5,1000,1000,417,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,henze,10000,488,5,1000,1000,652,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,schilling,10000,488,5,1000,1000,641,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,vrt,1500,1000,1,1000,1000,674,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,mmd,1500,540,5,1000,1000,808,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,mmdagg,1500,460,5,1000,1000,679,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,c2st,1500,540,5,1000,1000,,,0,,0,"null, last checkpoint evaluated"
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,ed,1500,540,5,1000,1000,815,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,henze,1500,488,5,1000,1000,902,0,0,,0,final
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,train,schilling,1500,488,5,1000,1000,902,0,0,,0,final

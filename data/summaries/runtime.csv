@@ -1,0 +1,5 @@
+model_name,model,budget,median_seconds,seeds
+ResNet-50 (CIFAR-100),r50_ep61,1500,0.2765,10
+ResNet-50 (CIFAR-100),r50_ep61,10000,2.358,10
+ResNet20-FRN (CIFAR-10),v7_ep38,1500,0.2455,10
+ResNet20-FRN (CIFAR-10),v7_ep38,10000,1.8570000000000002,10

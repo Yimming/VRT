@@ -1,11 +1,12 @@
 # Reproducing results
 
-Run commands from the repository root. `data/` holds the published per-seed and per-repetition results. Write new experiments to `results/` so they remain separate from the archived result files.
+Run commands from the repository root. [data/](data/README.md) holds the published per-seed and per-repetition results, grouped by experiment. [data/summaries/](data/summaries/) provides readable paper summaries. Write new experiments to `results/` so they remain separate from the archived result files.
 
 ## Saved results: no training or GPU required
 
 | Paper result | Command |
 | --- | --- |
+| All prepared paper summaries | `python results.py summaries --data data --out results/summaries` |
 | Tables 1–3, plus all 784 onset cells | `python results.py onsets --data data --out results/onsets.csv` |
 | Table 5 and Appendix C controls | `python results.py type-i --data data --out results/type_i.csv` |
 | Table 6, Figure 3(a), Appendix D | `python results.py synthetic --data data` |
@@ -93,7 +94,7 @@ python train.py evaluate-loss --dataset cifar10 --data-root datasets \
   --epochs 1-1000 --out results/simclr_cifar10_loss.csv
 ```
 
-Point the checkpoint pattern to the directory produced by training. This evaluates two fixed augmented views of 10,000 training and 10,000 test images, using complete batches of 512 images in both BatchNorm modes. The released curves are in `data/ssl_nll/`.
+Point the checkpoint pattern to the directory produced by training. This evaluates two fixed augmented views of 10,000 training and 10,000 test images, using complete batches of 512 images in both BatchNorm modes. The released curves are in [data/analyses/contrastive_loss/](data/analyses/contrastive_loss/).
 
 ## Calibration and split controls: Appendix C
 
@@ -101,30 +102,30 @@ Each command runs independently. The first example evaluates 500 randomly initia
 
 ```bash
 python controls.py cifar-vrt --arch r18_c10 --data-root datasets \
-  --reps 0-499 --out_dir results/null_cifar_vrt
+  --reps 0-499 --out_dir results/calibration/cifar/vrt
 python controls.py cifar-baselines --arch r18_c10 --data-root datasets \
   --part gpu --splits resplit,official --reps 0-499 \
-  --out_dir results/null_cifar_base
+  --out_dir results/calibration/cifar/baselines
 python controls.py cifar-baselines --arch r18_c10 --data-root datasets \
   --part cpu --splits resplit,official --reps 0-499 \
-  --out_dir results/null_cifar_base
+  --out_dir results/calibration/cifar/baselines
 python controls.py cifar-rule --arch r18_c10 --data-root datasets \
-  --nets 0-29 --seeds 42-91 --out_dir results/null_cifar_rule
+  --nets 0-29 --seeds 42-91 --out_dir results/calibration/cifar/decision_rule
 ```
 
 Repeat with the other architectures listed by `--help`. `cifar-official` runs the separate pixel and shuffled-extraction controls; `imagenet-vrt` runs the original ImageNet random-network control. The GPU/CPU baseline groups retain the paper's implementation choices.
 
-These control outputs use the historical result-family schemas. Once all required CIFAR settings are present under `results/`, `python results.py type-i --data results` summarizes them. A single architecture is a partial experiment, not the complete paper table.
+These control outputs use the same record schemas as the archived data. Once all required CIFAR settings are present under `results/`, `python results.py type-i --data results` summarizes them. A single architecture is a partial experiment, not the complete paper table.
 
 ## Synthetic sensitivity: Section 4.4 and Appendix D
 
 ```bash
 python synthetic.py clusters --reps 200 --jobs 4 \
-  --out results/synth/fig4a_clusters.csv
+  --out results/synthetic/power/fig4a_clusters.csv
 python synthetic.py single-cluster --reps 200 --jobs 4 \
-  --out results/synth/fig4a_matched.csv
+  --out results/synthetic/power/fig4a_matched.csv
 python synthetic.py bandwidth --reps 200 --jobs 4 \
-  --out results/synth/mmd_bandwidth.csv
+  --out results/synthetic/power/mmd_bandwidth.csv
 python results.py synthetic --data results
 ```
 
@@ -182,7 +183,7 @@ The destination must be new or empty. The exporter validates records, rejects co
 
 - The released numerical results reproduce the table summaries without checkpoints. Original image datasets, model checkpoints and extracted feature arrays are not included.
 - `figures/` retains additional numerical inputs, including the matched synthetic repetitions and loss records. Plotting scripts and page-layout code are outside this compact implementation.
-- The original two-dimensional hyperparameter-sweep outputs (Appendix E) and the uniform-sphere calibration outputs are unavailable here. Saved one-dimensional sweep logs remain in `data/km_logs/`.
+- The original two-dimensional hyperparameter-sweep outputs (Appendix E) and the uniform-sphere calibration outputs are unavailable here. Saved one-dimensional sweep logs remain in [data/synthetic/hyperparameters/](data/synthetic/hyperparameters/).
 - Appendix G's reference-direction experiment can be rerun with `synthetic.py reference`; its original per-repetition output is unavailable. The extra 10-seed ImageNet diagnostics in Appendix H (class balancing, enlarged reference/query sets and test-vs-test controls) have no dedicated runner in the supplied source.
 - Class-geometry measurements can be rerun with `evaluate.py geometry`, but the original Appendix J extraction inputs and plotting generator are not bundled.
 

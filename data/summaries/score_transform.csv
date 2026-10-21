@@ -1,0 +1,25 @@
+model_name,tag,vrt_onset,mmd_score_onset,mmd_embedding_onset,n_epochs,partial_epochs,unevaluated_after_onset,comparison,compared_pairs,mismatches,maximum_difference,threshold_crossings
+ResNet20-FRN (CIFAR-10),v7,38,24,,200,0,0,median score difference,10000,0,0.0,0
+ResNet-50 (CIFAR-100),r50,61,61,73,200,0,0,median score difference,10000,0,0.0,0
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,33,31,,50,0,0,median score difference,2500,0,0.0,0
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,,,,50,0,0,median score difference,2500,0,0.0,0
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,35,35,,50,0,0,median score difference,2500,0,0.0,0
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,,,,50,0,0,median score difference,2500,0,0.0,0
+"ResNet-18 (CIFAR-10 Zoo, model 0)",zoo_c10_m0,26,23,,51,0,0,median score difference,2550,0,0.0,0
+"ResNet-18 (CIFAR-10 Zoo, model 1)",zoo_c10_m1,25,25,,51,0,0,median score difference,2550,0,0.0,0
+"ResNet-18 (CIFAR-10 Zoo, model 2)",zoo_c10_m2,30,23,,51,0,0,median score difference,2550,0,0.0,0
+"ResNet-18 (CIFAR-10 Zoo, model 3)",zoo_c10_m3,29,28,,51,0,0,median score difference,2550,0,0.0,0
+"ResNet-18 (CIFAR-10 Zoo, model 4)",zoo_c10_m4,30,23,,51,0,0,median score difference,2550,0,0.0,0
+"ResNet-18 (CIFAR-100 Zoo, model 0)",zoo_c100_m0,34,23,45,61,0,0,median score difference,3050,0,0.0,0
+"ResNet-18 (CIFAR-100 Zoo, model 1)",zoo_c100_m1,28,28,43,61,0,0,median score difference,3050,0,0.0,0
+"ResNet-18 (CIFAR-100 Zoo, model 2)",zoo_c100_m2,29,29,45,61,0,0,median score difference,3050,0,0.0,0
+"ResNet-18 (CIFAR-100 Zoo, model 3)",zoo_c100_m3,26,25,43,61,0,0,median score difference,3050,0,0.0,0
+"ResNet-18 (CIFAR-100 Zoo, model 4)",zoo_c100_m4,27,27,45,61,0,0,median score difference,3050,0,0.0,0
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,150,150,150,3,0,0,median score difference,150,0,0.0,0
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,100,100,100,3,0,0,median score difference,150,0,0.0,0
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,100,100,100,3,0,0,median score difference,150,0,0.0,0
+5-layer CNN (CIFAR-10),wp,,,,101,0,0,median score difference,5050,0,0.0,0
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,,,1,9,0,0,median score difference,450,0,0.0,0
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,,,1,9,0,0,median score difference,450,0,0.0,0
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,229,234,284,865,0,0,VRT p of the check seed,865,57,0.009495000000000003,1
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,191,187,213,865,0,0,VRT p of the check seed,865,52,0.03148400000000001,0

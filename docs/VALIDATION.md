@@ -1,8 +1,9 @@
 # Validation, 21 October 2026
 
-- 81 regression tests passed after removal of the old script directories.
+- 91 regression tests passed after code consolidation and data-folder reorganization.
 - All 784 onset records matched `onsets_final.csv` field for field.
 - The 5,061,086 result records passed schema validation; all 5,156 manifest file hashes matched.
+- All 11 summary CSVs matched between the original and grouped data layouts. Source payloads are unchanged; `MANIFEST.csv` retains their original paths.
 - Fixed-input, fixed-seed comparisons preserved the original VRT, baseline,
   model and synthetic-experiment results.
 - CPU and V100 smoke jobs passed all test methods, including MMDAgg, synthetic

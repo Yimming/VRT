@@ -1,0 +1,33 @@
+model_name,tags,method,budget,eval_onset,train_onset
+ResNet20-FRN (CIFAR-10),v7,MMD,10000,null,not applicable
+ResNet20-FRN (CIFAR-10),v7,ED,10000,null,not applicable
+"ResNet-18 (CIFAR-100 Zoo, 5 models)",zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,MMD,10000,33--39,null
+"ResNet-18 (CIFAR-100 Zoo, 5 models)",zoo_c100_m0;zoo_c100_m1;zoo_c100_m2;zoo_c100_m3;zoo_c100_m4,ED,10000,33--37,55--56
+"ResNet-18 (CIFAR-10 Zoo, 5 models)",zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,MMD,10000,44--45 (3),null
+"ResNet-18 (CIFAR-10 Zoo, 5 models)",zoo_c10_m0;zoo_c10_m1;zoo_c10_m2;zoo_c10_m3;zoo_c10_m4,ED,10000,39--41,null
+ResNet-50 (CIFAR-100),r50,MMD,10000,63,121
+ResNet-50 (CIFAR-100),r50,ED,10000,62,121
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,MMD,10000,150,150
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 8)",phase_bs8,ED,10000,150,150
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,MMD,10000,<=100,<=100
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 128)",phase_bs128,ED,10000,<=100,<=100
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,MMD,10000,<=100,125
+"ResNet-50 (CIFAR-100 Phase Zoo, batch size 1024)",phase_bs1024,ED,10000,<=100,125
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,MMD,10000,100,658
+SimCLR ResNet-50 (CIFAR-10),simclr_c10,ED,10000,100,540
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,MMD,10000,127,440
+SimCLR ResNet-50 (CIFAR-100),simclr_c100,ED,10000,127,417
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,MMD,10000,null,null
+"ResNet-18 (CIFAR-10, A: baseline)",ablA,ED,10000,43,null
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,MMD,10000,null,null
+"ResNet-18 (CIFAR-10, B: 10x weight decay)",ablB,ED,10000,null,null
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,MMD,10000,null,null
+"ResNet-18 (CIFAR-10, C: strong augmentation)",ablC,ED,10000,44,null
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,MMD,10000,null,null
+"ResNet-18 (CIFAR-10, D: weight decay + augmentation)",ablD,ED,10000,null,null
+5-layer CNN (CIFAR-10),wp,MMD,10000,null,not applicable
+5-layer CNN (CIFAR-10),wp,ED,10000,null,not applicable
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,MMD,10000,1,null
+"DeepResNet-50 (ImageNet, simple augmentation)",imgnet_simple,ED,10000,1,null
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,MMD,10000,5,null
+"DeepResNet-50 (ImageNet, advanced augmentation)",imgnet_adv,ED,10000,1,null

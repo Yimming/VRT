@@ -35,6 +35,75 @@ class SchemaError(ValueError):
     pass
 
 
+FAMILY_PATHS = {
+    "vrt_fwd": "benchmarks/vrt",
+    "mmd_p2000": "benchmarks/mmd/normalized",
+    "mmd_raw_p2000": "benchmarks/mmd/unnormalized",
+    "ed_p2000": "benchmarks/energy_distance/normalized",
+    "ed_raw_p2000": "benchmarks/energy_distance/unnormalized",
+    "knn_v2": "benchmarks/nearest_neighbors",
+    "c2st": "benchmarks/c2st",
+    "bntrain_c2st": "benchmarks/c2st",
+    "mmdagg": "benchmarks/mmdagg",
+    "bntrain_mmdagg": "benchmarks/mmdagg",
+    "ssl": "benchmarks/simclr/eval",
+    "ssl_bntrain": "benchmarks/simclr/train",
+    "ssl_baselines": "benchmarks/simclr/aggregation_and_earlier_runs",
+    "null": "calibration/imagenet/train_test",
+    "null_trtr": "calibration/imagenet/disjoint_training",
+    "null_cifar_vrt": "calibration/cifar/vrt",
+    "null_cifar_base": "calibration/cifar/baselines",
+    "null_cifar_rule": "calibration/cifar/decision_rule",
+    "official_check": "calibration/cifar/split_checks",
+    "synth": "synthetic/power",
+    "km_logs": "synthetic/hyperparameters",
+    "reversed": "analyses/reference_direction",
+    "mmd_on_chat": "analyses/score_transform/mmd",
+    "chat_stats": "analyses/score_transform/statistics",
+    "ssl_nll": "analyses/contrastive_loss",
+    "timing": "runtime",
+}
+FAMILY_ALIASES = {"bntrain_c2st": "c2st", "bntrain_mmdagg": "mmdagg"}
+GROUPED_PREFIXES = sorted(
+    {(tuple(Path(path).parts), FAMILY_ALIASES.get(family, family))
+     for family, path in FAMILY_PATHS.items()}, key=lambda item: len(item[0]), reverse=True)
+GROUP_ROOTS = {Path(path).parts[0] for path in FAMILY_PATHS.values()}
+
+
+def family_path(root, family):
+    """Locate a logical result family in either released or original layout."""
+    root = Path(root).expanduser().resolve()
+    original = root / family
+    grouped = root / FAMILY_PATHS.get(family, family)
+    if original != grouped and original.exists() and grouped.exists():
+        raise SchemaError(f"ambiguous result layout: both {original} and {grouped} exist")
+    return original if original.exists() else grouped
+
+
+def identify_family(relative_path):
+    """Decode a payload path once; nested ImageNet controls retain their subfamily."""
+    parts = Path(relative_path).parts
+    for prefix, family in GROUPED_PREFIXES:
+        if parts[:len(prefix)] == prefix and len(parts) > len(prefix):
+            tail = parts[len(prefix):]
+            return family, tail[0] if family in NESTED and len(tail) > 1 else None
+    if parts and (parts[0] in SCHEMAS or parts[0] in NESTED or parts[0] == "km_logs"):
+        return parts[0], parts[1] if parts[0] in NESTED and len(parts) > 2 else None
+    return None, None
+
+
+def generated_path(relative_path):
+    """Documentation and regenerated summaries are not source result payloads."""
+    parts = Path(relative_path).parts
+    return bool(parts) and (parts[0] == "summaries" or parts[-1].lower() == "readme.md"
+                           or len(parts) == 1 and parts[0] in {"MANIFEST.csv", "EXCLUDED.txt"})
+
+
+def check_layout(root):
+    for family in FAMILY_PATHS:
+        family_path(root, family)
+
+
 def _check(kind, s):
     """True when the string s is an admissible value of the given kind"""
     if kind == ANY:
@@ -207,6 +276,10 @@ def resolve(family):
 def schema_for(family, basename, sub=None):
     """(schema, regex match) for a file, ('legacy', None) for a recognised legacy file, (None, None) when unknown.
     `sub` is the subfolder inside a nested Type-I family (null/<sub>/<file> uses the schema of <sub>)."""
+    if family is not None and family not in SCHEMAS and family not in NESTED:
+        logical, nested = identify_family(Path(family) / basename)
+        if logical is not None:
+            family, sub = logical, sub or nested
     if family in NESTED:
         if sub:
             cands, legacy = resolve(sub)
@@ -373,49 +446,54 @@ def protocol_for(schema, match):
 
 
 def validate_tree(root, families=None, verbose=False, protocol=True):
-    """Validate every recognised CSV under root (all result families or the given ones) and check that no key occurs
-    with two different values anywhere in a group; with protocol=True (default) rows must also carry the fixed protocol
-    values of the 50-seed runs (PROTOCOL). Returns a summary dict; raises SchemaError on the first problem, also when
-    the tree holds no result file at all."""
+    """Validate recognised result CSVs and detect conflicting keys across files."""
     seen = {}
     summary = {"files": 0, "records": 0, "legacy": 0, "unknown": [], "torn": 0, "cross_file_duplicates": 0}
-    if not os.path.isdir(root):
+    root = Path(root).expanduser().resolve()
+    if not root.is_dir():
         raise SchemaError(f"{root} is not a folder")
-    for family in sorted(os.listdir(root)):
-        fdir = os.path.join(root, family)
-        if not os.path.isdir(fdir) or (families and family not in families):
+    check_layout(root)
+    wanted = {FAMILY_ALIASES.get(f, f) for f in families} if families else None
+    for file_path in sorted(root.rglob("*.csv")):
+        relative = file_path.relative_to(root)
+        if generated_path(relative) or any(part in EXCLUDE_DIRS for part in relative.parts):
             continue
-        if family not in SCHEMAS and family not in NESTED:
+        family, sub = identify_family(relative)
+        if family is None:
+            if not families and relative.parts[0] in GROUP_ROOTS:
+                summary["unknown"].append(str(relative))
             continue
-        paths = sorted(Path(fdir).rglob("*.csv")) if family in NESTED else sorted(Path(fdir).glob("*.csv"))
-        for file_path in paths:
-            name, path = file_path.name, str(file_path)
-            sub = file_path.relative_to(fdir).parts[0] if file_path.parent != Path(fdir) else None
-            schema, m = schema_for(family, name, sub)
-            if schema is None:
-                summary["unknown"].append(os.path.join(family, name)); continue
-            if schema == "legacy":
-                summary["legacy"] += 1; continue
-            header, rows, torn, n_nul, _ = read_rows(path)
-            if header is None:
-                continue
-            if torn:
-                raise SchemaError(f"{path}: {len(torn)} torn lines, e.g. line {torn[0][0]}: {torn[0][1][:80]!r}")
-            _, records = validate_rows(schema, m.groupdict(), header, rows, path,
-                                       protocol=protocol_for(schema, m.groupdict()) if protocol else None)
-            group = schema["group"]
-            for key, values in records:
-                k = (group,) + key
-                prev = seen.get(k)
-                if prev is None:
-                    seen[k] = (hash(values), path)
-                elif prev[0] != hash(values):
-                    raise SchemaError(f"key {key} of group {group} has different values in {prev[1]} and {path}")
-                elif prev[1] != path:
-                    summary["cross_file_duplicates"] += 1
-            summary["files"] += 1; summary["records"] += len(records)
-            if verbose:
-                print(f"  {family}/{name}: {len(records)} records")
+        if wanted is not None and FAMILY_ALIASES.get(family, family) not in wanted:
+            continue
+        name, path = file_path.name, str(file_path)
+        schema, m = schema_for(family, name, sub)
+        if schema is None:
+            summary["unknown"].append(str(relative))
+            continue
+        if schema == "legacy":
+            summary["legacy"] += 1
+            continue
+        header, rows, torn, n_nul, _ = read_rows(path)
+        if header is None:
+            continue
+        if torn:
+            raise SchemaError(f"{path}: {len(torn)} torn lines, e.g. line {torn[0][0]}: {torn[0][1][:80]!r}")
+        _, records = validate_rows(schema, m.groupdict(), header, rows, path,
+                                   protocol=protocol_for(schema, m.groupdict()) if protocol else None)
+        group = schema["group"]
+        for key, values in records:
+            k = (group,) + key
+            prev = seen.get(k)
+            if prev is None:
+                seen[k] = (hash(values), path)
+            elif prev[0] != hash(values):
+                raise SchemaError(f"key {key} of group {group} has different values in {prev[1]} and {path}")
+            elif prev[1] != path:
+                summary["cross_file_duplicates"] += 1
+        summary["files"] += 1
+        summary["records"] += len(records)
+        if verbose:
+            print(f"  {relative}: {len(records)} records")
     if summary["unknown"]:
         raise SchemaError(f"{len(summary['unknown'])} files with unrecognised names, e.g. {summary['unknown'][:5]}")
     if summary["files"] == 0:
@@ -516,16 +594,19 @@ class Exporter:
         self.record(rel, os.path.getsize(s) if self.dry_run else os.path.getsize(d), "" if self.dry_run else sha256(d), info)
 
     def run(self):
+        check_layout(self.src)
         for root, dirs, files in os.walk(self.src):
             rel_root = os.path.relpath(root, self.src)
-            family = None if rel_root == "." else rel_root.split(os.sep)[0]
+            if rel_root == "." and "summaries" in dirs:
+                dirs.remove("summaries")
             for dname in [x for x in dirs if x in EXCLUDE_DIRS]:
                 self.excluded.append((os.path.join(rel_root, dname) if rel_root != "." else dname, EXCLUDE_DIRS[dname]))
                 dirs.remove(dname)
-            parts = [] if rel_root == "." else rel_root.split(os.sep)
-            sub = parts[1] if len(parts) > 1 else None
             for name in sorted(files):
                 rel = os.path.join(rel_root, name) if rel_root != "." else name
+                if generated_path(rel):
+                    continue
+                family, sub = identify_family(rel)
                 s, d = os.path.join(root, name), os.path.join(self.dst, rel)
                 if not name.endswith(".csv"):
                     self.copy(s, d, rel, "copied verbatim (not a result CSV)"); continue
@@ -554,8 +635,12 @@ class ResultRoutes:
 
     def __init__(self, data):
         self.BF = str(Path(data).expanduser().resolve())
-        self.SSLB = str(Path(self.BF) / "ssl_baselines")
+        check_layout(self.BF)
+        self.SSLB = str(family_path(self.BF, "ssl_baselines"))
         self._files = {}
+
+    def pattern(self, family, filename):
+        return str(family_path(self.BF, family) / filename)
 
     CIFAR = ["v7", "r50", "ablA", "ablB", "ablC", "ablD"] + [f"zoo_c10_m{i}" for i in range(5)] + [f"zoo_c100_m{i}" for i in range(5)]
 
@@ -583,7 +668,7 @@ class ResultRoutes:
     def read(self, patterns, pcol="p", acccol=None, filt=None):
         """epoch -> {seed: (p, acc)} over the files of the patterns, rows matching filt (model / stat / budget)"""
         d = collections.defaultdict(dict)
-        for pat in patterns:
+        for pat in dict.fromkeys(patterns):
             for f in sorted(glob.glob(pat)):
                 for (model, stat, budget), eps in self.parse(f, pcol, acccol).items():
                     if filt and any({"model": model, "stat": stat, "budget": budget}.get(k) != v for k, v in filt.items()):
@@ -599,27 +684,27 @@ class ResultRoutes:
             ds = self.SSL[tag]
             lab = ds if mode == "eval" else f"{ds}_bntrain"
             if stat == "mmdagg" and N == 5000:
-                pats = [f"{self.SSLB}/sslagg_{ds}_*.csv"] if mode == "eval" else [f"{self.BF}/ssl_bntrain/sslagg_{ds}_bntrain_*.csv"]
+                pats = [self.pattern("ssl_baselines", f"sslagg_{ds}_*.csv")] if mode == "eval" else [self.pattern("ssl_bntrain", f"sslagg_{ds}_bntrain_*.csv")]
                 return self.read(pats, filt={"model": lab, "budget": "b5000", "stat": "mmdagg"})
             st = {"vrt": "vrt" if N == 10000 else "vrt_low"}.get(stat, stat)
-            pats = [f"{self.BF}/ssl/ssl_{ds}_*_c*.csv"] if mode == "eval" else [f"{self.BF}/ssl_bntrain/ssl_{ds}_bntrain_*_c*.csv"]
+            pats = [self.pattern("ssl", f"ssl_{ds}_*_c*.csv")] if mode == "eval" else [self.pattern("ssl_bntrain", f"ssl_{ds}_bntrain_*_c*.csv")]
             return self.read(pats, "p", "acc", filt={"model": lab, "stat": st, "budget": f"b{N}"})
         t = tag if mode == "eval" else f"{tag}_bntrain"
         b = "large" if N == 10000 else "small"
         if stat == "vrt":
-            return self.read([f"{self.BF}/vrt_fwd/vrt_fwd_{t}_{b}_c*.csv"])
+            return self.read([self.pattern("vrt_fwd", f"vrt_fwd_{t}_{b}_c*.csv")])
         if stat == "vrt_rev":
-            return self.read([f"{self.BF}/reversed/vrt_rev_{t}_{b}_c*.csv"])
+            return self.read([self.pattern("reversed", f"vrt_rev_{t}_{b}_c*.csv")])
         if stat in ("mmd", "ed", "mmd_raw", "ed_raw"):
             base = {"mmd": "mmd_p2000", "ed": "ed_p2000", "mmd_raw": "mmd_raw_p2000", "ed_raw": "ed_raw_p2000"}[stat]
-            return self.read([f"{self.BF}/{base}/{stat.split('_')[0]}_{t}_n{N}_c*.csv"])
+            return self.read([self.pattern(base, f"{stat.split('_')[0]}_{t}_n{N}_c*.csv")])
         if stat in ("henze", "schilling"):
-            return self.read([f"{self.BF}/knn_v2/knn_{t}_n{N}_part*.csv"], f"p_{stat}")
+            return self.read([self.pattern("knn_v2", f"knn_{t}_n{N}_part*.csv")], f"p_{stat}")
         if stat == "c2st":
-            pats = [f"{self.BF}/c2st/c2st_{t}_b*_c*.csv"] + ([f"{self.BF}/bntrain_c2st/c2st_{t}_b*_c*.csv"] if mode == "train" else [])
+            pats = [self.pattern("c2st", f"c2st_{t}_b*_c*.csv")] + ([self.pattern("bntrain_c2st", f"c2st_{t}_b*_c*.csv")] if mode == "train" else [])
             return self.read(pats, "p", "acc", filt={"model": t, "budget": f"b{N}"})
         if stat == "mmdagg":
-            pats = [f"{self.BF}/mmdagg/mmdagg_{t}_b{N}_c*.csv"] + ([f"{self.BF}/bntrain_mmdagg/mmdagg_{t}_b{N}_c*.csv"] if mode == "train" else [])
+            pats = [self.pattern("mmdagg", f"mmdagg_{t}_b{N}_c*.csv")] + ([self.pattern("bntrain_mmdagg", f"mmdagg_{t}_b{N}_c*.csv")] if mode == "train" else [])
             return self.read(pats)
         raise ValueError(stat)
 
@@ -685,9 +770,9 @@ def exact_p_cell(routes, exact_perm_p, tag, mode, stat, N):
     families used 2,000 permutations, which the protocol validation enforces where the column exists)."""
     t = tag if mode == "eval" else f"{tag}_bntrain"
     if stat == "vrt_rev":
-        pats, pcol, ccol = [f"{routes.BF}/reversed/vrt_rev_{t}_{'large' if N == 10000 else 'small'}_c*.csv"], "p", "count"
+        pats, pcol, ccol = [routes.pattern("reversed", f"vrt_rev_{t}_{'large' if N == 10000 else 'small'}_c*.csv")], "p", "count"
     else:
-        pats, pcol, ccol = [f"{routes.BF}/knn_v2/knn_{t}_n{N}_part*.csv"], "p_henze", "henze_count"
+        pats, pcol, ccol = [routes.pattern("knn_v2", f"knn_{t}_n{N}_part*.csv")], "p_henze", "henze_count"
     out = {}
     for pat in pats:
         for f in sorted(glob.glob(pat)):
@@ -779,7 +864,7 @@ def export_results(a):
         raise SystemExit(f"{src} is not a folder")
     if not a.dry_run and os.path.exists(dst) and os.listdir(dst):
         raise SystemExit(f"{dst} exists and is not empty; export into a new folder so that stale files cannot survive")
-    if not os.path.isdir(os.path.join(src, "ssl_baselines")):
+    if not family_path(src, "ssl_baselines").is_dir():
         print("note: no ssl_baselines folder inside src; the SimCLR eval-mode MMDAgg files will be missing", file=sys.stderr)
     # the export is written to a private partial folder beside dst and moved into place only when it is complete, so a
     # refused export never leaves half a tree behind and never deletes anything it did not create
@@ -922,11 +1007,11 @@ def type_i_report(args):
     families = ["null_cifar_vrt", "null_cifar_base", "null_cifar_rule", "official_check"]
     validate_tree(args.data, families=families)
     counts = collections.defaultdict(dict)
-    for path, row in csv_records(Path(args.data) / "null_cifar_vrt/vrt_null_*.csv"):
+    for path, row in csv_records(family_path(args.data, "null_cifar_vrt") / "vrt_null_*.csv"):
         if row["budget"] == "large":
             key = (row["split"], row["arch"], row["bn_mode"], "vrt")
             add_unique(counts[key], int(row["rep"]), float(row["p"]) < .05, path)
-    for path, row in csv_records(Path(args.data) / "null_cifar_base/base_null_*.csv"):
+    for path, row in csv_records(family_path(args.data, "null_cifar_base") / "base_null_*.csv"):
         method, p = row["method"], float(row["p"])
         key = (row["split"], row["arch"], row["bn_mode"], method)
         add_unique(counts[key], int(row["rep"]), p >= .5 if method == "mmdagg" else p < .05, path)
@@ -952,7 +1037,7 @@ def type_i_report(args):
             print(arch + " | " + " | ".join(cells))
     print("C2ST here uses p < 0.05 without the held-out accuracy threshold.")
     networks = collections.defaultdict(dict)
-    for path, row in csv_records(Path(args.data) / "null_cifar_rule/vrt_rule_*.csv"):
+    for path, row in csv_records(family_path(args.data, "null_cifar_rule") / "vrt_rule_*.csv"):
         key = (row["arch"], row["bn_mode"], row["budget"], int(row["net"]))
         add_unique(networks[key], int(row["seed"]), float(row["p"]), path)
     if networks:
@@ -965,7 +1050,7 @@ def type_i_report(args):
         for key, hits in sorted(groups.items()):
             print(" / ".join(key) + f": {sum(hits)}/{len(hits)}")
     controls = collections.defaultdict(dict)
-    for path, row in csv_records(Path(args.data) / "official_check/official_check_*.csv"):
+    for path, row in csv_records(family_path(args.data, "official_check") / "official_check_*.csv"):
         key = (row["dataset"], row["features"], row["split"], row["method"])
         add_unique(controls[key], int(row["rep"]), float(row["p"]) < .05, path)
     if controls:
@@ -1013,7 +1098,7 @@ def score_transform_report(args):
     print("Appendix I: model | VRT | MMD on c-hat | MMD on embeddings | complete checkpoints")
     for tag in routes.CIFAR + routes.OTHER + list(routes.SSL):
         by_epoch = collections.defaultdict(dict)
-        for path, row in csv_records(Path(args.data) / f"mmd_on_chat/mmdchat_{tag}_c*.csv"):
+        for path, row in csv_records(family_path(args.data, "mmd_on_chat") / f"mmdchat_{tag}_c*.csv"):
             value = (float(row["p"]), float(row["dc"]), row.get("vrt_p", ""))
             add_unique(by_epoch[int(row["epoch"])], int(row["seed"]), value, path)
         if not by_epoch:
@@ -1039,7 +1124,7 @@ def score_transform_report(args):
             tolerance, compared = 1e-6, "VRT p of the check seed"
         else:
             dc = {}
-            for path, row in csv_records(Path(args.data) / f"vrt_fwd/vrt_fwd_{tag}_large_c*.csv"):
+            for path, row in csv_records(family_path(args.data, "vrt_fwd") / f"vrt_fwd_{tag}_large_c*.csv"):
                 dc[(int(row["epoch"]), int(row["seed"]))] = float(row["dc"])
             for ep, values in by_epoch.items():
                 for seed, (_, score, _) in values.items():
@@ -1069,7 +1154,7 @@ def score_transform_report(args):
 def runtime_report(args):
     records = []
     for tag in ["r50_ep61", "v7_ep38"]:
-        path = Path(args.data) / "timing" / f"tests_timing_{tag}_vrt64.csv"
+        path = family_path(args.data, "timing") / f"tests_timing_{tag}_vrt64.csv"
         if not path.is_file():
             raise SchemaError(f"{path}: float64 paper timings not found")
         schema, match = schema_for("timing", path.name)
@@ -1122,11 +1207,11 @@ def synthetic_pct(ps):
 
 def synthetic_report(a):
     root = Path(a.data).expanduser().resolve()
-    clusters = root / "synth/fig4a_clusters.csv"
-    matched = root / "synth/fig4a_matched.csv"
+    clusters = family_path(root, "synth") / "fig4a_clusters.csv"
+    matched = family_path(root, "synth") / "fig4a_matched.csv"
     if not matched.is_file():
         matched = Path(__file__).resolve().parent / "figures/fig_data_s50/fig4a_matched.csv"
-    bw_path = str(root / "synth/mmd_bandwidth.csv")
+    bw_path = str(family_path(root, "synth") / "mmd_bandwidth.csv")
     for path in (clusters, matched, Path(bw_path)):
         if not path.is_file():
             raise SchemaError(f"{path}: synthetic input missing")
@@ -1302,10 +1387,189 @@ def new_runs_report(args):
           "unprovided training checkpoints cannot be inferred.")
 
 
+def model_display_name(tag):
+    """Expand the model identifiers retained in the per-seed result files."""
+    tag = re.sub(r"_ep\d+$", "", str(tag)).removesuffix("_bntrain")
+    names = {
+        "v7": "ResNet20-FRN (CIFAR-10)",
+        "r50": "ResNet-50 (CIFAR-100)",
+        "ablA": "ResNet-18 (CIFAR-10, A: baseline)",
+        "ablB": "ResNet-18 (CIFAR-10, B: 10x weight decay)",
+        "ablC": "ResNet-18 (CIFAR-10, C: strong augmentation)",
+        "ablD": "ResNet-18 (CIFAR-10, D: weight decay + augmentation)",
+        "wp": "5-layer CNN (CIFAR-10)",
+        "imgnet_simple": "DeepResNet-50 (ImageNet, simple augmentation)",
+        "imgnet_adv": "DeepResNet-50 (ImageNet, advanced augmentation)",
+        "simclr_c10": "SimCLR ResNet-50 (CIFAR-10)",
+        "simclr_c100": "SimCLR ResNet-50 (CIFAR-100)",
+        "r18_c10": "ResNet-18 (CIFAR-10)",
+        "r18_c100": "ResNet-18 (CIFAR-100)",
+        "r50_c10": "ResNet-50 (CIFAR-10)",
+        "r50_c100": "ResNet-50 (CIFAR-100)",
+        "frn_c10": "ResNet20-FRN (CIFAR-10)",
+    }
+    for dataset in (10, 100):
+        for index in range(5):
+            names[f"zoo_c{dataset}_m{index}"] = f"ResNet-18 (CIFAR-{dataset} Zoo, model {index})"
+    for batch_size in (8, 128, 1024):
+        names[f"phase_bs{batch_size}"] = f"ResNet-50 (CIFAR-100 Phase Zoo, batch size {batch_size})"
+    return names.get(tag, tag)
+
+
+def _summary_method_name(method):
+    return {"vrt": "VRT", "vrt_rev": "VRT reversed", "mmd": "MMD", "mmd_raw": "MMD",
+            "mmdagg": "MMDAgg", "c2st": "C2ST", "ed": "ED", "ed_raw": "ED",
+            "henze": "Henze", "schilling": "Schilling",
+            "c2st_acc55": "C2ST with accuracy > 0.55"}.get(method, method)
+
+
+def _summary_group_name(tags):
+    if len(tags) == 1:
+        return model_display_name(tags[0])
+    if all(tag.startswith("zoo_c100_") for tag in tags):
+        return "ResNet-18 (CIFAR-100 Zoo, 5 models)"
+    if all(tag.startswith("zoo_c10_") for tag in tags):
+        return "ResNet-18 (CIFAR-10 Zoo, 5 models)"
+    return "; ".join(model_display_name(tag) for tag in tags)
+
+
+def _summary_cell(lookup, tags, mode, method, budget):
+    keys = [(tag, mode, method, budget) for tag in tags]
+    if not any(key in lookup for key in keys):
+        return "not evaluated"
+    if not all(key in lookup for key in keys):
+        return "incomplete"
+    values = [lookup[key] for key in keys]
+    cell = fmt(values)
+    if len(tags) == 1 and tags[0].startswith("phase_") and values == [100]:
+        return "<=100"
+    return cell
+
+
+def _summary_capture(report, data, key):
+    """Reuse a validated report's CSV without parsing its console presentation."""
+    import contextlib
+    import tempfile
+    from argparse import Namespace
+
+    with tempfile.TemporaryDirectory(prefix="vrt-summary-") as temporary:
+        path = Path(temporary) / "report.csv"
+        with contextlib.redirect_stdout(io.StringIO()):
+            report(Namespace(data=str(data), out=str(path)))
+        with path.open(newline="") as handle:
+            rows = list(csv.DictReader(handle))
+    result = []
+    for row in rows:
+        expanded = {"model_name": model_display_name(row[key]), **row}
+        if "method" in row:
+            expanded["method_name"] = _summary_method_name(row["method"])
+        result.append(expanded)
+    return result
+
+
+def _summary_synthetic(data):
+    directory = family_path(data, "synth")
+    matched = directory / "fig4a_matched.csv"
+    if not matched.is_file():
+        matched = Path(__file__).resolve().parent / "figures/fig_data_s50/fig4a_matched.csv"
+    paths = [("class_clusters", directory / "fig4a_clusters.csv"),
+             ("single_cluster_and_radial", matched),
+             ("bandwidth", directory / "mmd_bandwidth.csv")]
+    output = []
+    for study, path in paths:
+        if not path.is_file():
+            raise SchemaError(f"{path}: synthetic input missing")
+        schema, match = schema_for("synth", path.name)
+        header, raw_rows, torn, _, _ = read_rows(path)
+        if torn:
+            raise SchemaError(f"{path}: torn result rows")
+        _, validated = validate_rows(schema, match.groupdict(), header, raw_rows, path)
+        if len({key for key, _ in validated}) != len(validated):
+            raise SchemaError(f"{path}: repeated synthetic repetition keys")
+        counts = collections.defaultdict(list)
+        for fields in raw_rows:
+            row = dict(zip(header, fields))
+            clusters = int(row["C"]) if study == "class_clusters" else 10 if study == "bandwidth" else 1
+            budget = int(row["budget"]) if study == "single_cluster_and_radial" else 5000
+            scale = float(row["scale"]) if study == "bandwidth" else ""
+            key = (row["cond"], clusters, budget, row["test"], scale)
+            counts[key].append(float(row["p"]))
+        for (condition, clusters, budget, method, scale), p_values in sorted(counts.items()):
+            output.append(dict(study=study, condition=condition, clusters=clusters, budget=budget,
+                               method=method, scale=scale, rejections=sum(p < .05 for p in p_values),
+                               repetitions=len(p_values)))
+    return output
+
+
+def summaries_report(args):
+    """Write readable paper summaries and retain every numerical onset record."""
+    output = Path(args.out or "data/summaries").expanduser()
+    rows = compute_onsets(args.data)
+    lookup = {(row["tag"], row["mode"], row["stat"], row["budget"]):
+              None if row["onset"] == "" else row["onset"] for row in rows}
+    summaries = {"all_onsets.csv": [{"model_name": model_display_name(row["tag"]), **row} for row in rows]}
+
+    def group_row(tags):
+        return dict(model_name=_summary_group_name(tags), tags=";".join(tags))
+
+    main, batchnorm, raw, neighbors, small = [], [], [], [], []
+    for _, tags in GROUPS:
+        item = group_row(tags)
+        for method in TABLE_STATS:
+            budget = 5000 if method == "mmdagg" else 10000
+            item[_summary_method_name(method)] = _summary_cell(lookup, tags, "eval", method, budget)
+            if tags[0] not in NO_BN:
+                batchnorm.append(dict(**group_row(tags), method=_summary_method_name(method), budget=budget,
+                                      eval_onset=_summary_cell(lookup, tags, "eval", method, budget),
+                                      train_onset=_summary_cell(lookup, tags, "train", method, budget)))
+        main.append(item)
+        for method in ("mmd_raw", "ed_raw"):
+            raw.append(dict(**group_row(tags), method=_summary_method_name(method), budget=10000,
+                            eval_onset=_summary_cell(lookup, tags, "eval", method, 10000),
+                            train_onset="not applicable" if tags[0] in NO_BN else
+                            _summary_cell(lookup, tags, "train", method, 10000)))
+        item = group_row(tags)
+        for method in ("vrt", "schilling", "henze"):
+            item[_summary_method_name(method)] = _summary_cell(lookup, tags, "eval", method, 10000)
+        neighbors.append(item)
+        for mode in (("eval",) if tags[0] in NO_BN else ("eval", "train")):
+            item = dict(**group_row(tags), mode=mode, budget=1500)
+            for method in TABLE_STATS:
+                item[_summary_method_name(method)] = _summary_cell(lookup, tags, mode, method, 1500)
+            small.append(item)
+    summaries.update({"main_results.csv": main, "batchnorm_comparison.csv": batchnorm,
+                      "raw_features.csv": raw, "nearest_neighbors.csv": neighbors, "small_sample.csv": small})
+
+    reversed_rows = []
+    for _, tags in GROUPS:
+        for tag in tags:
+            standard = lookup.get((tag, "eval", "vrt", 10000))
+            reverse = lookup.get((tag, "eval", "vrt_rev", 10000))
+            reversed_rows.append(dict(model_name=model_display_name(tag), tag=tag, budget=10000,
+                                      standard_onset=_summary_cell(lookup, [tag], "eval", "vrt", 10000),
+                                      reversed_onset=_summary_cell(lookup, [tag], "eval", "vrt_rev", 10000),
+                                      delay_epochs=reverse-standard if standard is not None and reverse is not None else ""))
+    summaries["reversed_onsets.csv"] = reversed_rows
+    summaries["score_transform.csv"] = _summary_capture(score_transform_report, args.data, "tag")
+    summaries["calibration.csv"] = _summary_capture(type_i_report, args.data, "arch")
+    summaries["runtime.csv"] = _summary_capture(runtime_report, args.data, "model")
+    summaries["synthetic_power.csv"] = _summary_synthetic(args.data)
+
+    output.mkdir(parents=True, exist_ok=True)
+    counts = {}
+    for filename, records in summaries.items():
+        write_records(output / filename, records)
+        counts[filename] = len(records)
+        print(f"{filename}: {len(records)} rows")
+    print(f"Summaries written to {output}")
+    return counts
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest="command", required=True)
     help_text = {
+        "summaries": "write all paper summaries as readable CSVs",
         "onsets": "recompute all 784 historical onset cells and Tables 1–3",
         "validate": "validate historical results and verify manifest hashes",
         "type-i": "Table 5, Appendix C and untrained-network controls",
@@ -1323,6 +1587,8 @@ def main():
             p.add_argument("--stored-p", "--stored_p", action="store_true", dest="stored_p")
             p.add_argument("--no-validate", "--no_validate", action="store_true", dest="no_validate")
             p.add_argument("--no-protocol-check", "--no_protocol_check", action="store_true", dest="no_protocol_check")
+        elif command == "summaries":
+            p.add_argument("--out", default="data/summaries", help="output directory for the summary CSVs")
         elif command == "validate":
             p.add_argument("--no-manifest", action="store_true", help="validate new files without a release manifest")
         elif command == "synthetic":
@@ -1339,7 +1605,7 @@ def main():
     p.add_argument("--out", default="results/new_onsets.csv")
     p.add_argument("--seeds", default="42-91")
     args = parser.parse_args()
-    commands = {"onsets": onset_report, "validate": validate_report, "export": export_results,
+    commands = {"summaries": summaries_report, "onsets": onset_report, "validate": validate_report, "export": export_results,
                 "type-i": type_i_report, "synthetic": synthetic_report, "small-sample": supplementary_onsets,
                 "reversed": supplementary_onsets, "score-transform": score_transform_report,
                 "runtime": runtime_report, "new-runs": new_runs_report}
