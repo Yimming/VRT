@@ -1,5 +1,5 @@
 """
-Tests of tools/export_results.py and tools/result_schemas.py on synthetic result folders: NUL-filled regions, torn
+Tests of results.py export and schema validation on synthetic result folders: NUL-filled regions, torn
 lines, repeated header lines, verbatim duplicates, conflicting keys inside a file and across files (export refused),
 rows that do not belong to their file, invalid values (NaN p, MMDAgg decision 2), unrecognised names, the exact-p
 column for the two four-decimal families, excluded folders, legacy files, a non-empty destination and the manifest.
@@ -11,12 +11,12 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-TOOL = os.path.join(ROOT, "tools", "export_results.py")
+TOOL = os.path.join(ROOT, "results.py")
 SEEDS = range(42, 92)
 
 
 def run(src, dst, *extra):
-    return subprocess.run([sys.executable, TOOL, "--src", str(src), "--dst", str(dst), *extra],
+    return subprocess.run([sys.executable, TOOL, "export", "--src", str(src), "--dst", str(dst), *extra],
                           capture_output=True, text=True)
 
 

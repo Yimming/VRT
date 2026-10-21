@@ -1,5 +1,5 @@
 """
-Smoke test of tools/make_onsets.py on a synthetic result folder: one model (v7) with forward VRT at the large budget
+Smoke test of results.py onsets on a synthetic result folder: one model (v7) with forward VRT at the large budget
 (every epoch 0 to 5 with the 50 analysis seeds), a reversed-VRT file with four-decimal p, and a kNN file. Checks the
 sustained-onset rule, the exact-p recovery (0.0470/0.0530 median), the gap and tail counts, and the table printout.
 """
@@ -10,7 +10,7 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-TOOL = os.path.join(ROOT, "tools", "make_onsets.py")
+TOOL = os.path.join(ROOT, "results.py")
 SEEDS = list(range(42, 92))
 
 
@@ -36,7 +36,7 @@ def test_make_onsets_synthetic(tmp_path):
         for ep, ps in {0: [0.5002] * 50, 2: [0.0470] * 25 + [0.0530] * 25, 4: [0.0010] * 50}.items():   # on the 1/2001 lattice
             for s, p in zip(SEEDS, ps):
                 w.writerow(["v7", "large", "test_ref", ep, s, 2000, 60, "-0.01", f"{p:.4f}"])
-    r = subprocess.run([sys.executable, TOOL, "--data", str(data), "--out", str(tmp_path / "onsets.csv")],
+    r = subprocess.run([sys.executable, TOOL, "onsets", "--data", str(data), "--out", str(tmp_path / "onsets.csv")],
                        capture_output=True, text=True)
     assert r.returncode == 0, r.stderr
     rows = {(x["stat"], x["budget"]): x for x in csv.DictReader(open(tmp_path / "onsets.csv"))}
@@ -48,7 +48,7 @@ def test_make_onsets_synthetic(tmp_path):
     assert rev["unevaluated_after_onset"] == "2"             # epochs 3 and 5
     assert "ResNet20-FRN (CIFAR-10)          3 | missing" in r.stdout
     # with the stored four-decimal values the median at epoch 2 is 0.0500 exactly and the onset moves to 4
-    r2 = subprocess.run([sys.executable, TOOL, "--data", str(data), "--out", str(tmp_path / "o2.csv"), "--stored_p"],
+    r2 = subprocess.run([sys.executable, TOOL, "onsets", "--data", str(data), "--out", str(tmp_path / "o2.csv"), "--stored_p"],
                         capture_output=True, text=True)
     assert r2.returncode == 0, r2.stderr
     rows2 = {(x["stat"], x["budget"]): x for x in csv.DictReader(open(tmp_path / "o2.csv"))}
@@ -56,15 +56,15 @@ def test_make_onsets_synthetic(tmp_path):
     # an invalid value stops the run instead of counting as "not rejected"
     with open(data / "vrt_fwd" / "vrt_fwd_v7_large_c0-5.csv", "a") as f:
         f.write("v7,large,6,42,+0.1,nan\n")
-    r3 = subprocess.run([sys.executable, TOOL, "--data", str(data), "--out", str(tmp_path / "o3.csv")], capture_output=True, text=True)
+    r3 = subprocess.run([sys.executable, TOOL, "onsets", "--data", str(data), "--out", str(tmp_path / "o3.csv")], capture_output=True, text=True)
     assert r3.returncode != 0 and "not valid" in r3.stderr
-    r4 = subprocess.run([sys.executable, TOOL, "--data", str(data), "--out", str(tmp_path / "o4.csv"), "--no_validate"],
+    r4 = subprocess.run([sys.executable, TOOL, "onsets", "--data", str(data), "--out", str(tmp_path / "o4.csv"), "--no_validate"],
                         capture_output=True, text=True)
     assert r4.returncode == 0, r4.stderr                      # epoch 6 has one seed only: a partial epoch, ignored
     # make the row complete with 50 seeds of NaN and check the decision guard
     with open(data / "vrt_fwd" / "vrt_fwd_v7_large_c0-5.csv", "a") as f:
         for s in SEEDS[1:]:
             f.write(f"v7,large,6,{s},+0.1,nan\n")
-    r5 = subprocess.run([sys.executable, TOOL, "--data", str(data), "--out", str(tmp_path / "o5.csv"), "--no_validate"],
+    r5 = subprocess.run([sys.executable, TOOL, "onsets", "--data", str(data), "--out", str(tmp_path / "o5.csv"), "--no_validate"],
                         capture_output=True, text=True)
     assert r5.returncode != 0 and "outside (0, 1]" in r5.stderr

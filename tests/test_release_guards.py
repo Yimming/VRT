@@ -14,16 +14,13 @@ import pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-sys.path.insert(0, os.path.join(ROOT, "code"))
+sys.path.insert(0, ROOT)
 
-from release_utils import (ResumeIndex, open_append, repair_tail, exact_perm_p, validate_features, check_scores,
+from common import (ResumeIndex, open_append, repair_tail, exact_perm_p, validate_features, check_scores,
                            count_consistent)  # noqa: E402
-from vrt_low_lib import vrt_full, vrt_low, compute_chat, l2n  # noqa: E402
-import vrt_reversed_budget  # noqa: E402
-try:
-    import supcon_fill_vrt                                     # needs torch (its model code); its vrt_test is pure NumPy
-except ImportError:                                            # pragma: no cover
-    supcon_fill_vrt = None
+from vrt import vrt_full, vrt_low, compute_chat, l2n  # noqa: E402
+import vrt
+from evaluate import run_test
 
 
 def sphere(n, d, seed):
@@ -132,9 +129,6 @@ def test_vrt_paths_stop_on_nan_scores_and_non_finite_statistics():
     te = base[:40].copy()
     with pytest.raises(FloatingPointError):
         vrt_full(tr, te, 16, k=5, M=40, n_qtr=40, n_perm=20, seed=42)
-    if supcon_fill_vrt is not None:
-        with pytest.raises(FloatingPointError):
-            supcon_fill_vrt.vrt_test(tr, te, 16, k=5, M=40, n_qtr=40, n_perm=20, seed=42)
     # a query coinciding with two duplicate reference points gives NaN scores; check_scores refuses them
     ref = np.vstack([base[:1], base[:1], base[1:30]]).astype(np.float32)
     c = compute_chat(base[:1].astype(np.float32), ref, 16, 4)
@@ -142,9 +136,9 @@ def test_vrt_paths_stop_on_nan_scores_and_non_finite_statistics():
     with pytest.raises(FloatingPointError):
         check_scores(c)
     with pytest.raises(FloatingPointError):
-        vrt_reversed_budget.perm_p(np.array([1.0, np.nan]), np.array([1.0, 2.0]), 5, np.random.RandomState(0))
+        vrt.perm_p(np.array([1.0, np.nan]), np.array([1.0, 2.0]), 5, np.random.RandomState(0))
     with pytest.raises(FloatingPointError):
-        vrt_reversed_budget.perm_p(np.array([np.inf] * 4), np.array([np.inf] * 4), 5, np.random.RandomState(0))
+        vrt.perm_p(np.array([np.inf] * 4), np.array([np.inf] * 4), 5, np.random.RandomState(0))
     # ordinary inputs are untouched: the guarded functions give the same (obs, p) as before (reference values of the
     # as-run code for this seed are reproduced by construction, here checked against the unguarded formula)
     tr64, te64 = sphere(300, 16, 3), sphere(200, 16, 4)
@@ -164,11 +158,12 @@ def test_exact_perm_p_refuses_off_lattice_values():
         exact_perm_p(0.05, 20000)                              # four decimals cannot identify k for 20,000 permutations
 
 
-def test_raw_entry_points_accept_zero_rows(tmp_path):
-    x = sphere(40, 4, 7); x[3] = 0.0
+@pytest.mark.parametrize("method", ["mmd", "ed", "knn", "c2st"])
+def test_raw_entry_points_accept_zero_rows(method):
+    train, test = sphere(40, 4, 7), sphere(40, 4, 8)
+    train[3] = 0.0
     with pytest.raises(ValueError, match="zero norm"):
-        validate_features(x)
-    assert validate_features(x, allow_zero_rows=True) is x
-    for script in ("mmd_tst_fast.py", "energy_tst_fast.py", "knn_tst_budget.py", "base_fill.py"):
-        src = open(os.path.join(ROOT, "code", script)).read()
-        assert "allow_zero_rows=args.raw" in src, script
+        run_test(train, test, method, budget=40, n_perm=7, raw=False)
+    rows = run_test(train, test, method, budget=40, n_perm=7, raw=True)
+    assert len(rows) == (2 if method == "knn" else 1)
+    assert all(np.isfinite(row["p"]) and 0 <= row["p"] <= 1 for row in rows)

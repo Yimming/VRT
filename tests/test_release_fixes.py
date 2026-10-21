@@ -13,14 +13,14 @@ import numpy as np
 import pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.join(os.path.dirname(HERE), "code"))
+sys.path.insert(0, os.path.dirname(HERE))
 
-from release_utils import (validate_features, check_statistics, ResumeIndex, open_append, exact_perm_p, perm_p,
+from common import (validate_features, check_statistics, ResumeIndex, open_append, exact_perm_p, perm_p,
                            resume_start_epoch)  # noqa: E402
-from vrt_low_lib import compute_chat, vrt_full, vrt_low, check_scores, l2n  # noqa: E402
-from mmd_tst_fast import mmd_test_fast  # noqa: E402
-from energy_tst_fast import energy_test_fast  # noqa: E402
-from baselines2_stats import c2st_test  # noqa: E402
+from vrt import compute_chat, vrt_full, vrt_low, check_scores, l2n  # noqa: E402
+from baselines import mmd_test_fast  # noqa: E402
+from baselines import energy_test_fast  # noqa: E402
+from baselines import c2st_test  # noqa: E402
 
 
 def sphere(n, d, seed, shift=0.0):

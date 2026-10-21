@@ -14,12 +14,11 @@ import pytest
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-sys.path.insert(0, os.path.join(ROOT, "tools"))
-sys.path.insert(0, os.path.join(ROOT, "code"))
-from result_schemas import SCHEMAS, SchemaError, read_rows, validate_rows, validate_tree, protocol_for  # noqa: E402
+sys.path.insert(0, ROOT)
+from results import SCHEMAS, SchemaError, read_rows, validate_rows, validate_tree, protocol_for  # noqa: E402
 
-EXPORT = os.path.join(ROOT, "tools", "export_results.py")
-ONSETS = os.path.join(ROOT, "tools", "make_onsets.py")
+EXPORT = "export"
+ONSETS = "onsets"
 SEEDS = list(range(42, 92))
 REV_HEADER = ["tag", "budget", "direction", "epoch", "seed", "M", "k", "delta_c", "p", "count", "n_perm", "p_exact"]
 
@@ -87,7 +86,7 @@ def test_integer_keys_and_protocol_values(tmp_path):
 
 
 def run(tool, *args):
-    return subprocess.run([sys.executable, tool, *args], capture_output=True, text=True)
+    return subprocess.run([sys.executable, os.path.join(ROOT, "results.py"), tool, *args], capture_output=True, text=True)
 
 
 def test_make_onsets_lists_incomplete_cells_and_refuses_other_protocols(tmp_path):
@@ -135,6 +134,11 @@ def test_export_uses_a_partial_folder_and_refuses_an_empty_source(tmp_path):
 
 
 def test_runners_refuse_a_budget_larger_than_the_split():
-    for script in ("mmd_tst_fast.py", "energy_tst_fast.py", "knn_tst_budget.py", "base_fill.py"):
-        src = open(os.path.join(ROOT, "code", script)).read()
-        assert "never silently test a smaller budget" in src, script
+    import numpy as np
+    from evaluate import prepare_features
+
+    train = np.ones((2, 3))
+    test = np.ones((4, 3))
+    for method in ("vrt", "reversed", "mmd", "ed", "schilling", "henze", "c2st", "mmdagg"):
+        with pytest.raises(ValueError, match="at least 3 points"):
+            prepare_features(train, test, method, 3, "supervised")
