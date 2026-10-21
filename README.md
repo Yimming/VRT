@@ -9,6 +9,8 @@ VRT compares training and test embeddings through their local neighbourhoods. Th
 Use Python 3.11 and run commands from the repository root. For VRT and the table summaries:
 
 ```bash
+git clone https://github.com/Yimming/VRT.git
+cd VRT
 python -m venv .venv
 source .venv/bin/activate
 python -m pip install numpy==1.26.4 scipy==1.17.0
