@@ -111,6 +111,27 @@ python results.py new-runs \
 
 This format records method, budget, normalization, protocol, analysis seed and requested permutation/backend options. C2ST and Schilling do not use permutations; MMDAgg uses its own defaults. Separate settings are not pooled. When aggregating a smaller seed set, pass the same `--seeds` as the test run. Missing-seed checks are explicit; checkpoint coverage is measured against epochs present for that model in the supplied files. Checkpoints absent from every input cannot be inferred.
 
+## Model and checkpoint sources
+
+The models below are used in Section 4.1 and Tables 1–3. Download external weights from their authors; the models trained by us have [training commands below](#training-recipes).
+
+| Model in the paper | Source and selection | `models.py --arch` |
+| --- | --- | --- |
+| ResNet20-FRN-SiLU / CIFAR-10 (`v7`) | [TorchUncertainty weights](https://huggingface.co/datasets/torch-uncertainty/Checkpoints/tree/main/models/cifar10-resnet20-frn-silu); version 7 | `frn_c10` |
+| ResNet-18 / CIFAR-10 and CIFAR-100 zoos | [Full zoos and loading instructions](https://github.com/ModelZoos/ModelZooDataset#model-zoos); Zenodo snapshots: [CIFAR-10](https://zenodo.org/records/6974029), [CIFAR-100](https://zenodo.org/records/6977382). We use five runs per dataset from the `kaiming_uniform` zoos. | `r18_c10`, `r18_c100` |
+| ResNet-50 / CIFAR-100 (`r50`) | Trained by us: `train.py r50` | `r50_c100` |
+| Phase Zoo ResNet-50 / CIFAR-100 | [Checkpoint archive](https://drive.proton.me/urls/V2E66KY0JM#Pq5M06URN4EN), [author instructions](https://github.com/ModelZoos/PhaseTransitionModelZoo#dataset-access). Use `cifar_100-ResNet50_subset`, width 64, seed 0, batch sizes 8/128/1024, epochs 100/125/150. | `r50_c100` |
+| SimCLR ResNet-50 / CIFAR-10 and CIFAR-100 | Trained by us using [SupContrast](https://github.com/HobbitLong/SupContrast) in SimCLR mode: `train.py simclr` | `simclr_c10`, `simclr_c100` |
+| 5-layer CNN / CIFAR-10 (`wp`) | [CNN Wild Park](https://zenodo.org/records/12797219); trial containing `2f9ed_00036`. Keep its `params.json` and pass `--wp-config`. | `wp` |
+| DeepResNet50 / ImageNet, simple and advanced augmentation | [Encoder weights](https://zenodo.org/records/13971513); the two ResNet50 pretraining schemes in `encoder_weights.zip` | `imagenet` |
+| ResNet-18 / CIFAR-10, configurations A–D | Trained by us: `train.py regularization` | `r18_c10` |
+
+The CIFAR-10 Zenodo snapshot contains epochs 1, 10 and 50; the CIFAR-100 snapshot contains only epoch 60. Use the full-zoo links for training trajectories. The labels `m0`–`m4` in our result files identify our selected runs, not upstream run IDs. The Hugging Face page supplies model weights; the full `v7` epoch series is not bundled here.
+
+For the Phase Zoo, the selected trial names contain `bf0b6_00173` (batch 8), `bf0b6_00077` (batch 128) and `bf0b6_00005` (batch 1024); all use learning rate 0.1 and weight decay 0.0005.
+
+Pass the downloaded file path to `--checkpoint-format`, with one `--epochs` value for a single checkpoint. For trajectories, use a pattern such as `checkpoints/<trial>/checkpoint_{ep:06d}/checkpoints` for the CIFAR and Phase zoos. Wild Park uses `checkpoint_{ep:06d}/checkpoint.pt`. These are Python format strings, not wildcard patterns. Keep each run in a separate directory and extract it separately.
+
 ## Feature extraction and BatchNorm comparisons
 
 The extraction runner needs image data and compatible model checkpoints. CIFAR datasets must already be available in the supplied data directory. ImageNet uses `train/` and `val/` subdirectories. Features are extracted without stochastic image augmentation and saved before the SimCLR projection head.
@@ -135,16 +156,17 @@ python train.py r50 --data-root datasets --out checkpoints/r50 --seed 42
 python train.py regularization --data-root datasets \
   --out checkpoints/regularization --seed 42
 python train.py simclr --data-root datasets --dataset cifar10 \
-  --out checkpoints/simclr --seed 0
+  --out checkpoints/simclr --seed 0 --batch_size 512 --learning_rate 0.25
 ```
 
-The regularization recipe runs configurations A–D; `--configs A_baseline` selects one. SimCLR accepts `--dataset cifar100`. Run `python train.py simclr --help` for its training settings. Model-zoo and externally pretrained checkpoints used in the paper must be obtained separately.
+The regularization recipe runs configurations A–D; `--configs A_baseline` selects one. SimCLR accepts `--dataset cifar100`; the explicit batch size and learning rate above match the paper. Run `python train.py simclr --help` for its training settings. SimCLR saves every epoch in a configuration-named subdirectory of `--out`.
 
 For the SimCLR loss trajectories in Appendix F:
 
 ```bash
+SIMCLR_CHECKPOINTS=checkpoints/simclr/SimCLR_cifar10_resnet50_lr_0.25_decay_0.0001_bsz_512_temp_0.5_trial_0_cosine_warm
 python train.py evaluate-loss --dataset cifar10 --data-root datasets \
-  --checkpoint-format 'checkpoints/simclr/ckpt_epoch_{ep}.pth' \
+  --checkpoint-format "$SIMCLR_CHECKPOINTS/ckpt_epoch_{ep}.pth" \
   --epochs 1-1000 --out results/simclr_cifar10_loss.csv
 ```
 

@@ -28,7 +28,7 @@ To run VRT on your own embeddings, use the [Python example](REPRODUCIBILITY.md#d
 
 The [data guide](data/README.md) maps every folder to the paper and explains columns and names such as `bntrain`.
 
-Image datasets, checkpoints and extracted embeddings are not included. See the [reproduction scope](REPRODUCIBILITY.md#scope) for available inputs.
+Image datasets, checkpoints and extracted embeddings are not included. See [model sources](REPRODUCIBILITY.md#model-and-checkpoint-sources) for checkpoint links and training recipes, and the [reproduction scope](REPRODUCIBILITY.md#scope) for available inputs.
 
 ## Code and paper sections
 
