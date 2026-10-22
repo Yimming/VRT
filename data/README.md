@@ -7,7 +7,7 @@ The `01`–`11` prefixes keep folders in reading order: Sections 4.2–4.4 first
 | Folder / paper element | Runner | Main fields | Source files |
 | --- | --- | --- | --- |
 | [01_main_results/](01_main_results/) — 4.2 Main results; Tables 1–2 | `evaluate.py test` | `epoch, seed, budget, p, acc` | 3,576 |
-| [02_regularization_interventions/](02_regularization_interventions/) — 4.3 Regularization interventions | `train.py regularization; evaluate.py test` | `VRT, MMD, MMDAgg, C2ST, ED` | 0 |
+| [02_regularization_interventions/](02_regularization_interventions/) — 4.3 Regularization interventions | `train.py regularization; evaluate.py test` | `VRT, MMD, MMDAgg, C2ST, ED` | [Shared with 01](02_regularization_interventions/README.md#per-seed-results) |
 | [03_synthetic_experiments_and_feature_extraction/](03_synthetic_experiments_and_feature_extraction/) — 4.4 Synthetic experiments and feature extraction; Table 3 | `evaluate.py test --raw` | `epoch, seed, n_samples, p` | 336 |
 | [04_nearest_neighbor_two_sample_baselines/](04_nearest_neighbor_two_sample_baselines/) — Appendix B; Table 4 | `evaluate.py test` | `epoch, seed, k, p_schilling, p_henze` | 168 |
 | [05_type_i_calibration_and_controls_before_training/](05_type_i_calibration_and_controls_before_training/) — Appendix C; Table 5 | `controls.py` | `arch, split, bn_mode, rep, p, reject` | 669 |
