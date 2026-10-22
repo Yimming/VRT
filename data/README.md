@@ -12,7 +12,7 @@ The `01`–`11` prefixes keep folders in reading order: Sections 4.2–4.4 first
 | [04_nearest_neighbor_two_sample_baselines/](04_nearest_neighbor_two_sample_baselines/) — Appendix B; Table 4 | `evaluate.py test` | `epoch, seed, k, p_schilling, p_henze` | 168 |
 | [05_type_i_calibration_and_controls_before_training/](05_type_i_calibration_and_controls_before_training/) — Appendix C; Table 5 | `controls.py` | `arch, split, bn_mode, rep, p, reject` | 669 |
 | [06_synthetic_power_profile_details/](06_synthetic_power_profile_details/) — Appendix D; Table 6 and Figure 3(a) | `synthetic.py` | `cond, C, budget, rep, test, p, scale` | 4 |
-| [07_sensitivity_to_hyperparameters_and_sample_size/](07_sensitivity_to_hyperparameters_and_sample_size/) — Appendix E; Table 7 | `evaluate.py test; synthetic.py` | `mode, budget, onset; sweep logs` | 10 |
+| [07_sensitivity_to_hyperparameters_and_sample_size/](07_sensitivity_to_hyperparameters_and_sample_size/) — Appendix E; Table 7 | `evaluate.py test` (sample size); saved k/M logs only | `mode, budget, onset; sweep logs` | 10 |
 | [08_per_model_trajectories/](08_per_model_trajectories/) — Appendix F; Figures 2 and 6 | `train.py evaluate-loss` | `epoch, split, loss` | 20 |
 | [09_reference_set_selection/](09_reference_set_selection/) — Appendix G; Table 8; also Appendix H | `evaluate.py test --methods reversed` | `epoch, seed, direction, M, k, delta_c, p` | 92 |
 | [10_sensitivity_advantage_of_score_transformation/](10_sensitivity_advantage_of_score_transformation/) — Appendix I | `evaluate.py test; evaluate.py score-statistics` | `epoch, seed, p, score statistics` | 272 |

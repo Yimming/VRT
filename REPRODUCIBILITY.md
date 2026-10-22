@@ -268,7 +268,7 @@ python evaluate.py smoke
 
 - The released numerical results reproduce the table summaries without checkpoints. Original image datasets, model checkpoints and extracted feature arrays are not included.
 - [figures/](figures/README.md) contains plotting scripts and additional numerical inputs, including matched synthetic repetitions and loss records. Generated figures are written to `results/figures/`, which is ignored by Git.
-- The original two-dimensional hyperparameter-sweep outputs (Appendix E) and the uniform-sphere calibration outputs are unavailable here. Saved one-dimensional sweep logs remain in [data/07_sensitivity_to_hyperparameters_and_sample_size/records/](data/07_sensitivity_to_hyperparameters_and_sample_size/records/).
+- Appendix E's full two-dimensional sweep outputs, runner and plotting script are not included. The [hyperparameter data guide](data/07_sensitivity_to_hyperparameters_and_sample_size/README.md#hyperparameter-sweeps-k-and-m) links the saved one-dimensional sweep logs. The original uniform-sphere calibration outputs are also unavailable here.
 - Appendix G's reference-direction experiment can be rerun with `synthetic.py reference`; its original 500-repetition output is unavailable, so the included plot build reconstructs the figure from its saved vector asset. The extra 10-seed ImageNet diagnostics in Appendix H (class balancing, enlarged reference/query sets and test-vs-test controls) have no dedicated runner in the supplied source.
 - Class-geometry measurements can be rerun with `evaluate.py geometry`, but the original Appendix J extraction inputs and plotting generator are not bundled.
 
